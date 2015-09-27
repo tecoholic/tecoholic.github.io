@@ -18,15 +18,16 @@ Loading plain JavaScript files in CasperJS for unit testing seems to be complete
 Thanks for this quote, I found that using the `fs` module one can load local filesystem files as modules to be used. Using that now I could write unit tests while developing the library and later on write functional tests while using the library.
 
 Here is the file structure  
-`<br />
-library<br />
---test<br />
-  |--unit<br />
-     |--test.js<br />
-  |--index.html</p>
-<p>--src<br />
-  |--livetransit.js<br />
-`
+
+{% highlight bash %}
+library
+--test
+  |--unit
+     |--test.js
+     |--index.html
+--src
+  |--livetransit.js
+{% endhighlight %}
 
 And here is are the two tests &#8211; i) uses a webpage based approach; ii) uses module approach
 

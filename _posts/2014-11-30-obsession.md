@@ -24,14 +24,7 @@ The word hacking is being used in a lot of places where it means &#8220;modifica
 
 Taking a look at what I have done in 2014:  
 
-
-<div id="attachment_251" style="width: 753px" class="wp-caption aligncenter">
-  <a href="http://www.arunmozhi.in/wp-content/uploads/2014/11/github_dismal.png"><img src="http://www.arunmozhi.in/wp-content/uploads/2014/11/github_dismal.png" alt="github_dismal" width="743" height="296" class="aligncenter size-full wp-image-310" /></a>
-  
-  <p class="wp-caption-text">
-    Nothing :)
-  </p>
-</div>
+![Github Commits](/img/uploads/2014/11/github_dismal.png)
 
 I think I would do what John Resig recommends &#8211; <a href="http://ejohn.org/write-code-every-day/" title="Write Code Everyday" target="_blank">Write Code Everyday</a>, starting from today December 1, 2014. Lets see how far the obsession hacking goes.
 

@@ -20,7 +20,7 @@ I came to know about all this from Bala Jeyaraman of [Vasippu][2]. He is plannin
 
 The zim is created with a simple welcome page with all the pages as a list of links. The openzim format also has an inbuilt search index and Kiwix uses this really well. So you can create zims of 100 articles and still navigate to them easily either way.
 
-Zimbalaka has multi-lingual and multi-site support. That is, you can create a zim file from pages of any language of the 280+ exiting Wikipedias, and also from sites like WikiBooks, Wiktionary, Wikiversity and such. You can even input any custom url like (http://sub.domain.com/), Zimblaka would add (/wiki/Page_title) to it and download the pages.
+Zimbalaka has multi-lingual and multi-site support. That is, you can create a zim file from pages of any language of the 280+ exiting Wikipedias, and also from sites like WikiBooks, Wiktionary, Wikiversity and such. You can even input any custom url like `http://sub.domain.com/`, Zimblaka would add `/wiki/Page_title` to it and download the pages.
 
 It is currently hosted by my good friend Srikanth (<a href="https://twitter.com/logic" target="_blank">@logic</a>) at <a href="http://srik.me/zimbalaka" target="_blank">http://srik.me/zimbalaka</a>
 
@@ -28,8 +28,8 @@ It is currently hosted by my good friend Srikanth (<a href="https://twitter.com/
 
 Here is how the content looks in <a href="https://play.google.com/store/apps/details?id=org.kiwix.kiwixmobile" target="_blank">Kiwix for Android</a>. 
 
-[<img src="http://www.arunmozhi.in/wp-content/uploads/2015/05/navigate.png" alt="Navigation in Kiwix" width="551" height="488" class="aligncenter size-full wp-image-366" />][5]  
-[<img src="http://www.arunmozhi.in/wp-content/uploads/2015/05/multi.png" alt="Multi Site and Language Support" width="546" height="489" class="aligncenter size-full wp-image-365" />][6]
+![Navigation in Kiwix](/img/uploads/2015/05/navigate.png)
+![Multi Site and Language Support](/img/uploads/2015/05/multi.png)
 
 ### Pain points
 
@@ -41,7 +41,7 @@ Here is how the content looks in <a href="https://play.google.com/store/apps/det
 
 This tool is written using Flask &#8211; A simple Python web framework for the backend, Bootstrap as the frontend and uses the zimwriterfs compiled binary as the workhorse. The zimming tasks are run by Celery, which has been automated by supervisord. All the co-ordination and message passing happens via Redis. 
 
-Do you want to peek in how it is all done? Here is the source code [<a href="https://github.com/tecoholic/Zimbalaka" target="_blank">https://github.com/tecoholic/Zimbalaka</a>]. Feel free to fork, modify and host your own instance.
+Do you want to peek in how it is all done? Here is the source code <a href="https://github.com/tecoholic/Zimbalaka" target="_blank">https://github.com/tecoholic/Zimbalaka</a>. Feel free to fork, modify and host your own instance.
 
 ### Update
 

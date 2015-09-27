@@ -48,6 +48,6 @@ The greed of the companies to make money. They pull us, consumers, into the issu
 
 I as a layman consumer is completely ok with the current state of affairs and don’t mind if the billing becomes usage based, or someone creates a fast-lane for those who pay more as long as the slow lane is at the mandated minimum speed, which is the present case anyways.
 
- [1]: http://www.arunmozhi.in/net-neutrality-this-is-why/
+ [1]: /net-neutrality-this-is-why/
  [2]: http://en.wikipedia.org/wiki/Net_neutrality
  [3]: http://www.huffingtonpost.com/2014/09/10/internet-slowdown-day_n_5797966.html

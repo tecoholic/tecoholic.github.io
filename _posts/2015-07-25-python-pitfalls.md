@@ -11,19 +11,19 @@ tags:
 ---
 I was woken up today with the following question:
 
-<pre class="brush: python; title: ; notranslate" title="">def foo(x=[]):
+{% highlight python %}
+def foo(x=[]):
     x.append(1)
     return x
 
-&gt;&gt;&gt; foo()
-&gt;&gt;&gt; foo()
-</pre>
+>>> foo()
+>>> foo()
+{% endhighlight %}
 
 What could be the output? The answer is  
-`<br />
-[1]<br />
-[1, 1]<br />
-`
+
+    [1]
+    [1, 1]
 
 I was stupefied for a minute before I started DuckDuckGo-ing *Python default arguments*, *Python garbage collection*, *Python pitfalls*..etc.,
 

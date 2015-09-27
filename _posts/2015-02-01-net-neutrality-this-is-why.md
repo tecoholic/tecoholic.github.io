@@ -37,6 +37,6 @@ I previously concluded,
 
 > I as a layman consumer is completely ok with the current state of affairs and don’t mind if the billing becomes usage based, or someone creates a fast-lane for those who pay more as long as the slow lane is at the mandated minimum speed, which is the present case anyways.
 
-Though I still say the same, I would say it in fewer words &#8211; I want a neutral net, which is the present case anyways <img src="http://www.arunmozhi.in/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" />
+Though I still say the same, I would say it in fewer words &#8211; I want a neutral net, which is the present case anyways.
 
- [1]: http://www.arunmozhi.in/why-net-neutrality-or-why-not-tiered-pricing/ "Why Net-Neutrality?"
+ [1]: /why-net-neutrality-or-why-not-tiered-pricing/ "Why Net-Neutrality?"

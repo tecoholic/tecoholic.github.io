@@ -23,7 +23,8 @@ So, I am going to create a simple library that can do this.
 
 Here is the mockup usage of the library:
 
-<pre class="brush: jscript; title: ; notranslate" title="">// Create a new livetransit object with the map type
+{% highlight javascript %}
+// Create a new livetransit object with the map type
 var lt = new LiveTransit();
 
 // Assign a div for the map
@@ -43,7 +44,7 @@ lt.initiateMovement("chennai_velachery.kml", "chennai_velachery_weekday.json");
 lt.changeSchedule( "chennai_velachery_sunday.json" );
 // change the location - city
 lt.changeLocation( "new.kml", "new.json" );
-</pre>
+{% endhighlight %}
 
  [1]: https://twitter.com/logic
  [2]: http://onloop.net/transit/ "transit.js"
