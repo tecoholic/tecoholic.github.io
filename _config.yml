@@ -58,9 +58,10 @@ theme:
   # Post navigation
   post_navigation: false
 
+include: ['blog']
 # PAGINATION
 paginate: 5
-paginate_path: "blog/page:num"
+paginate_path: "/blog/page:num/"
 
 # BUILD SETTINGS
 markdown: kramdown
