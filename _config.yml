@@ -3,7 +3,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://tecoholic.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
   title: Arunmozhi
   avatar: avatar.jpg
@@ -60,6 +60,7 @@ theme:
 
 include: ['blog']
 # PAGINATION
+gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "/blog/page:num/"
 
