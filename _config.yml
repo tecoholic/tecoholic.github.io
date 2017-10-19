@@ -1,72 +1,39 @@
-# SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://tecoholic.github.io" # the base hostname & protocol for your site
+# Jekyll configuration
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: Arunmozhi
-  avatar: avatar.jpg
-  gravatar: # Email MD5 hash
-  description: "Arunmozhi aka Tecoholic is a programmer and a teacher. Arunmozhi.in is the site where he writes occasionally." # used by search engines
+name: Arunmozhi
+description: Personal site of Arunmozhi (aka) tecoholic
 
-  # Header and footer text
-  header_text:
-  header_text_feature_image:
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+# url is currently only used only for the RSS feed in feed.xml
+url: https://tecoholic.github.io/
 
-  # Icons
-  rss: false
-  email_address: "arun@arunmozhi.in" # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook: "tecoholic"
-  flickr:
-  github: "tecoholic"
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: "tecoholic"
-  wordpress:
-  youtube:
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: ''
 
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
+# This can be '' to hide the Github nav button
+github: 'tecoholic'
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
-  str_continue_reading: "Continue reading"
+# Set this to your UA-# value, or '' to disable the block completely
+gaaccount: ''
 
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+# The 'comments' setting enables comments. You'll need to select either
+# disqus or isso below to choose a comment system. Individual posts can
+# override 'comments' to disable on a post-by-post basis.
+comments: false
 
-  # Post navigation
-  post_navigation: false
+# Set this to your public isso URL to enable comments via isso. Set to '' to disable isso.
+isso: ''
 
-include: ['blog']
-# PAGINATION
-gems: [jekyll-paginate]
+# Set this to your disqus shortname to enable comments via disqus. Set to '' to disable disqus.
+disqus: ''
+
+permalink: /:year/:month/:title
 paginate: 5
-paginate_path: "/blog/page:num/"
 
-# BUILD SETTINGS
-markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
+markdown: kramdown
+plugins: ['jekyll-paginate']
+
+exclude: ['README.md', 'LICENSE']
