@@ -197,9 +197,11 @@ Add the following context processor to the Flask app:
 This provides a function called `hashed_url` which looks for the file and returns its hashed form. Now we can add the files using script taks as below:
 
 ```html
+    {% raw %}
     <script type="text/javascript" src="{{ hashed_url('build/runtime.js') }}"></script>
     <script type="text/javascript" src="{{ hashed_url('build/vendor.js') }}"></script>
     <script type="text/javascript" src="{{ hashed_url('build/main.js') }}"></script>
+    {% endraw %}
 ```
 
 The `hashed_url` would match the filename passed to it with the the files in the directory and returns the hashed form. For e.g., `hashed_url("build/main.js")` returns `/static/build/main.16f45d183a4c0f0b1b37.js`s
