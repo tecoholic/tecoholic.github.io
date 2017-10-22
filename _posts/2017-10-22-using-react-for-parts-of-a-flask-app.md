@@ -4,6 +4,7 @@ title: "Using React for parts of a Falsk App"
 description: "How does one setup a Flask application to use React in only parts of the application"
 category: Coding
 tags: [python,react,coding]
+excerpt: How does one setup a Flask application to use React in only parts of the application? React with JSX syntax, the ability to just drop the the library and use it for only selective parts of the app seemed just right. After trying out the tic-tac-toe tutorial, I ventured to setup it for our project.
 ---
 
 ## Background:
