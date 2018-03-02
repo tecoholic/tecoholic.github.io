@@ -5,7 +5,7 @@ subtitle:
 description: Freelance Programmer and OpenSource Enthusiast
 author: Arunmozhi
 language: en
-date_format: '%d-%M-%Y'
+date_format: '%d-%m-%Y'
 
 # url is currently only used only for the RSS feed in feed.xml
 url: https://tecoholic.github.io/
