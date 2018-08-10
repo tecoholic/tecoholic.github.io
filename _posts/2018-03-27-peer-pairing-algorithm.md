@@ -14,7 +14,7 @@ A class has **N** number of students. When the students submit an assignment, th
 2. The student cannot review his/her own work.
 3. There shouldn't be multiple reviews by the same person. Each reviewer assigned should be unique.
 
-I should return 0/False if there is an error in the input conditions such _K > N_
+I should return 0/False if there is an error in the input conditions such _K >= N_
 
 #### Example:
 
@@ -53,11 +53,8 @@ def generate_peer_pairs(N, K):
     :param K: The no.of reviews each student is supposed to receive.
     :returns: a dictionary of graders and their peers { grader_id: [peer_1, peer_2, ...]}
     """
-    if rounds >= N:
-        raise ValueError(
-            "No. of reviews cannot be greater than or equal to "
-            "the total number of students."
-        )
+    if K >= N:
+        return False
 
     available_offsets = list(range(1, N))
     offsets = []
@@ -73,6 +70,8 @@ def generate_peer_pairs(N, K):
     allocations = {}
     for idx, student in enumerate(students):
         allocations[student] = [students[(idx + offset) % N] for offset in offsets])
+
+    return allocations
 ```
 
 ## Notes
