@@ -6,17 +6,15 @@ categories: Coding
 tags: python coding
 ---
 
-## Background
-
 I am currently working on a project called [Peer Feedback](https://peerfeedback.io), where we are trying to build a nice peer feedback system for college students. We use Canvas Learning Management System (CanvasLMS) API as the data source for our application. All data about the students, courses, assignments, submissions are all fetched from CanvasLMS. The application is written in Python Flask.
 
-## Testing
+# Current Setup
 
 We are mostly getting data from API, realying it to frontend or storing it in the DB. So most of our testing is just mocking network calls and asserting response codes. There are only a few functions that contain original logic. So our test suite is focused on those functions and endpoints for the most part.
 
 We recently ran into a situation where we needed to test something that involved the fetching and filtering data from API and retriving data from DB based on the result.
 
-## Faker Library
+## Faker Library and issues
 
 The problem we ran into is, we can't test the function without first initalizing the database. The code we had for initializing the CanvaLMS used the [Faker](https://faker.readthedocs.io/en/master/) library, which provides nice fake data to create real world feel for us. But it came with its own set of problems:
 
@@ -46,9 +44,8 @@ We finally are switching to a more sensible test data for our testing. We are dr
 3. I no longer have to read a JSON file to get a user object and test related information. I can simply pick one using the `userXXX` template, reducing complexity of the test suite.
 4. And we won't be getting emails for random people asking us to remove them from mailing lists and probably we are saving ourselves being blacklisted as a spam domain.
 
-## Conclusion
+# Conclusion
 
 Faker provided us with data which helped us test a number of things in the frontend, like the different length in names, multi part names, unique names for testing filtering and searching etc., while also added a set of problems that makes our work difficult and slow.
 
 Our solution to having a sensible dataset for testing is plain numerically squenced dataset.
-
