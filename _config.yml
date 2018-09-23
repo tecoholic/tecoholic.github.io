@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-title: Tecoholic
-subtitle: 
+title: __tecoholic__
+subtitle: recovering technology addict
 description: Freelance Programmer and OpenSource Enthusiast
 author: Arunmozhi
 language: en
@@ -86,7 +86,7 @@ rss:
 #since: 2015
 
 # icon between year and author @Footer
-authoricon: heart
+authoricon: bed
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
@@ -114,7 +114,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   about: /about/
   archives: /archives/
   tags: /tags/
@@ -145,9 +145,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -187,14 +187,14 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family:
-    size:
+    family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace
+    size: 24
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family:
-    size: 16px
+    size: 16
 
 
 
@@ -212,6 +212,8 @@ font:
 social:
   GitHub: https://github.com/tecoholic
   StackOverflow: https://stackoverflow.com/users/8765631/arunmozhi
+  Twitter: https://twitter.com/tecoholic
+  Upwork: https://www.upwork.com/o/profiles/users/_~018e7e2458b86e03cd/
 
 
 
@@ -226,7 +228,6 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
-  Weibo: weibo
   StackOverflow: stack-overflow
 
 
@@ -255,15 +256,15 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  # position: left
+  # position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: hide
+  display: always
   #display: always
   #display: hide
   #display: remove
