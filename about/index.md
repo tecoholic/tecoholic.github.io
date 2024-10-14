@@ -4,10 +4,24 @@ type: about
 title: About me
 ---
 
-I am a freelance programmer. I write software in Python and Javascript. I hold a Bachelors in  Electrical and Electronics Engineering and a Masters in Remote Sensing from Anna University, Chennai.
+Hi 👋
 
-I am  also a Trustee and the Treasurer of [Vasippu Trust](http://www.vasippu.org), which works with students in North Chennai providing after class and in-class support.
+I am Arunmozhi - a software developer.
 
-You can reach me at **arun @ arunmozhi.in**
+More specifically - a Full Stack web developer.
 
-If you are thinking about hiring me for a project check out my [Upwork](https://www.upwork.com/o/profiles/users/_~018e7e2458b86e03cd/) page for availability.
+### What do I do?
+
+I help convert ideas into reality. I have built prototypes, first versions, customized existing solutions for early-stage startups and have seen them become production systems used by thousands.
+
+I do that by writing code that converts data into APIs, ML Models into services, and user stories into user interfaces. I create automated tasks in the server, UI components in the browser and everything in between.
+
+### What's my Stack?
+
+I believe in using the best tool for the task. My everyday languages are Python & JavaScript. That doesn't mean I cannot write some [Qt C++ when needed](https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS#L13). I believe in the philosophy that the stack is only as robust as the team working on it.
+
+### How to get in touch?
+
+Shoot an email to `arun` at `arunmozhi` dot `in`
+
+Available on the Fediverse [@tecoholic@social.arunmozhi.in](https://social.arunmozhi.in/@tecoholic)
