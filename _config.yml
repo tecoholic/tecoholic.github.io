@@ -212,8 +212,7 @@ font:
 social:
   GitHub: https://github.com/tecoholic
   StackOverflow: https://stackoverflow.com/users/8765631/arunmozhi
-  Twitter: https://twitter.com/tecoholic
-  Upwork: https://www.upwork.com/o/profiles/users/_~018e7e2458b86e03cd/
+  Social: https://social.arunmozhi.in/@tecoholic
 
 
 
@@ -227,9 +226,8 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
   StackOverflow: stack-overflow
-
+  Social: link
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
