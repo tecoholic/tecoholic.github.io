@@ -1,14 +1,14 @@
 # Jekyll configuration
 
-title: __tecoholic__
-subtitle: recovering technology addict
-description: Freelance Programmer and OpenSource Enthusiast
+title: Arunmozhi
+subtitle: aka tecoholic
+description: Just another programmer on the Internet
 author: Arunmozhi
 language: en
 date_format: '%d-%m-%Y'
 
 # url is currently only used only for the RSS feed in feed.xml
-url: http://arunmozhi.in
+url: https://arunmozhi.in
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
@@ -212,7 +212,7 @@ font:
 social:
   GitHub: https://github.com/tecoholic
   StackOverflow: https://stackoverflow.com/users/8765631/arunmozhi
-  Social: https://social.arunmozhi.in/@tecoholic
+  Fediverse: https://social.arunmozhi.in/@tecoholic
 
 
 
