@@ -39,8 +39,8 @@ So, I created [asdf-tutor](https://github.com/tecoholic/asdf-tutor) to let Mise 
 mkdir my-project
 cd my-project
 mise use tutor@18 # or tutor@latest # or tutor@nightly
-mise set TUTOR\_ROOT=$(pwd)
-mise set TUTOR\_PLUGINS\_ROOT=$(pwd)/plugins
+mise set TUTOR_ROOT=$(pwd)
+mise set TUTOR_PLUGINS_ROOT=$(pwd)/plugins
 mise trust
 ```
 
