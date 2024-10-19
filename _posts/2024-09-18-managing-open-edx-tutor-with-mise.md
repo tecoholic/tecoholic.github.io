@@ -56,9 +56,7 @@ That's all.
 
 Setup multiple projects the same way as above. Switch projects by navigating to the folder.
 
-<div style="max-width: 1024px">
 ![screenshot](https://arunmozhi.in/wp-content/uploads/2024/09/tutor-projects-using-mise-asdf-tutor.png)
-</div>
 
 #### Removing a project
 
