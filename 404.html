@@ -6,6 +6,12 @@
     <meta name="robots" content="all" />
     <meta name="robots" content="index,follow"/>
     <title>Arunmozhi - 404 Not Found</title>
+    <script>
+     var url = window.location.href;
+     if(url.endsWith("/")) {
+       window.location.replace(url.slice(0, -1));
+     }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
     <style>
      @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
@@ -445,12 +451,6 @@
        repeatDelay: 8,
        delay: 2
      });
-    </script>
-    <script>
-     var url = window.location.href;
-     if(url.endsWith("/")) {
-       window.location.replace(url.slice(0, -1));
-     }
     </script>
   </body>
 </html>
