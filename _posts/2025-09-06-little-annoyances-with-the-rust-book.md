@@ -112,3 +112,24 @@ Notice the shift from "you" to "we" here? You did all the wrong stuff and we are
 me to no end when authors write like this. I just ran the code you gave me and asked me to run. Now English is my second language.
 So, this change of "you" and "we" could be a minor nothing. But coupled with the *"don't think you are not good"*, it's really grating to read.
 
+## Update on 09/Sep/2025
+
+### Chapter 3 - Common Programming Concepts
+
+#### The Range
+
+At the end of this big chapter, there is a mention of `Range` from the standard library. I thought it would be a literal function/struct called `Range`,
+but the code shows an operator `..`.
+
+```rust
+fn main() {
+  for number in (1..4).rev() {
+    println!("{number}!");
+  }
+  println!("LIFTOFF!!!");
+}
+```
+
+This is confusing and it probably needs a better explanation. At least a note explaining what `..` is.
+
+
