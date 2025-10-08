@@ -212,8 +212,7 @@ font:
 social:
   GitHub: https://github.com/tecoholic
   StackOverflow: https://stackoverflow.com/users/8765631/arunmozhi
-  Fediverse: https://social.arunmozhi.in/@tecoholic
-
+  LinkedIn: https://www.linkedin.com/in/tecoholic/
 
 
 # Social Links Icons
@@ -227,7 +226,7 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   StackOverflow: stack-overflow
-  Social: link
+  LinkedIn: linkedin-in
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
