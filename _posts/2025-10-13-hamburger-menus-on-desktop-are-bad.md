@@ -30,10 +30,15 @@ They have started going down this path too.
 
 Now clicking on any of these items doesn't expand the menu like a normal desktop menu would. Instead it just updates the same view area.
 
-![Thunderbird browsing the new menu](/img/2025/thunderbird-menu-activity.webm)
+<video controls>
+  <source src="/img/2025/thunderbird-menu-activity.webm" type="video/webm" />
+</video>
 
 So, a simple task like toggling the status-bar on/off, that should take maybe 2 clicks and a bit of hovering, now takes 5 clicks to accomplish. The experience is even worse if you accidentaly click the wrong item. For comparison here is the regular menu:
 
-![Thunderbird regular menu](/img/2025/thunderbird-regular-menu.webm)
+
+<video controls>
+  <source src="/img/2025/thunderbird-regular-menu.webm" type="video/webm" />
+</video>
 
 2 clicks that's it, I can look through the entire menu list without clicking if I wanted and I don't loose any visual context. With the ham menu, I don't even know what submenu I am after second click. That, sir, is just bad.
