@@ -226,7 +226,7 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   StackOverflow: stack-overflow
-  LinkedIn: linkedin-in
+  LinkedIn: linkedin
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
