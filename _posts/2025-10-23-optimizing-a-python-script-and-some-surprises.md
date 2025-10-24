@@ -55,8 +55,9 @@ Once these were implemented, the runtime went from **2 mins** to **2.03 seconds*
 ## Wait! What?
 
 Yup. The optimized Python version was faster than the Go version. I just couldn't believe it. I asked
-Claude about it and it said that Python's Regex engine implemented in C is way more performant than
-Go's version and Go is very conservative with Regexes.
+Claude about it and it said something like 
+
+> Python's Regex engine implemented in C is way more performant than Go's version and Go is very conservative with Regexes.
 
 Okay! Can we make it faster? Claude replaced a bunch of Regex's with string replacements and made it
 a bit more faster with a runtime of **2.69s**. Still slower than Python. A genuinely mind-blowing realization
