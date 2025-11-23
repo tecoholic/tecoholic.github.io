@@ -1,5 +1,5 @@
 ---
-title: Brute-forcing a Framework Migration with LLM
+title: Brute-forcing a Django Forms to FastAPI Migration with LLM
 author: Arunmozhi
 layout: post
 categories:
