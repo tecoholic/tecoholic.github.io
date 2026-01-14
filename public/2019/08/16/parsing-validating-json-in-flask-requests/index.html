@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Parsing &amp; Validating JSON in Flask Requests | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2019/08/16/parsing-validating-json-in-flask-requests/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Parsing & Validating JSON in Flask Requests</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/flask/">#Flask</a><span></span>
+    <a href="/tags/python/">#Python</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2019-08-16">2019-08-16</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>5 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>This is a follow up to the previous article: 
+<a href="http://arunmozhi.in/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/" target="_blank" rel="noopener">Simplifying JSON parsing in Flask routes using decorators</a>
+</p>
+<p>In the previous article we focused on simplifying the JSON parsing using decorators. The aim was to not repeat the same logic in every route adhering to the DRY principle. I will focus on what goes on inside the decorator in this article.</p>
+<p>I ended the last article with the following decorator (kindly see the implementation of <code>@required_params</code> in the previous article)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@route</span>(<span style="color:#f92672">...</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@required_params</span>({<span style="color:#e6db74">&#34;name&#34;</span>: str, <span style="color:#e6db74">&#34;age&#34;</span>: int, <span style="color:#e6db74">&#34;married&#34;</span>: bool})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>where we pass the incoming parameters and their data types and perform their type validation.</p>
+<h3 id="using-an-external-library-for-validation">Using an external library for validation</h3>
+<p>The decorator implemented above is suitable for simple use cases. Now, consider the following advanced use cases</p>
+<ul>
+<li>What if we need more complex validations like Email or Date validation?</li>
+<li>What if we need to restrict a field to certain values? Say <code>role</code> should be restricted to (<code>teacher</code>, <code>student</code>, <code>admin</code>)?</li>
+<li>What if need to have custom error messages for each field?</li>
+<li>What if the value of a parameter is an object with its own set of validation rules?</li>
+</ul>
+<p>Solution for neither one of them is going to be trivial enough to be implemented in a single &amp; simple decorator function. This is when the external libraries come to our rescue. Libraries like 
+<a href="https://python-jsonschema.readthedocs.io/en/latest/" target="_blank" rel="noopener">jsonschema</a>
+, 
+<a href="https://schematics.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">schematics</a>
+, 
+<a href="https://marshmallow.readthedocs.io" target="_blank" rel="noopener">Marshmallow</a>
+ ..etc., not only provide functionality, they would also bring more clarity to the codebase, provide modularity and improve the readability.</p>
+<p><strong>Note:</strong> If you are already using a serialisation library like <code>marshmallow</code> in your project to handle your database Models, you probably knew all this. If you don&rsquo;t use a serialisation library in your project and instead have something like <code>to_json()</code> or <code>to_dict()</code> function in your models, then you SHOULD consider removing those functions and use a serialisation library.</p>
+<h3 id="example-application">Example application</h3>
+<p>Let me layout an example use case which we use to explore this. Here we have a simple app that has two routes which accepts JSON payload. The expected JSON data is described in the decorator <code>@required_params(...)</code> and the validation is carried out inside the decorator function.</p>
+<p>[gist https://gist.github.com/tecoholic/a0c29807f079d6acba8a502229b8f50a]</p>
+<h4 id="requests-and-responses">Requests and responses</h4>
+<p>Now let us sent an actual request to this application.</p>
+<p><img src="/img/wp-content/uploads/2019/08/decorator_correct_request.png" alt="decorator_correct_request"></p>
+<p>Now that is really nice, we have got a &ldquo;201 Created&rdquo; response. Let us now try with a wrong input. I am setting the <code>married</code> field to <code>twice</code> instead of <code>true</code> or <code>false</code>, the expected boolean values.</p>
+<p><img src="/img/wp-content/uploads/2019/08/decorator_wrong_request.png" alt="decorator_wrong_request"></p>
+<p>That returns a <strong>400 Bad request</strong> as expected. The decorator has tried validating the types of the input and has found that one of the values is not in the expected format. But the error message itself is kind of crude:</p>
+<ol>
+<li>It doesn&rsquo;t actually tell us which parameter is wrong. In a complex object this might lead to wasting a lot of time jumping between the docs and the input to guess and find the wrong parameter.</li>
+<li>The data types are represented as Python class types like <code>class 'int'</code>. While this might convey the intended meaning, it is still far better to say something decent like <code>integer</code> instead.</li>
+</ol>
+<h3 id="using-marshmallow-for-validation">Using Marshmallow for validation</h3>
+<p>Using the 
+<a href="https://marshmallow.readthedocs.io/en/3.0/quickstart.html" target="_blank" rel="noopener">marshmallow</a>
+ we can define the schema of our expected JSON.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> marshmallow <span style="color:#f92672">import</span> Schema, fields, ValidationError
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserSchema</span>(Schema):
+</span></span><span style="display:flex;"><span> first_name <span style="color:#f92672">=</span> fields<span style="color:#f92672">.</span>String(required<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span> last_name <span style="color:#f92672">=</span> fields<span style="color:#f92672">.</span>String(required<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span> age <span style="color:#f92672">=</span> fields<span style="color:#f92672">.</span>Integer(required<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span> married <span style="color:#f92672">=</span> fields<span style="color:#f92672">.</span>Boolean(required<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>Now that the marshmallow will take care of the validation, we can update our decorator too:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">required_params</span>(schema):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decorator</span>(fn):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">@wraps</span>(fn)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span> schema<span style="color:#f92672">.</span>load(request<span style="color:#f92672">.</span>get_json())
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">except</span> ValidationError <span style="color:#66d9ef">as</span> err:
+</span></span><span style="display:flex;"><span> error <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;error&#34;</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">&#34;messages&#34;</span>: err<span style="color:#f92672">.</span>messages
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> jsonify(error), <span style="color:#ae81ff">400</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> fn(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> decorator
+</span></span></code></pre></div><p>And finally we pass an object of the <code>UserSchema</code> instead of a list of params in the decorator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/user/&#34;</span>, methods<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;POST&#34;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@required_params</span>(UserSchema(strict<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_user</span>():
+</span></span><span style="display:flex;"><span> <span style="color:#75715e"># here a simple list is used in place of a DB</span>
+</span></span><span style="display:flex;"><span> users<span style="color:#f92672">.</span>append(request<span style="color:#f92672">.</span>get_json())
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;OK&#34;</span>, <span style="color:#ae81ff">201</span>
+</span></span></code></pre></div><p><strong>Note:</strong> I have passed the <code>strict=True</code> so that Marshmallow will raise a <code>ValidationError</code>. By default marshmallow 2 doesn&rsquo;t raise an error, however, it should be happening in version 3. Check your version to see if the <code>strict</code> parameter is necessary.</p>
+<p>With the app updated, now let us send a request and test it.</p>
+<p><img src="/img/wp-content/uploads/2019/08/marshmallow_error_1.png" alt="marshmallow_error_1.png"></p>
+<p>Good. We get the &ldquo;not a boolean&rdquo; validation error. Now what if we have multiple errors?</p>
+<p><img src="/img/wp-content/uploads/2019/08/marshmallow_error_2.png" alt="marshmallow_error_2"></p>
+<p>Sweet, we get parameter specific error messages even for multiple errors. If you remember our original implementation, only one error could be returned at a time because the first exception would return a response. Using the library provides a good upgrade from that.</p>
+<p>By defining multiple schemas for the various data models that we expect as an input, we could perform complex validations independent of our view function. This gives us clean view functions that handle just the business logic.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This post only exposes the basic implementation of using the libraries and simplifying parsing and validation of incoming JSON. The marshmallow library offers a lot more like: complex validators like Email and Date, parsing subset of a schema by using only, custom validators (age between 30-35 for example), loading the data directly into SQLAlchemy models (check out Flask-marshmallow)..etc., These can really make app development easier, safer and faster.</p>
+<p>
+<a href="https://schematics.readthedocs.io/en/latest/" target="_blank" rel="noopener">Schematic</a>
+ is another library offering similar functionalities that focuses on ORM integration.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2019/09/18/flask-marshmallow-has-no-attribute-data/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Flask Marshmallow - has no attribute data</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2019/08/12/investing-in-gilt-funds/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Investing in GILT funds</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

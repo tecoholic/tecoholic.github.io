@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self-Hosting on Arunmozhi</title>
+    <link>http://localhost:1313/tags/self-hosting/</link>
+    <description>Recent content in Self-Hosting on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Fri, 21 Jun 2024 08:20:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/self-hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitea - git push doesn&#39;t work after moving server to new IP</title>
+      <link>http://localhost:1313/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/</link>
+      <pubDate>Fri, 21 Jun 2024 08:20:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/</guid>
+      <description>&lt;p&gt;If Gitea is running as a docker container, then there is a SSH Shim script at &amp;ldquo;/usr/local/bin/gitea&amp;rdquo; that contains the local IP address of the machine, which might be different from the 127.0.0.1 that&amp;rsquo;s &#xA;&lt;a href=&#34;https://docs.gitea.com/installation/install-with-docker&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;provided in the documentation&lt;/a&gt;&#xA;.&lt;/p&gt;&#xA;&lt;p&gt;This script needs to be updated with the new IP address as well.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

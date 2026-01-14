@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+dev-note: Getting pyenv and pyright to work in Doom Emacs | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2023/09/12/dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>dev-note: Getting pyenv and pyright to work in Doom Emacs</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/doom-emacs/">#Doom-Emacs</a><span></span>
+    <a href="/tags/emacs/">#Emacs</a><span></span>
+    <a href="/tags/pyenv/">#Pyenv</a><span></span>
+    <a href="/tags/pyright/">#Pyright</a><span></span>
+    <a href="/tags/python/">#Python</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/notes/">Notes</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2023-09-12">2023-09-12</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>Getting Pyenv and Pyright to play nice in python-mode on Doom Emacs requires sticking to a few rules. I discovered these after multiple attempts of trial and error. All the following things might not be needed. But I got things to work only when I set all of these up.</p>
+<p>So, best advice is - start here and try to reduce it down.</p>
+<h3 id="emacs-config">Emacs Config</h3>
+<ul>
+<li>Edit your <code>.doom.d/init.el</code></li>
+</ul>
+<ol start="2">
+<li>
+<p>Enable both <code>lsp</code> and <code>tree-sitter</code> in the tools. <code>tree-sitter</code> is not probably needed for this. But, I wanted to use it, so.</p>
+</li>
+<li>
+<p>Enable python mode with <code>(python +lsp + tree-sitter +pyenv +pyright)</code></p>
+</li>
+</ol>
+<ul>
+<li>Add the 
+<a href="https://github.com/pythonic-emacs/pyenv-mode#projectile-integration" target="_blank" rel="noopener"><strong>Pyenv-mode - Projectile Integration</strong> snippet</a>
+ to your <code>~/.doom.d/config.el</code></li>
+</ul>
+<pre tabindex="0"><code>(require &#39;pyenv-mode)
+
+(defun projectile-pyenv-mode-set ()
+  &#34;Set pyenv version matching project name.&#34;
+  (let ((project (projectile-project-name)))
+    (if (member project (pyenv-mode-versions))
+        (pyenv-mode-set project)
+      (pyenv-mode-unset))))
+
+(add-hook &#39;projectile-after-switch-project-hook &#39;projectile-pyenv-mode-set)
+</code></pre><ul>
+<li>Then run <code>~/.emacs.d/bin/doom sync</code> and then <code>~/.emacs.d/bin/doctor</code> to ensure the required tools are available.</li>
+</ul>
+<h3 id="setting-up-your-python-env">Setting up your Python Env</h3>
+<p>Add your project as a Projectile project using <code>SPC p a</code></p>
+<p>Now if you have read the Projectile script you would have noticed that the &ldquo;pyenv mode&rdquo; sets the name of the project as the Python environment name. So, if you like me use 
+<a href="https://github.com/pyenv/pyenv-virtualenv" target="_blank" rel="noopener">pyenv-virtualenv</a>
+ to create multiple virtual environments, then create your virtualenv with the same name as your project and install the dependencies within that virtualenv. For example,</p>
+<pre tabindex="0"><code># project name is awesome-sauce
+cd awesome-sauce
+pyenv virtualenv 3.11 awesome-sauce
+pyenv local awesome-sauce
+pip install -r requirements.txt  # or any way you want to setup the dependencies
+</code></pre><p>This will create a local <code>.python-version</code> file with the virtualenv name. This <strong>file seems to be crucial</strong> in getting the <strong>pyright</strong> to work. I tried multiple times without this file and just using <code>pyenv shell &lt;env&gt;</code> to activate the env and install the dependencies. And when I loaded up a file in Emacs, pyright would complain that none of the dependencies were available for import.</p>
+<h3 id="results">Results</h3>
+<p>With all of this setup clearly, now I get autocompletion for dependencies installed via pip as expected, and syntax checking is happening as I type.</p>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.29.59-pm.png?w=1024" alt=""></p>
+<p>Notice that in the modeline, pyenv has loaded the correct environment and the LSP is also using the same one (the blue Python awesome-sauce).</p>
+<p>I can now also run my tests quickly using <code>SPC m t t</code> using pytest.</p>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.33.03-pm.png?w=1024" alt=""></p>
+<h3 id="finally---a-request">Finally - a request</h3>
+<p>There&rsquo;s a big chance that I might have missed something while documenting this. In case you are trying to achieve the same setup, but these rules aren&rsquo;t sufficient to get things working for you, kindly drop a line.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">How to set uploads space limit per user on Misskey?</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">dev-note: Doom Emacs status line missing icons on fresh install</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

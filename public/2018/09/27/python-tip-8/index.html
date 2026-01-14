@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Python Tip #8 - reducing looping by using dicts | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2018/09/27/python-tip-8/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Python Tip #8 - reducing looping by using dicts</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/python/">#Python</a><span></span>
+    <a href="/tags/coding/">#Coding</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/pythontips/">PythonTips</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2018-09-27">2018-09-27</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>1 minute</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>In situations where you have a list of objects and have to retrieve then in random order, dictionaries can act as lookup tables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>users <span style="color:#f92672">=</span> list of <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get users one by one by looking up ids</span>
+</span></span><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> next((u <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users <span style="color:#66d9ef">if</span> u<span style="color:#f92672">.</span>id <span style="color:#f92672">==</span> user_1_id), <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>user_2 <span style="color:#f92672">=</span> next((u <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users <span style="color:#66d9ef">if</span> u<span style="color:#f92672">.</span>id <span style="color:#f92672">==</span> user_2_id), <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler solution using lookup table</span>
+</span></span><span style="display:flex;"><span>lookup <span style="color:#f92672">=</span> dict((u<span style="color:#f92672">.</span>id, user) <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users)
+</span></span><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> lookup[user_1_id]
+</span></span><span style="display:flex;"><span>user_2 <span style="color:#f92672">=</span> lookup[user_2_id]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>This tip is not very obvious, hence this explanation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> next((u <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users <span style="color:#66d9ef">if</span> u<span style="color:#f92672">.</span>id <span style="color:#f92672">==</span> user_1_id), <span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><p>This method employs a iterator looping through the list of users everytime we have to find a user, which means we have to run this loop a hundred times. This poses a complexity of <strong>O(N<sup>2</sup>)</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>lookup <span style="color:#f92672">=</span> dict((u<span style="color:#f92672">.</span>id, user) <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users)
+</span></span><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> lookup[user_1_id]
+</span></span></code></pre></div><p>This method on the other hand iterates through the users list one time and create a lookup table that we can again and again without having to iterate through the list everytime. This reduces the complexity to <strong>O(N)</strong> which could theoritically lead up to 10 times faster execution of the program.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2018/10/01/python-tip-9/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Python Tip #9 - sorting</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2018/09/25/python-tip-7/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Python Tip #7 - getattr()</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

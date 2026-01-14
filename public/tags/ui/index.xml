@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ui on Arunmozhi</title>
+    <link>http://localhost:1313/tags/ui/</link>
+    <description>Recent content in Ui on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Mon, 13 Oct 2025 11:27:43 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hamburger menus on desktop are bad</title>
+      <link>http://localhost:1313/2025/10/13/hamburger-menus-on-desktop-are-bad/</link>
+      <pubDate>Mon, 13 Oct 2025 11:27:43 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2025/10/13/hamburger-menus-on-desktop-are-bad/</guid>
+      <description>&lt;p&gt;I am no UI expert. So, the statement is more of a personal opinion.&lt;/p&gt;&#xA;&lt;p&gt;I believe Hamburder menus in desktop software are just bad. There is no place for them whatsoever. In a mobile UI where space is limited, they make total sense.&lt;/p&gt;&#xA;&lt;p&gt;In a 24/27-inch monitor, having to click a 48px icon to see the list of item that perfectly fit in a single line of the menu bar is just &amp;hellip; bad. That&amp;rsquo;s all.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

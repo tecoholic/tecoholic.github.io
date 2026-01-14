@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Arunmozhi</title>
+    <link>http://localhost:1313/tags/github/</link>
+    <description>Recent content in Github on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Sun, 23 Feb 2020 08:09:23 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gitignore.io - Generating Complex Git Ignore Files Automatically</title>
+      <link>http://localhost:1313/2020/02/23/gitignore-io-generating-complex-git-ignore-files-automatically/</link>
+      <pubDate>Sun, 23 Feb 2020 08:09:23 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/02/23/gitignore-io-generating-complex-git-ignore-files-automatically/</guid>
+      <description>&lt;p&gt;My way of generating &lt;code&gt;.gitignore&lt;/code&gt; files has evolved over time. First it was just adding files and folder names manually to a empty file called .gitignore. Then as more and more people started sharing their &lt;strong&gt;dotfiles&lt;/strong&gt;, I started using copies of it. One most used resource for me is the &#xA;&lt;a href=&#34;https://github.com/github/gitignore&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github gitignore Repository&lt;/a&gt;&#xA;. I just grab the raw url of the gitignore that I want and use wget to save in my repository, like:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

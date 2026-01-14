@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  Coding | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/categories/coding/" >
+  <link href="http://localhost:1313/categories/coding/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/categories/coding/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>Coding</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/09/18/flask-marshmallow-has-no-attribute-data/">
+          <div class="postHeader">
+            <span class="postTitle">Flask Marshmallow - has no attribute data</span>
+            
+            
+            <time class="postDate" datetime="2019-09-18">2019-09-18</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p><em>TL,DR-</em></p>
+<blockquote>
+<p>Remove <code>.data</code> after the <code>schema.dump()</code> calls in the code. Marshmallow 3 supplies the data directly.</p>
+</blockquote>
+<h3 id="the-issue">The Issue</h3>
+<p>If you use 
+<a href="https://flask-marshmallow.readthedocs.io/en/latest/" target="_blank" rel="noopener">Flask-Marshmallow</a>
+ in your Flask application for serialisation of models, then there are chances that you will run into this error when you upgrade dependencies. The reason for this issue is Flask Marshmallow has added support for Marshmallow 3 when moving from version <code>0.10.0</code> to <code>0.10.1</code>. And Marshmallow 3 returns the data directly when the <code>dump</code> function is called instead of creating an object with the <code>.data</code> attribute.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/08/16/parsing-validating-json-in-flask-requests/">
+          <div class="postHeader">
+            <span class="postTitle">Parsing &amp; Validating JSON in Flask Requests</span>
+            
+            
+            <time class="postDate" datetime="2019-08-16">2019-08-16</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 5 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>This is a follow up to the previous article: 
+<a href="http://arunmozhi.in/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/" target="_blank" rel="noopener">Simplifying JSON parsing in Flask routes using decorators</a>
+</p>
+<p>In the previous article we focused on simplifying the JSON parsing using decorators. The aim was to not repeat the same logic in every route adhering to the DRY principle. I will focus on what goes on inside the decorator in this article.</p>
+<p>I ended the last article with the following decorator (kindly see the implementation of <code>@required_params</code> in the previous article)</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/">
+          <div class="postHeader">
+            <span class="postTitle">Simplifying JSON parsing in Flask routes using decorators</span>
+            
+            
+            <time class="postDate" datetime="2019-07-26">2019-07-26</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Flask is simple and effective when it comes to reading input parameters from the URL. For example, take a look at this simple route.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/todo/&lt;int:id&gt;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">task</span>(id):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> jsonify({<span style="color:#e6db74">&#34;id&#34;</span>: id, <span style="color:#e6db74">&#34;task&#34;</span>: <span style="color:#e6db74">&#34;Write code&#34;</span>})
+</span></span></code></pre></div><p>You specify a parameter called <code>id</code> and set its type as <code>int</code>, Flask automatically parses the value from the URL converts it to an integer and makes it available as a parameter in the <code>task</code> function.</p>
+<p>But it becomes harder when we start working with JSON being passed on as inputs when we build APIs.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/02/26/adding-unique-constraints-after-the-fact-in-sqlalchemy-copy/">
+          <div class="postHeader">
+            <span class="postTitle">Adding Unique Constraints After the Fact in SQLAlchemy [Copy]</span>
+            
+            
+            <time class="postDate" datetime="2019-02-26">2019-02-26</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <blockquote>
+<p>This post is originally from 
+<a href="https://skien.cc/blog/2014/01/31/adding-unique-contraints-after-the-fact-in-sqlalchemy/" target="_blank" rel="noopener">https://skien.cc/blog/2014/01/31/adding-unique-contraints-after-the-fact-in-sqlalchemy/</a>
+. But the URL is throwing a 404 and I could access the page only from the Google cache. I am copying it here in case it goes missing in the future.</p>
+</blockquote>
+<p><strong>Update:</strong></p>
+<p>
+<a href="https://twitter.com/taubeneck/status/1100591684096806913" target="_blank" rel="noopener">https://twitter.com/taubeneck/status/1100591684096806913</a>
+</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/01/29/replacing-image-in-a-pdf-with-python/">
+          <div class="postHeader">
+            <span class="postTitle">Replacing image in a PDF with Python</span>
+            
+            
+            <time class="postDate" datetime="2019-01-29">2019-01-29</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Being a freelancer is an interesting role. You come across a variety of projects. I recently worked on a project involving replacing images in a PDF which taught me a couple of things.</p>
+<ol>
+<li>While there are a number of tools to deal with PDF in Python, the general purpose tools can only do so much because&hellip; reason 2</li>
+<li>PDF is a dump of instructions to put things in specific places. There is no logical way it is done that make general purposes tools manipulate the PDF in a consistent way.</li>
+<li>Not everything is bad. Almost all positive changes like adding text or image and whole page changes like rotating, cropping are usually possible and so are all read operations like text, image extraction ..etc.,</li>
+<li>The issue is when you want to delete something and replace it with something else.</li>
+</ol>
+<p>With that learnt, I set out to achieve the goal anyway.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/01/23/python-technical-interview-an-experience/">
+          <div class="postHeader">
+            <span class="postTitle">Python Technical Interview - An Experience</span>
+            
+            
+            <time class="postDate" datetime="2019-01-23">2019-01-23</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>As a freelancer one of the things that comes with getting a project/job is handling technical interviews. I have so far managed to convince the client with a work sample, test project &hellip;etc., This is literally the first time I sat for a full technical interview. And it did teach a few lessons. Let me document it for future use.</p>
+<p>It started off with the basic of the language:</p>
+<h4 id="1-what-is-the-difference-between-an-iterable-and-an-iterator">1. What is the difference between an iterable and an iterator?</h4>
+<p>Vincent Driessen provides a clear explanation of the difference with the examples here 
+<a href="https://nvie.com/posts/iterators-vs-generators/" target="_blank" rel="noopener">https://nvie.com/posts/iterators-vs-generators/</a>
+</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/01/08/qgis-creating-new-column-from-existing-using-python/">
+          <div class="postHeader">
+            <span class="postTitle">QGIS - Creating new column from existing using Python</span>
+            
+            
+            <time class="postDate" datetime="2019-01-08">2019-01-08</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Yesterday, I was working on the 
+<a href="https://commons.wikimedia.org/wiki/File:Parks_in_Chennai_by_Wards.png" target="_blank" rel="noopener">ward level parks map of Chennai</a>
+ I had to join a CSV data layer with the boundary polygon layer, but there was one issue while my CSV file has the ward numbers as integers (1,2,3..etc), the polygon layer had them as strings (Ward 1, Ward 2, Ward 3 &hellip;etc.,) So I was thinking, wouldn&rsquo;t it be nice just to strip the word Ward and put it in a new column, so that I can make a join by matching the ward numbers. Turns out Python integration in QGIS is so good that, I did it without even searching the internet. Here is how.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/20/sensible-test-data/">
+          <div class="postHeader">
+            <span class="postTitle">Sensible Test Data</span>
+            
+            
+            <time class="postDate" datetime="2018-09-20">2018-09-20</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I am currently working on a project called 
+<a href="https://peerfeedback.io" target="_blank" rel="noopener">Peer Feedback</a>
+, where we are trying to build a nice peer feedback system for college students. We use Canvas Learning Management System (CanvasLMS) API as the data source for our application. All data about the students, courses, assignments, submissions are all fetched from CanvasLMS. The application is written in Python Flask.</p>
+<h1 id="current-setup">Current Setup</h1>
+<p>We are mostly getting data from API, realying it to frontend or storing it in the DB. So most of our testing is just mocking network calls and asserting response codes. There are only a few functions that contain original logic. So our test suite is focused on those functions and endpoints for the most part.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/05/30/python-gotcha-1-extended-assignment-operator-and-lists/">
+          <div class="postHeader">
+            <span class="postTitle">Python Gotcha #1: Extended Assignment Operator and Lists</span>
+            
+            
+            <time class="postDate" datetime="2018-05-30">2018-05-30</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p><em>Extended Assignment Operators</em> - we use them all the time as shorthands for assigning values.
+Lets see how this works when using multiple identifiers (variables) in terms of simple data like a number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">+=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)  <span style="color:#75715e"># only the value of b is changed even though we have assigned a to b</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> b<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span>  <span style="color:#75715e"># the long form assignment also doesn&#39;t affect the original a</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)  
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><h3 id="gotcha">Gotcha</h3>
+<p>Let us apply a similar set of operations on <code>list</code></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/03/27/peer-pairing-algorithm/">
+          <div class="postHeader">
+            <span class="postTitle">Peer Pairing Algorithm</span>
+            
+            
+            <time class="postDate" datetime="2018-03-27">2018-03-27</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="problem-statement">Problem Statement</h2>
+<p>A class has <strong>N</strong> number of students. When the students submit an assignment, they are assigned <strong>K</strong> peers to review their assignments and provide feedback such that <em>0 &lt; K &lt; N</em>. Now, if given the input <strong>N</strong> and <strong>K</strong>, return a <em>dict</em> (Python) <em>Object</em> (JavaScript) or something equivalent in other languages in the format, <code>student: [list of reviewers]</code> adhering to the following rules:</p>
+<ol>
+<li>Each student should be assigned <strong>K</strong> reviewers.</li>
+<li>The student cannot review his/her own work.</li>
+<li>There shouldn&rsquo;t be multiple reviews by the same person. Each reviewer assigned should be unique.</li>
+</ol>
+<p>I should return 0/False if there is an error in the input conditions such <em>K &gt;= N</em></p>
+        </div>
+      </div>
+    
+  </div>
+
+  <nav class="pagination" role="navigation" aria-label="Pagination"><a class="pagination-prev" href="/categories/coding/page/2/" rel="prev">
+    « newer posts
+  </a><span class="pagination-status">
+    page 3 / 4
+  </span><a class="pagination-next" href="/categories/coding/page/4/" rel="next">
+    older posts »
+  </a></nav>
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  Notes | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/categories/notes/" >
+  <link href="http://localhost:1313/categories/notes/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/categories/notes/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>Notes</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2024/09/18/avoid-accidental-push-to-upstream/">
+          <div class="postHeader">
+            <span class="postTitle">Avoiding Accidental Push to Upstream</span>
+            
+            
+            <time class="postDate" datetime="2024-09-18">2024-09-18</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>As anyone who works with multiple remotes in Git and has rights to many of them, I run into the issue of pushing to the wrong remote.
+The main issue is I will simply use <code>git push origin</code> while a simple <code>git push</code> might be sufficient.
+After trying and failing many times to get rid of this muscle memory, here are the 2 options I have come up with.</p>
+<h3 id="option-1-dont-set-origin">Option 1: Don&rsquo;t set origin</h3>
+<p>A Git clone usually sets the remote as <code>origin</code>. I change this right after a clone to something more descriptive of the source like <code>upstream</code>.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/">
+          <div class="postHeader">
+            <span class="postTitle">Gitea - git push doesn&#39;t work after moving server to new IP</span>
+            
+            
+            <time class="postDate" datetime="2024-06-21">2024-06-21</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>If Gitea is running as a docker container, then there is a SSH Shim script at &ldquo;/usr/local/bin/gitea&rdquo; that contains the local IP address of the machine, which might be different from the 127.0.0.1 that&rsquo;s 
+<a href="https://docs.gitea.com/installation/install-with-docker" target="_blank" rel="noopener">provided in the documentation</a>
+.</p>
+<p>This script needs to be updated with the new IP address as well.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2024/04/03/dealing-with-ghost-outdated-service-entries-in-nomad/">
+          <div class="postHeader">
+            <span class="postTitle">Dealing with ghost/outdated service entries in Nomad</span>
+            
+            
+            <time class="postDate" datetime="2024-04-03">2024-04-03</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I have run into this issue multiple times with Nomad. For some reason, when jobs are redeployed/restarted, the service registration isn&rsquo;t removed. This causes my Traefik reverse proxy to send requests to a non-existing allocation in Nomad.</p>
+<p>Last time this happened, I think I completely nuked the Nomad setup and setup everything from scratch. This time around, I finally figured out the right way to do things.</p>
+<ol start="2">
+<li>
+<p>Use <code>nomad service list</code> to get a list of the services</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/">
+          <div class="postHeader">
+            <span class="postTitle">How to set uploads space limit per user on Misskey?</span>
+            
+            
+            <time class="postDate" datetime="2023-09-26">2023-09-26</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Change the Policy of the role applied to the user. Since I have a single person instance, I just needed to update the default Policy Template from the Control Panel</p>
+<ol start="2">
+<li>
+<p>Go to Control Panel</p>
+</li>
+<li>
+<p>Click Roles</p>
+</li>
+<li>
+<p>Either change the &ldquo;Role Template&rdquo; if you have no roles defined, or edit the role governing the users for whom the limit needs to be changed.</p>
+</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png?w=1024" alt=""></p>
+<ol start="4">
+<li>Their &ldquo;Roles&rdquo; page should show the new limit under <strong>driveCapacityMb</strong> and also their &ldquo;Drive&rdquo; page in Basic Settings</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.44.40-pm-1.png?w=610" alt=""></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/12/dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs/">
+          <div class="postHeader">
+            <span class="postTitle">dev-note: Getting pyenv and pyright to work in Doom Emacs</span>
+            
+            
+            <time class="postDate" datetime="2023-09-12">2023-09-12</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Getting Pyenv and Pyright to play nice in python-mode on Doom Emacs requires sticking to a few rules. I discovered these after multiple attempts of trial and error. All the following things might not be needed. But I got things to work only when I set all of these up.</p>
+<p>So, best advice is - start here and try to reduce it down.</p>
+<h3 id="emacs-config">Emacs Config</h3>
+<ul>
+<li>Edit your <code>.doom.d/init.el</code></li>
+</ul>
+<ol start="2">
+<li>
+<p>Enable both <code>lsp</code> and <code>tree-sitter</code> in the tools. <code>tree-sitter</code> is not probably needed for this. But, I wanted to use it, so.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/">
+          <div class="postHeader">
+            <span class="postTitle">dev-note: Doom Emacs status line missing icons on fresh install</span>
+            
+            
+            <time class="postDate" datetime="2023-09-12">2023-09-12</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Let&rsquo;s say you set up 
+<a href="https://github.com/doomemacs/doomemacs" target="_blank" rel="noopener">Doom Emacs</a>
+ from scratch for the first time, and you followed the instructions correctly and install the <code>all-the-icons</code> fonts when prompted, saw the icons properly displayed in the dashboard (launch window), but once you open a file, the status line starts showing random characters, instead of icons.</p>
+<blockquote>
+<p>You need to install nerd-icons using <code>M-x nerd-icons-install-fonts</code> because the doom-modline has switched from all-the-icons to nerd-icons</p>
+<p>
+<a href="https://github.com/seagle0128/doom-modeline/issues/310" target="_blank" rel="noopener">https://github.com/seagle0128/doom-modeline/issues/310</a>
+</p>
+</blockquote>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/">
+          <div class="postHeader">
+            <span class="postTitle">Podcast Notes: Darren Palmer on the EV Revolution</span>
+            
+            
+            <time class="postDate" datetime="2022-04-13">2022-04-13</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 6 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="preamble">Preamble</h2>
+<p>I listen to podcasts while doing chores like cooking, travelling in public transport, doing dishes&hellip;etc., In most cases, I just absorb what I can with the partial attention I provide to the podcast. Recently I thought, I would listen to some of them with a bit more attention, like a lecture and take some notes. I learnt a lot in this one from how EV range anxiety is a non-problem to wineries hedge their quality of wine my mixing grapes from different fields.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/08/10/product-audience-quadrant/">
+          <div class="postHeader">
+            <span class="postTitle">Product - Audience Quadrant</span>
+            
+            
+            <time class="postDate" datetime="2020-08-10">2020-08-10</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>The Indiehackers podcast #152 
+<a href="https://www.indiehackers.com/podcast/152-tyler-tringas-and-justin-jackson" target="_blank" rel="noopener">Picking the Right Market to Get Started In with Justin Jackson and Tyler Tringas</a>
+ lays out this relationship quadrant between a product and the audience, which I think is a very important when thinking about a software business.</p>
+<p><img src="/img/wp-content/uploads/2020/08/product-audience-fit.png" alt="product-audience-fit"></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/1/01/01/creating-opticks-extension-from-scratch/">
+          <div class="postHeader">
+            <span class="postTitle">Creating Opticks Plug-in From Scratch</span>
+            
+            
+            <time class="postDate" datetime="0001-01-01">0001-01-01</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <blockquote>
+<p>Windows Only</p>
+</blockquote>
+<h3 id="rant-about-bad-documentation-in-opticks">Rant about bad documentation in Opticks</h3>
+<p>I was to build a custom Plug-in for the open source satellite image processing software 
+<a href="http://www.opticks.org" target="_blank" rel="noopener">Opticks</a>
+ in the college. Extension, plugin, addon - anyway you call it. It has always been my playground. So I thought this would be another quick dip in a new pool. I was wrong. They have a seperate Plug-in development SDK and all their problems start there. You can run through their documentation umpteen times, all times you would end up is a place that has a set of instructions telling you to build the sample plugins and the Plug-in development tutorials using a previously setup Microsoft Visual Studio project and a batch file called retrive_dependencies.bat running a Java jar file. What is bad about it? Because I donot know what the damn settings I have to set in the project settings, what are my dependencies and no clue how to create a plugin other than the sample plugins. YES. NO CLUE TO CREATE NEW Plug-in FROM SCRATCH.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/1/01/01/notes-on-ilugc-march-meet--wikipedia-chennai-meetup-5/">
+          <div class="postHeader">
+            <span class="postTitle">Notes on ILUGC March Meet and Wikipedia Chennai Meetup 5</span>
+            
+            
+            <time class="postDate" datetime="0001-01-01">0001-01-01</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I attended this meet and kept typing in my observations to keep myself completely concentrated about what is being said.
+This has been sitting as a text file in my drive without purpose, so I thought it would be better taken care online.</p>
+<pre><code>3:50PM: Introduction by T.Shrinivasan
+3.52PM: Technical talk 1: Swift by Yogesh
+      OpenStack - Swift - Object Storage Component
+      -&gt; public cloud
+      -&gt; private cloud, home server, admistration
+      -&gt; VMs
+      -&gt; Image Server
+      -&gt; Volatile machines -&gt; Virtual hard disk -&gt; Block Storage -&gt; Amazom EBS
+      -&gt; Authentication Server -&gt; User permissions
+      -&gt; Object storage -&gt; data stored in
+
+Slide 1: Introduction
+* Object Storage
+* Analogous to AWS S3
+* API based access only - no mount, no format, no file system - recent developements give a illusion of file system - Pyhton running over Aapache
+* Major Usage - Media and Big Data Storage
+
+Slide 2: Use Cases
+* Media Storage
+* Big Data Storage
+* Backup and archival
+* Conten Delivery
+* Data distribution
+
+Slide 3: Features
+* REST based API
+* versioning
+* Scalable and distributed
+* Redunant( Replications ) - Minimum of 3
+* Streaming Support
+* Cheap( community Servers )
+
+Slide 4: Components
+* Proxy Server - gateway to use the system - autheticates using authetication server
+* Account Server - holds info about containers
+* Container Server - hold info about object
+* Object Server -  holds the actual data
+* Rings - Hashing of the data
+* Caching Server - caching data and authetication code
+
+Slide 5: Contribution
+* Contibutor's License agreement
+* Fork from Github / Pull Request
+* Patches / Bug Fixes
+* Python
+
+Slide 6: Getting Help
+* Mailing Lists
+* Blogs &amp; Social Media
+* Documentation
+* IRC
+* Meetups - meetup.com
+
+4.26PM: Wikimedia India Chapter - Bala Jeyaraman (SodaBottle)
+        Overview about the Wikipedia related talks
+        * Introduction to Bala and Surya Prakash
+
+4.31PM: State of Tamil Wikipedia - Surya Prakash
+    * What is Wikipedia? - Online Refrence Wikipedia
+    * Contributors and what they do?
+    * Statistics about the Wikipedia usage
+    * Contibutors - Who they are? What they do? 
+    * Edits - What are wikipedia edits?
+    * What do you achieve by editing wikipedia?
+        - Writing style and fluentcy
+        - Team work and co-operation
+        - Critical thinking and analysis
+        - Global Society
+    * Other Wikipedia Projects
+        - Wiki Source
+        - Wiki Books
+        - WikiPedia
+        - Wikimedia Commons
+        - Wiki News
+        - Wiki Quotes
+        - Wiktionary
+    * What wikipedia is not?
+        - a dictionary
+        - a text book
+        - an archive
+        - an advertisement board
+        - a chat room
+        - a blog
+        - a campign tool
+        - a correction tool
+        - a research publication
+        - an experimental tool
+    * User Contibution
+        - Writing a new article
+        - Translation from other language wikipedia articles
+        - Structuring the esssays 
+        - Wikifying the content
+        - Referencing
+        - Updating the content
+        - Administartion work ( by Administrators )
+        - Introducing Wikipedia to others
+        - Coding by Programmers
+        - Adding Media
+        - User Opinions
+        - Verification of work
+        - Graphic Files &amp; Sound files
+    * Tamil Input in Tamil Wikipedia
+
+5.02PM: Copyright of Content contributed to Wikipedia - BalaJeyaraman answering to queries
+
+5.21PM: State of Wikimedia India Chapter - Bala Jeyaraman
+
+5.35PM: Interactive session
+
+6.30PM: Exchanged pleasentaries and dispersed. Two college students tugged around me and I ended up talking non-stop 30-40mins about coding and GSoC
+</code></pre>
+        </div>
+      </div>
+    
+  </div>
+
+  
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

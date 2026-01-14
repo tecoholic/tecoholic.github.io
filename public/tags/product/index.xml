@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Product on Arunmozhi</title>
+    <link>http://localhost:1313/tags/product/</link>
+    <description>Recent content in Product on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Mon, 10 Aug 2020 04:18:40 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/product/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Product - Audience Quadrant</title>
+      <link>http://localhost:1313/2020/08/10/product-audience-quadrant/</link>
+      <pubDate>Mon, 10 Aug 2020 04:18:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/10/product-audience-quadrant/</guid>
+      <description>&lt;p&gt;The Indiehackers podcast #152 &#xA;&lt;a href=&#34;https://www.indiehackers.com/podcast/152-tyler-tringas-and-justin-jackson&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Picking the Right Market to Get Started In with Justin Jackson and Tyler Tringas&lt;/a&gt;&#xA; lays out this relationship quadrant between a product and the audience, which I think is a very important when thinking about a software business.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2020/08/product-audience-fit.png&#34; alt=&#34;product-audience-fit&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

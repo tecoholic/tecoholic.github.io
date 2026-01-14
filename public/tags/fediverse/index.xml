@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fediverse on Arunmozhi</title>
+    <link>http://localhost:1313/tags/fediverse/</link>
+    <description>Recent content in Fediverse on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Tue, 26 Sep 2023 11:22:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fediverse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set uploads space limit per user on Misskey?</title>
+      <link>http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/</link>
+      <pubDate>Tue, 26 Sep 2023 11:22:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/</guid>
+      <description>&lt;p&gt;Change the Policy of the role applied to the user. Since I have a single person instance, I just needed to update the default Policy Template from the Control Panel&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to Control Panel&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click Roles&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Either change the &amp;ldquo;Role Template&amp;rdquo; if you have no roles defined, or edit the role governing the users for whom the limit needs to be changed.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png?w=1024&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Their &amp;ldquo;Roles&amp;rdquo; page should show the new limit under &lt;strong&gt;driveCapacityMb&lt;/strong&gt; and also their &amp;ldquo;Drive&amp;rdquo; page in Basic Settings&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.44.40-pm-1.png?w=610&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

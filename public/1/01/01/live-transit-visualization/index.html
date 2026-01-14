@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Live Transit Visualization | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/1/01/01/live-transit-visualization/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Live Transit Visualization</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="0001-01-01">0001-01-01</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>After a push from 
+<a href="https://twitter.com/logic" target="_blank" rel="noopener">@logic</a>
+, I started working on a project to show live location of suburban trains based on 
+<a href="http://onloop.net/transit/" title="transit.js" target="_blank" rel="noopener">transit.js</a>
+. The idea is to make a map similar to 
+<a href="http://onloop.net/chennairail/" title="Chennai Rail" target="_blank" rel="noopener">this</a>
+ for many cities, with a choice of schedules (weekday/sunday). But I found the jQuery plugin, transit.js, too hardcoded and disorganised to perform what I wanted to and also to my taste.</p>
+<p>I found other projects like:</p>
+<ul>
+<li>
+<a href="https://github.com/PasDeChocolat/LiveBus" title="LiveBus" target="_blank" rel="noopener">LiveBus</a>
+ which does a live status map using SVG maps based on d3.js library and GTFS feeds of the bus data.</li>
+<li>
+<a href="https://transitlive.com/" title="TransitLive" target="_blank" rel="noopener">TransitLive</a>
+ which uses LeafletJS as the map library with their own OSM tiles. The schdule data seems to come from the backend service.</li>
+<li>
+<a href="http://www.nextbus.com/" title="NextBus" target="_blank" rel="noopener">NextBus</a>
+ which has a textual realtime status and route maps based completely on Google Maps.</li>
+<li>
+<a href="http://tripplanner.kingcounty.gov/hiwire?.a=iRealTimeDisplay" title="King County Metro" target="_blank" rel="noopener">King County Metro</a>
+ which again uses Google Maps for the map and a custom way of loading data from its servers. The best map I have seen so far and loads a ton of JS.</li>
+</ul>
+<p>Each has its own technology stack solving the same problem.
+<a href="http://bdon.org/2014/07/13/realtime-transit-data-howto/" target="_blank" rel="noopener">This blog post</a>
+ details the use of GTFS data or the lack of it for realtime visualization. So the generalized picture seems to be that everyone is rolling out a custom version of their own.</p>
+<p>So, I am going to create a simple library that can do this.</p>
+<p>Here is the mockup usage of the library:</p>
+<p>{% highlight javascript %}
+// Create a new livetransit object with the map type
+var lt = new LiveTransit();</p>
+<p>// Assign a div for the map
+var divId = &ldquo;map&rdquo;;
+var mapType = &ldquo;google&rdquo;;</p>
+<p>lt.setupMap(divId, mapType);</p>
+<p>// Overloaded to perform both addRoute and initiateMovement
+lt.initiateMovement(&ldquo;chennai_velachery.kml&rdquo;, &ldquo;chennai_velachery_weekday.json&rdquo;);</p>
+<p>// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+// other probable cases to deal with
+// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+// Specify a different schedule like Sunday/Holiday Schedule
+lt.changeSchedule( &ldquo;chennai_velachery_sunday.json&rdquo; );
+// change the location - city
+lt.changeLocation( &ldquo;new.kml&rdquo;, &ldquo;new.json&rdquo; );
+{% endhighlight %}</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/1/01/01/leader/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Leader</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/net-neutrality-this-is-why/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Net-neutrality. This is why.</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

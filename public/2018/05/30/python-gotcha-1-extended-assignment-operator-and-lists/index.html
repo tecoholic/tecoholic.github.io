@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Python Gotcha #1: Extended Assignment Operator and Lists | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2018/05/30/python-gotcha-1-extended-assignment-operator-and-lists/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Python Gotcha #1: Extended Assignment Operator and Lists</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/python/">#Python</a><span></span>
+    <a href="/tags/coding/">#Coding</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2018-05-30">2018-05-30</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p><em>Extended Assignment Operators</em> - we use them all the time as shorthands for assigning values.
+Lets see how this works when using multiple identifiers (variables) in terms of simple data like a number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">+=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)  <span style="color:#75715e"># only the value of b is changed even though we have assigned a to b</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> b<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span>  <span style="color:#75715e"># the long form assignment also doesn&#39;t affect the original a</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)  
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><h3 id="gotcha">Gotcha</h3>
+<p>Let us apply a similar set of operations on <code>list</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">+=</span> [<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)  <span style="color:#75715e"># surprise! - changing the value of b also affect the value of a</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> b<span style="color:#f92672">+</span>[<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]  <span style="color:#75715e"># surprise again !! - but assigning a new value to b doesn&#39;t</span>
+</span></span></code></pre></div><h3 id="takeaway">Takeaway</h3>
+<p>Now the question is, why does the value of <code>a</code> change when adding elements to <code>b</code>?
+And furthermore why doesn&rsquo;t it change when we do it using the long form?</p>
+<p>The answer is: Extended assignment operators act differently on <em>mutable</em> and <em>immutable</em> values.
+So when we say <code>b += [4,5]</code> we are basically saying add 4 and 5 to the list b, but when we say
+<code>b = b + [6,7]</code>, we are saying &ldquo;take the list b, add 6, 7 to it and <strong>create a new list</strong> from it, then assign it to the identifier b&rdquo;.</p>
+<p>This subtle difference will come to bite us when we least expect it. So be aware and take precautions :)</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2018/09/19/python-tip-1/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Python Tip #1 - Setting flags without using if statements</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2018/03/27/peer-pairing-algorithm/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Peer Pairing Algorithm</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

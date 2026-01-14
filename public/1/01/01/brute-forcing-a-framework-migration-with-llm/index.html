@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Brute-forcing a Django Forms to FastAPI Migration with LLM | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/1/01/01/brute-forcing-a-framework-migration-with-llm/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Brute-forcing a Django Forms to FastAPI Migration with LLM</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="0001-01-01">0001-01-01</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>I decided to migrate a Python Django application to FastAPI. The app was mainly serving APIs for triggering some background tasks. Whatever data it needed could be just put into configs or JSON files.</p>
+<p>There are 2 parts to this app:</p>
+<ol>
+<li><strong>The JSON API</strong> - this is the main API. This was implemented with Pydantic Models and Django-Ninja.</li>
+<li><strong>The Playground</strong> - this is a set of web forms that allows the user to manually upload files to test the API.</li>
+</ol>
+<p>I used Claude code in the Plan mode for it to gather all the information, ask questions and prepare a migration plan. The API was migrated pretty well. Use of Pydantic models and Django-Ninja really helped there. I am not sure if I had Django Rest Framework or something like that, it would have gone as smoothly.</p>
+<p>But the &ldquo;playground&rdquo; was a mess. There is no directly equivalient to Django&rsquo;s Forms in FastAPI. After sometime manually editing Jinja templates, I came up with a way to get a 1:1 migration. It went like this:</p>
+<ul>
+<li>Checked out the main branch with Django</li>
+<li>Made Claude Code generate HTML page for all the URLs in the playground</li>
+<li>Switched to the FastAPI branch</li>
+<li>Asked Claude code to implement the playground so that the HTMLs matched functionally.</li>
+</ul>
+<p>It mostly worked. It missed the CSRF token in the forms and reasoned that &ldquo;FastAPI doesn&rsquo;t need it&rdquo;. I had to prod it a bit to get that implemented and now I have a 1:1 feature parity.</p>
+<p>In all there were about 32 Django Forms being rendered on a single HTML template. Claude managed to keep the same 1 template setup working by defining the fields in Python Code. The form definitions in the Python code are not the best and will require some manual refactoring. Initially, I was thinking, I should ask Claude to generate some integration tests, and then use that as the reference to perform the migration. But, I borrowed the React&rsquo;s UI testing idea to generate artifacts instead. I think it is much simpler and effective solution when dealing with LLMs than writing integration tests.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/1/01/01/bargain/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Bargain</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/creating-opticks-extension-from-scratch/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Creating Opticks Plug-in From Scratch</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

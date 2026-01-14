@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Thinking about the next step as a Python Developer | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/06/15/thinking-about-the-next-step-as-a-python-developer/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Thinking about the next step as a Python Developer</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/python/">#Python</a><span></span>
+    <a href="/tags/thought/">#Thought</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/general/">General</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-06-15">2020-06-15</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p><strong>Disclaimer:</strong> The analysis is not a bullet proof analysis. Despite writing code, and throwing around numbers, this might still be a random observation. Stack Overflow Job board is a not an indicator of everything. So take everything with a pinch of salt.</p>
+<h2 id="python-or-full-stack">Python or Full Stack?</h2>
+<p>As someone who identifies as a Python Developer and uses Python as the primary language for programming, thinking about what to learn next is confusing. I primarily do &ldquo;Full Stack development&rdquo;, that is write backend API in Python Flask/Django and use modern JS (React/Vue) for the frontend. But recently I am seeing a disconnect between the idea of &ldquo;Python Developer&rdquo; and &ldquo;Full Stack Developer&rdquo; in the job postings. Full Stack development seems to be defined more or less synonymous to JS development. Python Job postings on the other hand are more closer to dev ops, systems development, data analytics and machine learning.</p>
+<h2 id="a-simple-experiment">A simple experiment</h2>
+<p>So, I devised a simple experiment to verify what I seeing is in fact something of a trend and not a random observation. Look at the job postings on Stack Overflow for skill demand and use that as an indicator.</p>
+<ul>
+<li>Go to Stack Overflow Jobs</li>
+<li>Set the &ldquo;Tech you like&rdquo; to <code>node.js</code> - <strong>139</strong></li>
+<li>Set the &ldquo;Tech you like&rdquo; to <code>django</code> + <code>flask</code> - <strong>61</strong></li>
+<li>Set the &ldquo;Tech you like&rdquo; to <code>python</code> and &ldquo;Tech you don&rsquo;t like&rdquo; to <code>django</code>+<code>flask</code> - <strong>266</strong></li>
+</ul>
+<blockquote>
+<p>huh, what?</p>
+</blockquote>
+<p>Web Development in NodeJS is more in demand than Web Development in Python and Python&rsquo;s general purpose demand is way more higher than Python Web Development.</p>
+<p><em>For the sake of simplicity, I have considered Django + Flask as the entire Python Web development.</em></p>
+<p>Okay, so my observations and confusion about &ldquo;Full Stack Development&rdquo; becoming more and more Node.js development is in fact valid and I wasn&rsquo;t imagining it.</p>
+<h2 id="whats-up-with-python">What&rsquo;s up with Python?</h2>
+<p>Now I was intrigued with finding out what&rsquo;s happening to Python. What are those 266 other listings? Where is the demand for Python coming from? Also, I am getting a little worried about continuing as a Full Stack (Python) Developer. To get a better idea of the situation, I downloaded the RSS Feed of the Job postings for Python + NodeJS, extracted the categories for each posting and created a map of the 30 most mentioned categories.</p>
+<p><img src="/img/wp-content/uploads/2020/06/selection_022.png" alt="Selection_022"></p>
+<p>Each Job posting is a row with the top 30 categories as columns. If a job positing falls under a category, it is marked 1, otherwise zero. Then I created a heatmap of the correlation matrix of the table, which will tell me how the technologies are related to each other.</p>
+<p><img src="/img/wp-content/uploads/2020/06/heatmap.png" alt="heatmap"></p>
+<p>Anything that has a positive correlation has the value printed in green. Armed with this data, we can make a few observations:</p>
+<ol>
+<li>REST and API are not correlated to Python, but to NodeJS</li>
+<li>Event Flask and Django are not correlated to REST API</li>
+<li>Python is associated with system languages like C, C++, and Java more than web technologies.</li>
+<li>Flask is associated with more technologies than Django. Especially to Micro-Services technologies like Docker and Kubernetes.</li>
+</ol>
+<h3 id="predictions">Predictions</h3>
+<ol>
+<li>General purpose Python web development will probably go the way of Ruby-on-Rails.</li>
+<li>Python Web development&rsquo;s growth will increasingly come from micro-services and API systems which will sit on top of Machine Learning / AI based services.</li>
+<li>PHP, .Net, Java all have their own full-stack definitions and job postings, but I think NodeJS will continue dominate this term.</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Identifying the next thing to learn for a Python Developer doing Full Stack Development means identifying the area of focus. Taking the time to retool in Node.JS might be as good a choice as learning micro services architecture with a bit of DevOps or learning Data Science and ML. Picking a path and moving ahead is looking more of a necessity at this point.</p>
+<p>And I am left wondering which path to choose.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/06/28/text-plain-mime-type-and-python/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">text/plain MIME Type and Python</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/05/13/thoughts-on-the-git-branch-pr-model/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Thoughts on The Git Branch PR Model</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

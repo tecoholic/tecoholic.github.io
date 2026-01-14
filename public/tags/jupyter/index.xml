@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jupyter on Arunmozhi</title>
+    <link>http://localhost:1313/tags/jupyter/</link>
+    <description>Recent content in Jupyter on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Wed, 22 Apr 2020 05:03:57 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jupyter - Finding the point when a line graph crosses the threshold</title>
+      <link>http://localhost:1313/2020/04/22/jupyter-finding-the-point-when-a-line-graph-crosses-the-threshold/</link>
+      <pubDate>Wed, 22 Apr 2020 05:03:57 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/04/22/jupyter-finding-the-point-when-a-line-graph-crosses-the-threshold/</guid>
+      <description>&lt;p&gt;A friend of came up with the problem. There are a set of points [(x, y), (x1, y1), (x2, &amp;hellip;]. He wanted to find the points at which this line would pass the value Z less than the peak. If the maximum value is 100 and Z = 20. He wanted to find the points where it would cross y = 80.&lt;/p&gt;&#xA;&lt;p&gt;Now there are multiple ways to solve this problem. I attempted a simple linear interpolation solution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

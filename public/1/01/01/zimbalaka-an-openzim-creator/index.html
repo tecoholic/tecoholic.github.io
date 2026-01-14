@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+&#39;Zimbalaka &amp;#8211; Zim file creator for Offline Wikipedia&#39; | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/1/01/01/zimbalaka-an-openzim-creator/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>'Zimbalaka &#8211; Zim file creator for Offline Wikipedia'</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="0001-01-01">0001-01-01</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>OpenZim is a Wikimedia developed format for offline reading of Wikipedia. Read more 
+<a href="http://www.openzim.org" target="_blank" rel="noopener">here</a>
+. But the project was sadly sidelined and the support from MediaWiki, the software that runs Wikipedia sites, was also removed.</p>
+<p>I came to know about all this from Bala Jeyaraman of 
+<a href="http://www.vasippu.org" target="_blank" rel="noopener">Vasippu</a>
+. He is planning to introduce tablets in a classroom of 6th standard students, with exceptional comprehension levels compared to average Indian classrooms, and wanted a way to load select material into the tablets. The OpenZim files have an excellent reading app called 
+<a href="http://www.kiwix.org" target="_blank" rel="noopener">Kiwix</a>
+, which also offers complete Wiki sites as downloads. Tablets can’t afford to have huge amount of data, like full Wikipedia. There is no way to create a zim file with select topics. Once has to request the OpenZim team to do it for him/her.</p>
+<h2 id="enter-zimbalaka">Enter Zimbalaka</h2>
+<p>
+<a href="http://srik.me/zimbalaka/" target="_blank" rel="noopener">Zimbalaka</a>
+ is a project which tries to solve just that. It creates offline wikipedia content files in zim file format. A person can input a list of pages that needs to be created as a zim, or at least a wikipedia category. Then Zimbalaka downloads those pages, removes all the clutter like, sidebar, toolbox, edit links …etc., and gives a cleaned version as a zim file for download. It can be opened in Kiwix.</p>
+<p>The zim is created with a simple welcome page with all the pages as a list of links. The openzim format also has an inbuilt search index and Kiwix uses this really well. So you can create zims of 100 articles and still navigate to them easily either way.</p>
+<p>Zimbalaka has multi-lingual and multi-site support. That is, you can create a zim file from pages of any language of the 280+ exiting Wikipedias, and also from sites like WikiBooks, Wiktionary, Wikiversity and such. You can even input any custom url like <code>http://sub.domain.com/</code>, Zimblaka would add <code>/wiki/Page_title</code> to it and download the pages.</p>
+<p>It is currently hosted by my good friend Srikanth (<a href="https://twitter.com/logic" target="_blank">@logic</a>) at <a href="http://srik.me/zimbalaka" target="_blank">
+<a href="http://srik.me/zimbalaka" target="_blank" rel="noopener">http://srik.me/zimbalaka</a>
+</a></p>
+<h3 id="screenshots">Screenshots</h3>
+<p>Here is how the content looks in <a href="https://play.google.com/store/apps/details?id=org.kiwix.kiwixmobile" target="_blank">Kiwix for Android</a>.</p>
+<p><img src="/img/uploads/2015/05/navigate.png" alt="Navigation in Kiwix">
+<img src="/img/uploads/2015/05/multi.png" alt="Multi Site and Language Support"></p>
+<h3 id="pain-points">Pain points</h3>
+<ul>
+<li>A small pain point is that, Zimbalaka also strips the external references that occur at the end of the Wikipedia articles, as I didn’t find it useful in an offline setup.</li>
+<li>You cannot add a custom Welcome page in the zim file. Not a very big priority. The current file does its work of listing all the pages</li>
+<li>You cannot include pages from multiple sites as a single zim file. The workaround is to create multiple files or use a tool called <a href="https://sourceforge.net/p/kiwix/other/ci/master/tree/zimwriterfs/" target="_blank">zimwriterfs</a>, which has to be compiled from source (this is used by zimbalaka behind the scenes).</li>
+</ul>
+<h3 id="developers">Developers</h3>
+<p>This tool is written using Flask – A simple Python web framework for the backend, Bootstrap as the frontend and uses the zimwriterfs compiled binary as the workhorse. The zimming tasks are run by Celery, which has been automated by supervisord. All the co-ordination and message passing happens via Redis.</p>
+<p>Do you want to peek in how it is all done? Here is the source code <a href="https://github.com/tecoholic/Zimbalaka" target="_blank">
+<a href="https://github.com/tecoholic/Zimbalaka" target="_blank" rel="noopener">https://github.com/tecoholic/Zimbalaka</a>
+</a>. Feel free to fork, modify and host your own instance.</p>
+<h3 id="update">Update</h3>
+<p>The OpenZim team has appreciated the effort I had put in and offered to host the tool on their server at 
+<a href="http://zimbalaka.openzim.org" target="_blank" rel="noopener">http://zimbalaka.openzim.org</a>
+. They have also pointed me to a desired backend called ‘mwoffliner’ that they have developed to download and clean the html. I will be working on it in my free time.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/1/01/01/thattachu-open-source-typing-tutor/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">'Thattachu &#8211; Open Source Typing Tutor'</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/a-conversation-about-schools/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">A Conversation About Schools - Part 1</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

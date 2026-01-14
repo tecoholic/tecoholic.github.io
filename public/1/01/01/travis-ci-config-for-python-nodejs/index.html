@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Travis CI config for Python &#43; NodeJS | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/1/01/01/travis-ci-config-for-python-nodejs/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Travis CI config for Python + NodeJS</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="0001-01-01">0001-01-01</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>1 minute</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>I currently work with the 
+<a href="http://www.gluu.org" target="_blank" rel="noopener">Gluu Federation</a>
+ – an open source company. My present job is to build a Web UI for the cluster management using the available API.</p>
+<p>We use Python Flask for the Backend and AngularJS+Bootstrap for the Frontend. Pretty much a standard affair these days. Testing is crucial and we have the backend tests in Python Nose and the Frontend Unit tests using Karma and Jasmine running on NodeJS.</p>
+<p>Now the question is how does one configure the Travis CI .yml file to perform tests in a both Python and Javascript. I initially set up using <code>language: node_js</code> and ran only the frontend tests. Then I went around searching and stumbled on 
+<a href="https://github.com/travis-ci/travis-ci/issues/4090" target="_blank" rel="noopener">travis-ci – issue#4090 – Support multiple languages</a>
+. Thanks to the tip from 
+<a href="https://github.com/BanzaiMan" target="_blank" rel="noopener">@BanzaiMan</a>
+ I now have both frontend and backend tests running with a simple yml file.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/1/01/01/the-year-of-2014/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">The year of 2014</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/unit-testing-with-casperjs/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Unit Testing with CasperJS</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

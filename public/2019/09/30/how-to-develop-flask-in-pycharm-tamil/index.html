@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+PyCharmஇல் Flask செயலி உருவாக்குவது எப்படி? | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2019/09/30/how-to-develop-flask-in-pycharm-tamil/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>PyCharmஇல் Flask செயலி உருவாக்குவது எப்படி?</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/python-flask-tamil/">Python-Flask-Tamil</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2019-09-30">2019-09-30</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>PyCharm என்பது ஒரு ஒருங்கினைந்த நிரலாக்க மென்பொருள். ஆங்கிலத்தில் Integrated Development Environment (IDE) என செல்லும் ஒரு நிரலாக்கக் கருவி. நாம் செய்யும் வேலையின் தரம் நாம் பயன்படுத்தும் கருவிகளைக்கொண்டே இருக்கிறது. ஒரு சிற்பிக்கு அது நன்றாகத் தெரியும். மென்பொருள் உருவாக்கம் சிலை செதுக்குவதைக் காட்டிலும் கடினமான விடயமா என்று தெரியாது, உறுதியாகச் சிக்கலான ஒன்று என்றே நான் கூறுவேன். எனவே நாம் பயன்படுத்தும் கருவிகளும் அதற்கு நிகரானதாக இருக்கு வேண்டும். Notepad, Notedpad++, Emacs, Eclipse, VIM, Atom, VS Code என பலவற்றில் நிரல் எழுதி இப்பொழுது கடைசி 3 ஆண்டுகளாக வருடம் 7-8ஆயிரம் செலவழித்து Professional Edition வாங்கிப் பயன்படுத்தும் அளவிற்கு உடன் நிற்பது PyCharmதான்.</p>
+<p>இனி Python Flask தொடரில் வரும் கட்டுரைகள் எல்லாம் நான் அதிலேயெ எழுதப்போகிறேன். நீங்களும் பயன்படுத்துமாறு கேட்டுக்கொள்கிறேன். (உங்க Mind voice கேக்குது. இல்லை. எனக்கு இதில் எந்த ஆதாயமும் இல்லை)</p>
+<p>Flask தொடரில் இதற்கு முன் வந்த கட்டுரைகள்:</p>
+<ol>
+<li>
+<a href="https://arunmozhi.in/2019/09/27/what-is-python-flask/" target="_blank" rel="noopener">Python Flask என்றால் என்ன?</a>
+</li>
+<li>
+<a href="https://arunmozhi.in/2019/09/28/python-flask-installation-tamil/" target="_blank" rel="noopener">Python Flaskஐ நிறுவுவது எப்படி?</a>
+</li>
+<li>
+<a href="https://arunmozhi.in/2019/09/29/flask-first-application-tamil/" target="_blank" rel="noopener">Flaskஇல் நம் முதல் செயலி</a>
+</li>
+</ol>
+<h3 id="எனனத-7-8-ஆயரம-சலவழககனம">என்னாது? 7-8 ஆயிரம் செலவழிக்கனுமா?</h3>
+<p><strong>இல்லை.</strong></p>
+<p>PyCharm இல் இரண்டு பதிப்புகள் உள்ளன. ஒன்று காசு கொடுத்து வாங்க வேண்டிய Professional Edition, மற்றொன்று <strong>இலவசமாகக்</strong> கிடைக்கும் Community Edition. இந்த தொடரில் நான் பயன்படுத்தப்போவது எல்லாமே Community Edition தான். இன்னும் ஏன் யோசனை? 
+<a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/</a>
+</p>
+<h3 id="pycharm-இலலமல-இநதத-தடர-மலம-படகக-மடயத">PyCharm இல்லாமல் இந்தத் தொடரை மேலும் படிக்க முடியாதா?</h3>
+<p>கண்டிப்பாக முடியும். உங்களுக்கு PyCharm வேண்டாம் என்றால், தாராலமாக உங்களுக்கு பிடித்த கருவிகளைப் பயன்படுத்தாலாம். நாம் Flask கற்றுக்கொள்ள PyCharm அவசியம் கிடையாது. ஆங்காங்கே நான் இடும் படங்கள் PyCharm இன் படங்களாக இருக்க வாய்ப்பு உள்ளது, அதற்கு நிகரான விசயங்களை உங்களுடைய கருவியிலும் பார்த்துக்கொள்ளவும்.</p>
+<h2 id="flask-project-உரவககம">Flask Project உருவாக்கம்</h2>
+<p>PyCharmஐ திறந்து கொள்ளவும்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/launch-window.png" alt="launch-window.png"></p>
+<p>அதில் Create New Project-ஐச் சொடுக்கவும்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/create-project.png" alt="create-project.png"></p>
+<p>வரும் பெட்டியில் நாம் கொடுக்க வேண்டியது இரண்டு விசயங்கள்:</p>
+<ol>
+<li><strong>நம் Project-ஐ எங்கு சேமிக்கப்போகிறோம்.</strong> உங்களுக்கு பிடித்தமான இடத்தை அங்கு கடைசியில் இருக்கு &ldquo;Browse&rdquo; பொத்தானை அமுக்கி தேர்வு செய்து கொள்ளவும். புதிதாக ஒரு folder உருவாக்க வேண்டும் எனில் அதை கடைசியில் டைப் செய்து விடுங்கள். எ.கா. என் கணினியில் நான் code எனும் folderஇல் எல்லா projectகளையும் சேர்த்து வைத்து உள்ளேன். அதனால் code எனும் போல்டரை தேர்வு செய்துவிட்டு, <code>/flaskapp</code> என்பதை தட்டச்சு செய்துவிட்டேன்.</li>
+<li>நாம் எந்த Python version ஐப் பயன்படுத்தப்போகிறோம். உங்கள் கணினியில் ஒரே ஒரு Python மட்டும் இருக்கலாம், அல்லாது பலவையும் இருக்கலாம். எனது கணினியைப் பாருங்கள்</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2019/09/python-interpreters.png" alt="python-interpreters.png"></p>
+<p>இதில் நாம் எதை நம் செயலி உருவாக்கத்திற்கு பயம்படுத்தப் போகிறோமோ அதைத் தேர்வு செய்ய வேண்டும். நாம் Python 3யைத்தான் இக்கட்டுரைத் தொடரில் பயன்படுத்தவிருக்கிறோம். எனவே Python 3ஐ தேர்வு செய்து கொள்ளுங்கள்.</p>
+<p>தேர்வு செய்தவுடன் Create பொத்தானை சொடுக்கவும். இப்பொழுது PyCharm நமக்கான project folderஐ உருவாக்கி அதனுள் ஒரு virutal environmentஐ நமக்கு உருவாக்கித் தந்துவிடும். அது முடிந்தவுடன், PyCharmஇன் project/editor window திறந்து விடும்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/project-window.png" alt="project-window.png"></p>
+<p>இதில் நாம் தெரிந்துகொள்ள வேண்டிய இடங்கள் 5.</p>
+<ol>
+<li>இங்குதான் நாம் நம் தரவுகளை எழுதுவோம்</li>
+<li>இது நம் projectஇல் உள்ள கோப்புகளை பார்வையிட மற்றும் மாற்றங்கள் செய்ய உதவும் Project Tree</li>
+<li>நம் project folderக்குள் எதேனும் கட்டளைகள் இட விரும்பினால் அதற்கு தேவையான Terminal. இதின் சிறப்பு என்னவென்றால், நாம் <code>source env/bin/activate</code> என்று நமது environmentஐ நாம் activate செய்யத்தேவையில்லை. அது தானாகவே activate ஆகிவிடும். நாம் நேராக நமது வேலையை செய்யலாம்.</li>
+<li>Python Console - இது உங்களுக்கு எதாவது சிறு சிறு Python வரிகளை சோதித்துப்பாக்க பயன்படும்.</li>
+<li>Configuration Manager - இங்கு நாம் நமது செயலியை இயக்கிப் பார்க்கத் தேவையானவற்றை பதிவு செய்து, இயக்கி, பிழைகளை கண்டறியும் இடம்.</li>
+</ol>
+<h2 id="flask-சயல-எழததல">Flask செயலி எழுதுதல்</h2>
+<p>கீழே உள்ள terminalஐத் திறந்து, Flaskஐ நிறுவும் கட்டளையை இடவும்</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install flask
+</span></span></code></pre></div><p><img src="/img/wp-content/uploads/2019/09/install-flask.png" alt="install-flask.png"></p>
+<p>அது முடிந்ததும், project treeஇல் உங்கள் project folderஇன் மேல் வலது-&ldquo;க்ளிக்&rdquo; செய்து ஒரு புது Python கோப்பை உருவாக்கவும். அதற்கு <code>app.py</code> என்று பெயரிடுங்கள்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/new-file-creation.png" alt="new-file-creation.png"></p>
+<p>இப்பொழுது திறந்து இருக்கும் அந்த கோப்பில் நம் முதல் செயலிக்கான தரவைப் தட்டச்சு செய்து கொள்ளுங்கள்.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#f92672">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span>
+</span></span></code></pre></div><p>நீங்கள் தட்டச்சு செய்யும் பொழுதே PyCharm உங்களுக்கு உதவ ஆரம்பிப்பதைக் காணலாம்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/type-suggestions.png" alt="type-suggestions.png"></p>
+<p>முழு தரவையும் தட்டச்சு செய்தவுடன் &ldquo;Save&rdquo; செய்து கோப்பை பத்திரப்படுத்திவிடவும்.</p>
+<h2 id="சயலய-இயகக-சதபபத"><img src="/img/wp-content/uploads/2019/09/hello-world-1.png" alt="hello-world.png">
+செயலியை இயக்கி சோதிப்பது</h2>
+<p>வலதுபுறம் மேலே உள்ள &ldquo;Add Configuration&rdquo; பொத்தானை சொடுக்கவும். உடனே அது ஒரு New Configuration பெட்டியத் திறக்கும்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/new-configuration.png" alt="new-configuration.png"></p>
+<p>இதில் உள்ள + குறியை சொடுக்கி ஒரு Python configurationஐ உருவாக்கவும்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/new-config-create-menu.png" alt="new-config-create-menu.png"></p>
+<p>அங்கு நிங்கள் செய்ய வேண்டியவை 4</p>
+<p><img src="/img/wp-content/uploads/2019/09/filled-config.png" alt="filled-config.png"></p>
+<ol>
+<li>Script Pathஇல் உள்ள folder பொத்தானை சொடுக்கி உங்கள் projectக்குள் இருக்கும் virtual environment (venv)க்குள் bin -&gt; flask என்பதைத் தேர்வு செய்து கொள்ளவும்.</li>
+<li>Parametersஇல் run எனத் தட்டச்சு செய்யவும்.</li>
+<li>Environment Variablesஇல் <code>FLASK_APP=app;FLASK_ENV=development;</code> என்பதைச் சேர்க்கவும்.</li>
+<li>Nameஇல் &ldquo;Dev Server&rdquo; என்று கொடுக்கவும்</li>
+</ol>
+<p>அதை OK கொடுத்து மூடி விடவும். இப்பொழுது Dev Sever என்று ஒரு Configuration உங்களுக்கு உருவாகி இருக்கும். அதன் அருகில் உள்ள run பொத்தானை அமுக்கினால், நம்முடைய Flask server வேலை செய்ய ஆரம்பிப்பதைக் காணலாம்.</p>
+<p><img src="/img/wp-content/uploads/2019/09/run-button.png" alt="run-button.png">
+<img src="/img/wp-content/uploads/2019/09/run-window.png" alt="run-window.png"></p>
+<p>இதில் Flaskஇன் server ஆரம்பமாகி, நம்முடைய செயலியை நாம் பார்க்க செல்ல வேண்டிய முகவரி இருக்கும். அந்த முகவரியை சொடுக்கினால், சென்ற கட்டுரையைப் போலவே நமக்கு Hello World எனும் செய்தி காத்திருக்கும்.</p>
+<h3 id="மடவர">முடிவுரை</h3>
+<p>ஒரு terminalஐயும் text editorஐயும் வைத்து செய்த வேலையை இப்படி என்ன என்னமோ configuration எல்லாம் செய்து பயன்படுத்த வேண்டுமா என்று நினைத்தால், கவலைப்படாதீர்கள். இந்த ஒரு முறை இதை செய்து விட்டோம் என்றால் அடுத்த முறை நாம் எதுவும் செய்ய வேண்டியது இல்லை.</p>
+<p><img src="/img/wp-content/uploads/2019/09/relaunch.png" alt="relaunch.png"></p>
+<p>திறந்தவுடன் நமக்கு நம்முடைய project காட்டும். சோதித்துப்பார்க்க நாம் நேரடியாக Dev sever ஐ ஆரம்பிக்காலாம். வேலை முடிந்ததும் மூடி விடலாம். Text Editor, terminal, virtual environment activate செய்வது, Flask app பதிவிட்டு பிறகு run செய்வது என பல விசயங்களில் கவனம் சிதறவிடத் தேவையில்லை.</p>
+<p>உங்களுக்கு இதில் எதேனும் ஐயங்கள் இருந்தால் கீழ பதிவிடவும். நன்றி.</p>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"><img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons Licence"></a>
+<br>
+This work is licensed under a 
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2019/10/08/pop-out-a-box-effect-in-davinci-resolve-16/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Pop-Out a box effect in DaVinci Resolve 16</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2019/09/29/flask-first-application-tamil/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Flaskஇல் நம் முதல் செயலி</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

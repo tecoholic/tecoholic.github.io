@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  PythonTips | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/categories/pythontips/" >
+  <link href="http://localhost:1313/categories/pythontips/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/categories/pythontips/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>PythonTips</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/10/01/python-tip-9/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #9 - sorting</span>
+            
+            
+            <time class="postDate" datetime="2018-10-01">2018-10-01</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Sorting is simplified in Python with sorted(). You can even sort with complex rules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> strings <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;bob&#39;</span>, <span style="color:#e6db74">&#39;donald&#39;</span>, <span style="color:#e6db74">&#39;cathy&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> sorted(strings)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;bob&#39;</span>, <span style="color:#e6db74">&#39;cathy&#39;</span>, <span style="color:#e6db74">&#39;donald&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> sorted(strings, key<span style="color:#f92672">=</span>len)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;bob&#39;</span>, <span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;cathy&#39;</span>, <span style="color:#e6db74">&#39;donald&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">secondchar</span>(word):
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>    <span style="color:#66d9ef">return</span> word[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> sorted(strings, key<span style="color:#f92672">=</span>secondchar)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;cathy&#39;</span>, <span style="color:#e6db74">&#39;alice&#39;</span>, <span style="color:#e6db74">&#39;bob&#39;</span>, <span style="color:#e6db74">&#39;donald&#39;</span>]
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/27/python-tip-8/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #8 - reducing looping by using dicts</span>
+            
+            
+            <time class="postDate" datetime="2018-09-27">2018-09-27</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>In situations where you have a list of objects and have to retrieve then in random order, dictionaries can act as lookup tables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>users <span style="color:#f92672">=</span> list of <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get users one by one by looking up ids</span>
+</span></span><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> next((u <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users <span style="color:#66d9ef">if</span> u<span style="color:#f92672">.</span>id <span style="color:#f92672">==</span> user_1_id), <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>user_2 <span style="color:#f92672">=</span> next((u <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users <span style="color:#66d9ef">if</span> u<span style="color:#f92672">.</span>id <span style="color:#f92672">==</span> user_2_id), <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler solution using lookup table</span>
+</span></span><span style="display:flex;"><span>lookup <span style="color:#f92672">=</span> dict((u<span style="color:#f92672">.</span>id, user) <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> users)
+</span></span><span style="display:flex;"><span>user_1 <span style="color:#f92672">=</span> lookup[user_1_id]
+</span></span><span style="display:flex;"><span>user_2 <span style="color:#f92672">=</span> lookup[user_2_id]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>This tip is not very obvious, hence this explanation:</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/25/python-tip-7/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #7 - getattr()</span>
+            
+            
+            <time class="postDate" datetime="2018-09-25">2018-09-25</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Sometimes we have to deal with external objects and their attributes. getattr() can save you at those times.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Get the attribute name</span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> obj<span style="color:#f92672">.</span>name  <span style="color:#75715e"># AttributeError if name is not present</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check if the attribute is present before fetching</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> obj<span style="color:#f92672">.</span>name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">AttributeError</span>:
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Guest&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler solution</span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> obj<span style="color:#f92672">.</span>name <span style="color:#66d9ef">if</span> hasattr(obj, <span style="color:#e6db74">&#34;name&#34;</span>) <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;Guest&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simplest Solution</span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> getattr(obj, <span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;Guest&#34;</span>)
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/24/python-tip-6/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #6 - Merging Dictionaries</span>
+            
+            
+            <time class="postDate" datetime="2018-09-24">2018-09-24</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Merge or combine dictionaries</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#ae81ff">1</span> }
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;b&#34;</span>: <span style="color:#ae81ff">2</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Adding elements of one dictionary to another</span>
+</span></span><span style="display:flex;"><span>d1<span style="color:#f92672">.</span>update(d2)  <span style="color:#75715e"># d1 =&gt; { &#34;a&#34;: 1, &#34;b&#34;: 2 }</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a new dict with values from other dictionaries</span>
+</span></span><span style="display:flex;"><span>d3 <span style="color:#f92672">=</span> { <span style="color:#f92672">**</span>d1, <span style="color:#f92672">**</span>d2 }  <span style="color:#75715e"># d3 =&gt; { &#34;a&#34;: 1, &#34;b&#34;: 2 }</span>
+</span></span><span style="display:flex;"><span>d4 <span style="color:#f92672">=</span> { <span style="color:#f92672">**</span>d3, <span style="color:#e6db74">&#34;c&#34;</span>: <span style="color:#ae81ff">3</span> }  <span style="color:#75715e"># d4 =&gt; { &#34;a&#34;: 1, &#34;b&#34;: 2, &#34;c&#34;: 3 }</span>
+</span></span></code></pre></div><blockquote>
+<p>** is the unpacking operator</p>
+</blockquote>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/22/python-tip-5/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #5 - Get value from dict if key is present</span>
+            
+            
+            <time class="postDate" datetime="2018-09-22">2018-09-22</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Check for existence of a key in dictionary and retrieve its value if present.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dictionary <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;value&#34;</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># checking for the presence and key and getting the value</span>
+</span></span><span style="display:flex;"><span>wanted <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;key&#34;</span> <span style="color:#f92672">in</span> dictionary:
+</span></span><span style="display:flex;"><span>    wanted <span style="color:#f92672">=</span> dictionary[<span style="color:#e6db74">&#34;key&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler version</span>
+</span></span><span style="display:flex;"><span>wanted <span style="color:#f92672">=</span> dictionary<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;key&#34;</span>, <span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/21/python-tip-3/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #3 - Filtering Lists</span>
+            
+            
+            <time class="postDate" datetime="2018-09-21">2018-09-21</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>Selecting elements from a list that satidfy a condition</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>selected <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> items:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> condition:
+</span></span><span style="display:flex;"><span>        selected<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler version using List comprehension</span>
+</span></span><span style="display:flex;"><span>selected <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> items <span style="color:#66d9ef">if</span> condition]
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/21/python-tip-4/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #4 - Find an element in a list satisfying condition</span>
+            
+            
+            <time class="postDate" datetime="2018-09-21">2018-09-21</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>What if you want to find the first item that matches the condition instead of getting a list of items?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>selected <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> items:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> condition:
+</span></span><span style="display:flex;"><span>        selected <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler version using next()</span>
+</span></span><span style="display:flex;"><span>selected <span style="color:#f92672">=</span> next((i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> items <span style="color:#66d9ef">if</span> condition), <span style="color:#66d9ef">None</span>)
+</span></span></code></pre></div><blockquote>
+<p><strong>next()</strong> is a built in function which is not that well known.</p>
+</blockquote>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/20/python-tip-2/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #2 - Single Line if Statements</span>
+            
+            
+            <time class="postDate" datetime="2018-09-20">2018-09-20</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Setting a value based on condition</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> condition:
+</span></span><span style="display:flex;"><span>    choice <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Head&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    choice <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tail&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Single line Version</span>
+</span></span><span style="display:flex;"><span>choice <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Head&#34;</span> <span style="color:#66d9ef">if</span> condition <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;Tail&#34;</span>
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/19/python-tip-1/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #1 - Setting flags without using if statements</span>
+            
+            
+            <time class="postDate" datetime="2018-09-19">2018-09-19</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>When you have to check for the presence of a value in a list and set a flag based on it, we can avoid typical:</p>
+<pre><code>set default =&gt; check =&gt; update 
+</code></pre>
+<p>routine in Python and condense it to a single line like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;pizza&#39;</span>, <span style="color:#e6db74">&#39;coke&#39;</span>, <span style="color:#e6db74">&#39;fries&#39;</span>]
+</span></span><span style="display:flex;"><span>order_book <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Setting an yes or no flag in another dictionary or object</span>
+</span></span><span style="display:flex;"><span>order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;pizza&#39;</span> <span style="color:#f92672">in</span> orders:
+</span></span><span style="display:flex;"><span>    order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler Version</span>
+</span></span><span style="display:flex;"><span>order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pizza&#39;</span> <span style="color:#f92672">in</span> orders
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+  </div>
+
+  
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

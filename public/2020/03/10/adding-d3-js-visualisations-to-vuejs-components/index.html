@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Adding D3.js Visualisations to VueJS components | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/03/10/adding-d3-js-visualisations-to-vuejs-components/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Adding D3.js Visualisations to VueJS components</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/d3js/">#D3js</a><span></span>
+    <a href="/tags/vue/">#Vue</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-03-10">2020-03-10</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>D3.JS is an amazing library to create data visualizations. But it relies on manipulating the DOM Elements of the web page. When building a website with VueJS we are thinking in terms of reactive components and not in terms of static DOM elements. Successfully using D3.js in Vue components is dependent on our clear understanding of the the Vue life cycle. Because at some point the reactive component becomes a DOM element that we see in the browser. That is when we can start using D3.js to manipulate our DOM elements.</p>
+<p>Let us start with a simple example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">title</span>&gt;Simple Example&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://d3js.org/d3.v5.min.js&#34;</span>&gt;https://d3js.org/d3.v5.min.js&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">h1</span>&gt;Simple Example&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dia&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#dia&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">400</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">svg</span>.<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">enter</span>()
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">i</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#ae81ff">11</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">25</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Now this will give us a inverted bar graph like this:</p>
+<p><img src="/img/wp-content/uploads/2020/03/simple_d3_chart.png" alt="simple_d3_chart"></p>
+<h3 id="doing-the-same-in-a-vue-component">Doing the same in a Vue Component</h3>
+<p>The first step is to include the d3.js library into the project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn add d3 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or npm install d3</span>
+</span></span></code></pre></div><p>Then let us import it to our component and put our code in. The confusion starts with where do we put it the code in. Because we can&rsquo;t just put it into the `` tag like in a HTML file. Since Vue components export an object, we will have to put the code inside one of the object&rsquo;s methods. Vue has a number of lifestyle hooks that we can use for this purpose like beforeCreate, created, mounted..etc., Here is where the knowledge of Vue component life-cycle comes useful. If we see the 
+<a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" target="_blank" rel="noopener">the life-cycle diagram</a>
+ from the documentation, we can see that when the full DOM becomes available to us and the <code>mounted()</code> callback function is called.</p>
+<p><img src="/img/wp-content/uploads/2020/03/vue_cycle_mounted.png" alt="vue_cycle_mounted"></p>
+<p>So, <code>mounted()</code> seems to be a good place to put out D3.js code. Let us do it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">h1</span>&gt;Simple Chart&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dia&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">d3</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;d3&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;VisualComponent&#39;</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">mounted</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#dia&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">400</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">svg</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">enter</span>()
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">i</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">25</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">51</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>)
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><p>Now this shows the same graph that we saw in the simple HTML page example.</p>
+<h3 id="next">Next</h3>
+<ol>
+<li>
+<a href="http://arunmozhi.in/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1" target="_blank" rel="noopener">How to use Vue&rsquo;s reactivity in D3.js Visualizations in Vue Components? - Part 1</a>
+</li>
+<li>
+<a href="https://arunmozhi.in/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2/" target="_blank" rel="noopener">How to use Vue&rsquo;s reactivity in D3.js Visualizations in Vue Components? - Part 2</a>
+</li>
+</ol>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Employing VueJS reactivity to update D3.js Visualisations - Part 1</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/02/24/lottie-amazing-animations-for-the-web/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Lottie - Amazing Animations for the Web</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

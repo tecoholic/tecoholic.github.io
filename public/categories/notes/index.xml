@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Arunmozhi</title>
+    <link>http://localhost:1313/categories/notes/</link>
+    <description>Recent content in Notes on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Wed, 18 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Avoiding Accidental Push to Upstream</title>
+      <link>http://localhost:1313/2024/09/18/avoid-accidental-push-to-upstream/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2024/09/18/avoid-accidental-push-to-upstream/</guid>
+      <description>&lt;p&gt;As anyone who works with multiple remotes in Git and has rights to many of them, I run into the issue of pushing to the wrong remote.&#xA;The main issue is I will simply use &lt;code&gt;git push origin&lt;/code&gt; while a simple &lt;code&gt;git push&lt;/code&gt; might be sufficient.&#xA;After trying and failing many times to get rid of this muscle memory, here are the 2 options I have come up with.&lt;/p&gt;&#xA;&lt;h3 id=&#34;option-1-dont-set-origin&#34;&gt;Option 1: Don&amp;rsquo;t set origin&lt;/h3&gt;&#xA;&lt;p&gt;A Git clone usually sets the remote as &lt;code&gt;origin&lt;/code&gt;. I change this right after a clone to something more descriptive of the source like &lt;code&gt;upstream&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gitea - git push doesn&#39;t work after moving server to new IP</title>
+      <link>http://localhost:1313/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/</link>
+      <pubDate>Fri, 21 Jun 2024 08:20:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/</guid>
+      <description>&lt;p&gt;If Gitea is running as a docker container, then there is a SSH Shim script at &amp;ldquo;/usr/local/bin/gitea&amp;rdquo; that contains the local IP address of the machine, which might be different from the 127.0.0.1 that&amp;rsquo;s &#xA;&lt;a href=&#34;https://docs.gitea.com/installation/install-with-docker&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;provided in the documentation&lt;/a&gt;&#xA;.&lt;/p&gt;&#xA;&lt;p&gt;This script needs to be updated with the new IP address as well.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dealing with ghost/outdated service entries in Nomad</title>
+      <link>http://localhost:1313/2024/04/03/dealing-with-ghost-outdated-service-entries-in-nomad/</link>
+      <pubDate>Wed, 03 Apr 2024 03:07:14 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2024/04/03/dealing-with-ghost-outdated-service-entries-in-nomad/</guid>
+      <description>&lt;p&gt;I have run into this issue multiple times with Nomad. For some reason, when jobs are redeployed/restarted, the service registration isn&amp;rsquo;t removed. This causes my Traefik reverse proxy to send requests to a non-existing allocation in Nomad.&lt;/p&gt;&#xA;&lt;p&gt;Last time this happened, I think I completely nuked the Nomad setup and setup everything from scratch. This time around, I finally figured out the right way to do things.&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Use &lt;code&gt;nomad service list&lt;/code&gt; to get a list of the services&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to set uploads space limit per user on Misskey?</title>
+      <link>http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/</link>
+      <pubDate>Tue, 26 Sep 2023 11:22:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/</guid>
+      <description>&lt;p&gt;Change the Policy of the role applied to the user. Since I have a single person instance, I just needed to update the default Policy Template from the Control Panel&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to Control Panel&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click Roles&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Either change the &amp;ldquo;Role Template&amp;rdquo; if you have no roles defined, or edit the role governing the users for whom the limit needs to be changed.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png?w=1024&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Their &amp;ldquo;Roles&amp;rdquo; page should show the new limit under &lt;strong&gt;driveCapacityMb&lt;/strong&gt; and also their &amp;ldquo;Drive&amp;rdquo; page in Basic Settings&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.44.40-pm-1.png?w=610&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>dev-note: Getting pyenv and pyright to work in Doom Emacs</title>
+      <link>http://localhost:1313/2023/09/12/dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs/</link>
+      <pubDate>Tue, 12 Sep 2023 11:10:47 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2023/09/12/dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs/</guid>
+      <description>&lt;p&gt;Getting Pyenv and Pyright to play nice in python-mode on Doom Emacs requires sticking to a few rules. I discovered these after multiple attempts of trial and error. All the following things might not be needed. But I got things to work only when I set all of these up.&lt;/p&gt;&#xA;&lt;p&gt;So, best advice is - start here and try to reduce it down.&lt;/p&gt;&#xA;&lt;h3 id=&#34;emacs-config&#34;&gt;Emacs Config&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Edit your &lt;code&gt;.doom.d/init.el&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Enable both &lt;code&gt;lsp&lt;/code&gt; and &lt;code&gt;tree-sitter&lt;/code&gt; in the tools. &lt;code&gt;tree-sitter&lt;/code&gt; is not probably needed for this. But, I wanted to use it, so.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>dev-note: Doom Emacs status line missing icons on fresh install</title>
+      <link>http://localhost:1313/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/</link>
+      <pubDate>Tue, 12 Sep 2023 09:10:27 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s say you set up &#xA;&lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doom Emacs&lt;/a&gt;&#xA; from scratch for the first time, and you followed the instructions correctly and install the &lt;code&gt;all-the-icons&lt;/code&gt; fonts when prompted, saw the icons properly displayed in the dashboard (launch window), but once you open a file, the status line starts showing random characters, instead of icons.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You need to install nerd-icons using &lt;code&gt;M-x nerd-icons-install-fonts&lt;/code&gt; because the doom-modline has switched from all-the-icons to nerd-icons&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://github.com/seagle0128/doom-modeline/issues/310&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/seagle0128/doom-modeline/issues/310&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Podcast Notes: Darren Palmer on the EV Revolution</title>
+      <link>http://localhost:1313/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/</link>
+      <pubDate>Wed, 13 Apr 2022 01:24:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/</guid>
+      <description>&lt;h2 id=&#34;preamble&#34;&gt;Preamble&lt;/h2&gt;&#xA;&lt;p&gt;I listen to podcasts while doing chores like cooking, travelling in public transport, doing dishes&amp;hellip;etc., In most cases, I just absorb what I can with the partial attention I provide to the podcast. Recently I thought, I would listen to some of them with a bit more attention, like a lecture and take some notes. I learnt a lot in this one from how EV range anxiety is a non-problem to wineries hedge their quality of wine my mixing grapes from different fields.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Product - Audience Quadrant</title>
+      <link>http://localhost:1313/2020/08/10/product-audience-quadrant/</link>
+      <pubDate>Mon, 10 Aug 2020 04:18:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/10/product-audience-quadrant/</guid>
+      <description>&lt;p&gt;The Indiehackers podcast #152 &#xA;&lt;a href=&#34;https://www.indiehackers.com/podcast/152-tyler-tringas-and-justin-jackson&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Picking the Right Market to Get Started In with Justin Jackson and Tyler Tringas&lt;/a&gt;&#xA; lays out this relationship quadrant between a product and the audience, which I think is a very important when thinking about a software business.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2020/08/product-audience-fit.png&#34; alt=&#34;product-audience-fit&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating Opticks Plug-in From Scratch</title>
+      <link>http://localhost:1313/1/01/01/creating-opticks-extension-from-scratch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/1/01/01/creating-opticks-extension-from-scratch/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Windows Only&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;rant-about-bad-documentation-in-opticks&#34;&gt;Rant about bad documentation in Opticks&lt;/h3&gt;&#xA;&lt;p&gt;I was to build a custom Plug-in for the open source satellite image processing software &#xA;&lt;a href=&#34;http://www.opticks.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Opticks&lt;/a&gt;&#xA; in the college. Extension, plugin, addon - anyway you call it. It has always been my playground. So I thought this would be another quick dip in a new pool. I was wrong. They have a seperate Plug-in development SDK and all their problems start there. You can run through their documentation umpteen times, all times you would end up is a place that has a set of instructions telling you to build the sample plugins and the Plug-in development tutorials using a previously setup Microsoft Visual Studio project and a batch file called retrive_dependencies.bat running a Java jar file. What is bad about it? Because I donot know what the damn settings I have to set in the project settings, what are my dependencies and no clue how to create a plugin other than the sample plugins. YES. NO CLUE TO CREATE NEW Plug-in FROM SCRATCH.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes on ILUGC March Meet and Wikipedia Chennai Meetup 5</title>
+      <link>http://localhost:1313/1/01/01/notes-on-ilugc-march-meet--wikipedia-chennai-meetup-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/1/01/01/notes-on-ilugc-march-meet--wikipedia-chennai-meetup-5/</guid>
+      <description>&lt;p&gt;I attended this meet and kept typing in my observations to keep myself completely concentrated about what is being said.&#xA;This has been sitting as a text file in my drive without purpose, so I thought it would be better taken care online.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;3:50PM: Introduction by T.Shrinivasan&#xA;3.52PM: Technical talk 1: Swift by Yogesh&#xA;      OpenStack - Swift - Object Storage Component&#xA;      -&amp;gt; public cloud&#xA;      -&amp;gt; private cloud, home server, admistration&#xA;      -&amp;gt; VMs&#xA;      -&amp;gt; Image Server&#xA;      -&amp;gt; Volatile machines -&amp;gt; Virtual hard disk -&amp;gt; Block Storage -&amp;gt; Amazom EBS&#xA;      -&amp;gt; Authentication Server -&amp;gt; User permissions&#xA;      -&amp;gt; Object storage -&amp;gt; data stored in&#xA;&#xA;Slide 1: Introduction&#xA;* Object Storage&#xA;* Analogous to AWS S3&#xA;* API based access only - no mount, no format, no file system - recent developements give a illusion of file system - Pyhton running over Aapache&#xA;* Major Usage - Media and Big Data Storage&#xA;&#xA;Slide 2: Use Cases&#xA;* Media Storage&#xA;* Big Data Storage&#xA;* Backup and archival&#xA;* Conten Delivery&#xA;* Data distribution&#xA;&#xA;Slide 3: Features&#xA;* REST based API&#xA;* versioning&#xA;* Scalable and distributed&#xA;* Redunant( Replications ) - Minimum of 3&#xA;* Streaming Support&#xA;* Cheap( community Servers )&#xA;&#xA;Slide 4: Components&#xA;* Proxy Server - gateway to use the system - autheticates using authetication server&#xA;* Account Server - holds info about containers&#xA;* Container Server - hold info about object&#xA;* Object Server -  holds the actual data&#xA;* Rings - Hashing of the data&#xA;* Caching Server - caching data and authetication code&#xA;&#xA;Slide 5: Contribution&#xA;* Contibutor&#39;s License agreement&#xA;* Fork from Github / Pull Request&#xA;* Patches / Bug Fixes&#xA;* Python&#xA;&#xA;Slide 6: Getting Help&#xA;* Mailing Lists&#xA;* Blogs &amp;amp; Social Media&#xA;* Documentation&#xA;* IRC&#xA;* Meetups - meetup.com&#xA;&#xA;4.26PM: Wikimedia India Chapter - Bala Jeyaraman (SodaBottle)&#xA;        Overview about the Wikipedia related talks&#xA;        * Introduction to Bala and Surya Prakash&#xA;&#xA;4.31PM: State of Tamil Wikipedia - Surya Prakash&#xA;    * What is Wikipedia? - Online Refrence Wikipedia&#xA;    * Contributors and what they do?&#xA;    * Statistics about the Wikipedia usage&#xA;    * Contibutors - Who they are? What they do? &#xA;    * Edits - What are wikipedia edits?&#xA;    * What do you achieve by editing wikipedia?&#xA;        - Writing style and fluentcy&#xA;        - Team work and co-operation&#xA;        - Critical thinking and analysis&#xA;        - Global Society&#xA;    * Other Wikipedia Projects&#xA;        - Wiki Source&#xA;        - Wiki Books&#xA;        - WikiPedia&#xA;        - Wikimedia Commons&#xA;        - Wiki News&#xA;        - Wiki Quotes&#xA;        - Wiktionary&#xA;    * What wikipedia is not?&#xA;        - a dictionary&#xA;        - a text book&#xA;        - an archive&#xA;        - an advertisement board&#xA;        - a chat room&#xA;        - a blog&#xA;        - a campign tool&#xA;        - a correction tool&#xA;        - a research publication&#xA;        - an experimental tool&#xA;    * User Contibution&#xA;        - Writing a new article&#xA;        - Translation from other language wikipedia articles&#xA;        - Structuring the esssays &#xA;        - Wikifying the content&#xA;        - Referencing&#xA;        - Updating the content&#xA;        - Administartion work ( by Administrators )&#xA;        - Introducing Wikipedia to others&#xA;        - Coding by Programmers&#xA;        - Adding Media&#xA;        - User Opinions&#xA;        - Verification of work&#xA;        - Graphic Files &amp;amp; Sound files&#xA;    * Tamil Input in Tamil Wikipedia&#xA;&#xA;5.02PM: Copyright of Content contributed to Wikipedia - BalaJeyaraman answering to queries&#xA;&#xA;5.21PM: State of Wikimedia India Chapter - Bala Jeyaraman&#xA;&#xA;5.35PM: Interactive session&#xA;&#xA;6.30PM: Exchanged pleasentaries and dispersed. Two college students tugged around me and I ended up talking non-stop 30-40mins about coding and GSoC&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

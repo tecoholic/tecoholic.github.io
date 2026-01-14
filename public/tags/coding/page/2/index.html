@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  Coding | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/tags/coding/" >
+  <link href="http://localhost:1313/tags/coding/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/tags/coding/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>Coding</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/09/19/python-tip-1/">
+          <div class="postHeader">
+            <span class="postTitle">Python Tip #1 - Setting flags without using if statements</span>
+            
+            
+            <time class="postDate" datetime="2018-09-19">2018-09-19</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 1 minute
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>When you have to check for the presence of a value in a list and set a flag based on it, we can avoid typical:</p>
+<pre><code>set default =&gt; check =&gt; update 
+</code></pre>
+<p>routine in Python and condense it to a single line like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>orders <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;pizza&#39;</span>, <span style="color:#e6db74">&#39;coke&#39;</span>, <span style="color:#e6db74">&#39;fries&#39;</span>]
+</span></span><span style="display:flex;"><span>order_book <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Setting an yes or no flag in another dictionary or object</span>
+</span></span><span style="display:flex;"><span>order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;pizza&#39;</span> <span style="color:#f92672">in</span> orders:
+</span></span><span style="display:flex;"><span>    order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Simpler Version</span>
+</span></span><span style="display:flex;"><span>order_book[<span style="color:#e6db74">&#39;pizza&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pizza&#39;</span> <span style="color:#f92672">in</span> orders
+</span></span></code></pre></div>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/05/30/python-gotcha-1-extended-assignment-operator-and-lists/">
+          <div class="postHeader">
+            <span class="postTitle">Python Gotcha #1: Extended Assignment Operator and Lists</span>
+            
+            
+            <time class="postDate" datetime="2018-05-30">2018-05-30</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p><em>Extended Assignment Operators</em> - we use them all the time as shorthands for assigning values.
+Lets see how this works when using multiple identifiers (variables) in terms of simple data like a number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> a
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">+=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)  <span style="color:#75715e"># only the value of b is changed even though we have assigned a to b</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> b <span style="color:#f92672">=</span> b<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span>  <span style="color:#75715e"># the long form assignment also doesn&#39;t affect the original a</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(b)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(a)  
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><h3 id="gotcha">Gotcha</h3>
+<p>Let us apply a similar set of operations on <code>list</code></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/03/27/peer-pairing-algorithm/">
+          <div class="postHeader">
+            <span class="postTitle">Peer Pairing Algorithm</span>
+            
+            
+            <time class="postDate" datetime="2018-03-27">2018-03-27</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="problem-statement">Problem Statement</h2>
+<p>A class has <strong>N</strong> number of students. When the students submit an assignment, they are assigned <strong>K</strong> peers to review their assignments and provide feedback such that <em>0 &lt; K &lt; N</em>. Now, if given the input <strong>N</strong> and <strong>K</strong>, return a <em>dict</em> (Python) <em>Object</em> (JavaScript) or something equivalent in other languages in the format, <code>student: [list of reviewers]</code> adhering to the following rules:</p>
+<ol>
+<li>Each student should be assigned <strong>K</strong> reviewers.</li>
+<li>The student cannot review his/her own work.</li>
+<li>There shouldn&rsquo;t be multiple reviews by the same person. Each reviewer assigned should be unique.</li>
+</ol>
+<p>I should return 0/False if there is an error in the input conditions such <em>K &gt;= N</em></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2018/03/02/simplistic-algorithms-with-python/">
+          <div class="postHeader">
+            <span class="postTitle">Simplistic Algorithms with Python</span>
+            
+            
+            <time class="postDate" datetime="2018-03-02">2018-03-02</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I have been working on the problems in Codility to get better at the algorithms and also to expand the way I solve problems in general. One common thing I notice with using Python as the language is that, sometimes the solutions are so simple I wonder if I learnt anything at all.</p>
+<p>Take for example, this challenge called 
+<a href="https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/" target="_blank" rel="noopener">GenomicRangeQuery</a>
+ which aims to teach the application of Prefix sums in problem solving. Here is the solution which gets the perfect score of 100% for both accuracy and complexity.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/1/01/01/using-react-for-parts-of-a-flask-app/">
+          <div class="postHeader">
+            <span class="postTitle">Using React for parts of a Falsk App</span>
+            
+            
+            <time class="postDate" datetime="0001-01-01">0001-01-01</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 7 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="background">Background:</h2>
+<p>As a part of my work, I needed a console like viewer in a web application (like the one used in travis.ci). The frontend is simply Bootstrap 3 and some jQuery JavaScript. I have written a rudimentary one using Bootstrap&rsquo;s Panel and List Groups and using the helper classes to style them. But the appication has grown and it is time we got a really good log viewer.</p>
+<h2 id="requirements">Requirements:</h2>
+<ul>
+<li>The library should be easy to include in the project without requiring a complete overhaul of the frontend. (Things like Angular, Ember are out)</li>
+<li>We might decouple the app into a REST API and frontend sometime in the future, so it needs to provide a upgrade path for the full frontend.</li>
+<li>To me, a Python programmer, it should be easy to get started and start building, without enforcing specific new requirements.
+(e.g., Angular forces TypeScript, I am willing to learn, just not now, not for this one)</li>
+</ul>
+<p>React with JSX syntax, the ability to just drop the the library and use it for only selective parts of the app seemed just right. After trying out the tic-tac-toe tutorial, I ventured to setup it for our project.</p>
+        </div>
+      </div>
+    
+  </div>
+
+  <nav class="pagination" role="navigation" aria-label="Pagination"><a class="pagination-prev" href="/tags/coding/" rel="prev">
+    « newer posts
+  </a><span class="pagination-status">
+    page 2 / 2
+  </span></nav>
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

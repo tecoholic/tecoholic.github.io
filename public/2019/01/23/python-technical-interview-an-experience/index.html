@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Python Technical Interview - An Experience | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2019/01/23/python-technical-interview-an-experience/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Python Technical Interview - An Experience</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/documentation/">#Documentation</a><span></span>
+    <a href="/tags/experience/">#Experience</a><span></span>
+    <a href="/tags/python/">#Python</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2019-01-23">2019-01-23</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>As a freelancer one of the things that comes with getting a project/job is handling technical interviews. I have so far managed to convince the client with a work sample, test project &hellip;etc., This is literally the first time I sat for a full technical interview. And it did teach a few lessons. Let me document it for future use.</p>
+<p>It started off with the basic of the language:</p>
+<h4 id="1-what-is-the-difference-between-an-iterable-and-an-iterator">1. What is the difference between an iterable and an iterator?</h4>
+<p>Vincent Driessen provides a clear explanation of the difference with the examples here 
+<a href="https://nvie.com/posts/iterators-vs-generators/" target="_blank" rel="noopener">https://nvie.com/posts/iterators-vs-generators/</a>
+</p>
+<p>As an aside, he has a number of posts which are really great like his Git workflow model that I have used in my projects. Bookmark it</p>
+<h4 id="2-what-is-a-context-manager-what-is-its-purpose-how-is-it-different-from-a-tryfinally-block-why-would-you-use-one-over-another">2. What is a Context Manager? What is its purpose? How is it different from a try&hellip;finally block? Why would you use one over another?</h4>
+<p>Context Manager are functions/classes that allow us to allocate and release resources as required. Used with the <code>with</code> keyword in code.</p>
+<p>The difference between context manager and <code>try..finally</code> block is explained in technical detail here: 
+<a href="https://stackoverflow.com/questions/26096435/is-python-with-statement-exactly-equivalent-to-a-try-except-finally-bloc" target="_blank" rel="noopener">https://stackoverflow.com/questions/26096435/is-python-with-statement-exactly-equivalent-to-a-try-except-finally-bloc</a>
+</p>
+<p>But a simpler more practical difference is given by Dan Bader: 
+<a href="https://dbader.org/blog/python-context-managers-and-with-statement" target="_blank" rel="noopener">https://dbader.org/blog/python-context-managers-and-with-statement</a>
+</p>
+<h4 id="3-can-you-tell-me-some-advantages-of-python-over-other-languages">3. Can you tell me some advantages of Python over other languages?</h4>
+<p>I rambled something like, it is is easier to read and write. The file structure (I should have said modules/packages) is great. Even modern iterations of Javascript are copying the <code>import</code> <code>from</code> syntax. Native implementation of a lot of things in standard library&hellip;etc.,et.,</p>
+<p>But the thing my interviewer was looking for were the words &ldquo;automatic garbage collection&rdquo; because the next question was</p>
+<h4 id="4-how-does-python-handle-memory">4. How does Python handle memory?</h4>
+<p>Python has automated memory management and garbage collection.That is why we never worry about how much memory we are allocating like C&rsquo;s <code>malloc</code> `calloc functions.</p>
+<h4 id="5-do-you-know-how-python-does-that-do-you-know-about-gil">5. Do you know how Python does that? Do you know about GIL?</h4>
+<p><em>sheepish smiles and saying no&rsquo;s ensued</em>. I ran into an issue a few months back, I think maybe with a DB connection issue or something which led me on a rabbit hole that ended with GIL. I should have learnt it that day.</p>
+<p>Anyway, here is the article about Python&rsquo;s memory management. 
+<a href="https://realpython.com/python-memory-management/" target="_blank" rel="noopener">https://realpython.com/python-memory-management/</a>
+</p>
+<h4 id="6-have-you-worked-on-projects-involving-multi-threading-what-do-you-know-about-multi-threading">6. Have you worked on projects involving multi-threading? What do you know about multi-threading?</h4>
+<p>I hadn&rsquo;t. Someday maybe I will.</p>
+<h4 id="7-can-you-explain-in-detail-the-steps-involved-in-a-form-submit-to-response-cycle-in-detail">7. Can you explain in detail the steps involved in a form submit to response cycle in detail?</h4>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data</a>
+</p>
+<h4 id="8-how-does-the-browser-know-where-your-server-is-when-the-information-is-submitted-to-a-particular-url">8. How does the browser know where your server is when the information is submitted to a particular URL?</h4>
+<p>DNS servers - IP resolution</p>
+<h4 id="9-the-server-sends-back-text-as-a-string-how-do-you-see-colorful-information-in-browser">9. The server sends back text as a string how do you see colorful information in browser?</h4>
+<p>The text is converted into DOM elements which are rendered by the browsers rendering engine.</p>
+<h4 id="10-if-a-browser-is-showing-unreadable-character-and-question-marks-instead-of-displaying-the-information-what-could-be-the-reason">10. If a browser is showing unreadable character and question marks instead of displaying the information what could be the reason?</h4>
+<p>Document Encoding mismatch. The server might send the data encoded in Unicode UTF-8 and the browser might be decoding it as ASCII or LATIN-1 resulting in weird characters and question marks being rendered in the browser.</p>
+<h4 id="11-you-said-unicode-and-utf-8-what-is-the-difference">11. You said Unicode and UTF-8 what is the difference?</h4>
+<p>Unicode is the term used to describe the character set. If it is encoded with 8 bits it is called UTF-8, if encoded with 16 bits it is called UTF-16 etc.,</p>
+<p>For deep dive into Unicode (a must): 
+<a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/" target="_blank" rel="noopener">https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/</a>
+</p>
+<h4 id="12-what-kind-of-request-does-the-browser-make-to-a-server-and-what-are-the-types-of-requests-that-can-be-made">12. What kind of request does the browser make to a server? And what are the types of requests that can be made?</h4>
+<p>Browsers make a HTTP requests. The types are GET, POST, PUT, DELETE, HEAD, OPTIONS ..etc., (I think I said UPDATE instead of PUT, silly)</p>
+<h4 id="13-what-is-the-difference-between--and--in-javascript">13. What is the difference between <code>==</code> and <code>===</code> in JavaScript?</h4>
+<p>StackOverflow: 
+<a href="https://stackoverflow.com/questions/523643/difference-between-and-in-javascript" target="_blank" rel="noopener">https://stackoverflow.com/questions/523643/difference-between-and-in-javascript</a>
+</p>
+<p>Some other questions, that were asked:</p>
+<ol>
+<li>Do you know Docker? Have you used AWS?</li>
+<li>Do you know Data Base schema design?</li>
+<li>You have a SQL query that takes a long time to execute. How would you begin to make it faster? Do you know about Query optimisation and execution plans?</li>
+</ol>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2019/01/28/map-of-pm-modis-domestic-visits/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Map of PM Modi's Domestic Visits</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2019/01/16/what-is-the-relation-between-the-sc-population-and-sc-literacy/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">What is the relation between the SC population and SC literacy?</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

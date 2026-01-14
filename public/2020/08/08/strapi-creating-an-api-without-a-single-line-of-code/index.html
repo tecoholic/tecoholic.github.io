@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Strapi - Creating an API without a single line of code | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Strapi - Creating an API without a single line of code</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/api/">#Api</a><span></span>
+    <a href="/tags/js/">#Js</a><span></span>
+    <a href="/tags/software/">#Software</a><span></span>
+    <a href="/tags/strapi/">#Strapi</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-08-08">2020-08-08</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>8 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>
+<a href="https://strapi.io/" target="_blank" rel="noopener">Strapi</a>
+ is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API - both REST and GraphQL. I picked this up for a quick project in place of my regular Python frameworks like Flask or Django, because I can have an API up and running without writing a single line of code.</p>
+<p>This is a mini series which outlines:</p>
+<ol>
+<li>Setting up Strapi and creating an API - (you are here)</li>
+<li>
+<a href="http://arunmozhi.in/2020/08/11/strapi-adding-isowner-policy-to-the-api/" target="_blank" rel="noopener">Adding ownership control to the API endpoints</a>
+</li>
+<li>Optimising REST API responses</li>
+</ol>
+<h2 id="why-this-series">Why this series?</h2>
+<p>There is already wealth of blog posts on using Strapi for creating a variety of websites and apps. But most of them tend to focus on capabilities of vanilla Strapi. I want to focus on a couple of customisations that I made when using it to build a web application.</p>
+<h2 id="our-example-app">Our example app</h2>
+<p>Our example API is for an expense management system. Users can do the following things via the API:</p>
+<ol>
+<li>CRUD operations on Expense items</li>
+<li>CRUD operations on Categories which will be used to group the expense items</li>
+</ol>
+<p><strong>Note:</strong> I am not going to get into building frontend in this series, we will just focus on Strapi and the API</p>
+<h3 id="installing-strapi">Installing Strapi</h3>
+<p>The 
+<a href="https://strapi.io/documentation/v3.x/getting-started/installation.html" target="_blank" rel="noopener">Strapi Documentation</a>
+ is probably the best source for this based on your method of choice. You can install it on local machine, just pull a docker container or use a cloud provider like Digital Ocean or Platform.sh.</p>
+<p>I will refrain from posting the instructions here to avoid duplication.</p>
+<h3 id="creating-the-admin-account">Creating the Admin Account</h3>
+<p>Once you have created a new project, start the application in development mode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>yarn develop
+</span></span></code></pre></div><p><strong>Side note:</strong> This is very important, I once started it using the <code>yarn start</code> command and spent a solid 5 minutes searching why all the edit functionalities have disappeared.</p>
+<p>You will be greeted with a admin registration screen like this one.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-register-admin.png" alt="strapi-register-admin"></p>
+<p>Fill in the information and create the admin account. This should log you in and show the Admin Homepage</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-admin-home.png" alt="strapi-admin-home"></p>
+<h3 id="creating-the-models">Creating the Models</h3>
+<p>Strapi employs the well known MVC (Model-View-Controller) pattern. So, the first step is to define the Models for the API. Models are called as &ldquo;Content-Type&rdquo; in Strapi due to the CMS nature of the application. Click the &ldquo;Create Your First Content-Type&rdquo; button on the home page to create our first model - Category.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-category.png" alt="strapi-category"></p>
+<p>Click Continue, now we can add the fields for the model.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-fields.png" alt="strapi-fields"></p>
+<p>The category model is going to have two fields:</p>
+<ol>
+<li>name - a string - the name of the category</li>
+<li>color - a string - the hex code of the category color which be used for the frontend</li>
+</ol>
+<p>Since both of them are strings, let&rsquo;s click <strong>Text</strong> and create the fields</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-category-name.png" alt="strapi-category-name"></p>
+<p>When we describe models in code, we usually have some constraints like primary key, unique, not-null ..etc., In this case we want the categories to have a name and have a minimum of 2 characters. We can specify that by switching to the <strong>Advanced Settings</strong> tab and setting the constraints.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-text-advanced-settings.png" alt="strapi-text-advanced-settings"></p>
+<p>Click <strong>+ Add another field</strong> and create another &ldquo;Text&rdquo; field for <code>color</code>. (I am leaving the screenshot out for that one)</p>
+<p>Click finish after putting in the details for color field.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-category-2.png" alt="strapi-category-2"></p>
+<p>We want the Categories to be user specific. So we need to add a relationship between the User Model which is already there and between the Category model which we just created.</p>
+<ul>
+<li>Click &ldquo;Add another field&rdquo; button again and select <strong>Relation</strong>.</li>
+<li>On the relation dialog on the right side, click the dropdown next to Category and select User.</li>
+<li>In the middle relationship buttons select the Many-to-One icon such that the description reads (User has many Categories)</li>
+</ul>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-category-user-relation.png" alt="strapi-category-user-relation"></p>
+<ul>
+<li>Click Finish and Click Save</li>
+<li>Strapi will save this changes to the application and restart the application.</li>
+<li>Now if you open the <code>api</code> folder and look at the contents you will see the files that Strapi created for the &lsquo;Category&rsquo; Model</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>api
+</span></span><span style="display:flex;"><span>└── category
+</span></span><span style="display:flex;"><span>├── config
+</span></span><span style="display:flex;"><span>│   └── routes.json
+</span></span><span style="display:flex;"><span>├── controllers
+</span></span><span style="display:flex;"><span>│   └── category.js
+</span></span><span style="display:flex;"><span>├── models
+</span></span><span style="display:flex;"><span>│   ├── category.js
+</span></span><span style="display:flex;"><span>│   └── category.settings.json
+</span></span><span style="display:flex;"><span>└── services
+</span></span><span style="display:flex;"><span>└── category.js
+</span></span></code></pre></div><h3 id="exercise-create-the-expense-item-model">Exercise: Create the Expense Item model</h3>
+<p>Now that we know the steps to create a model visually, I am going to leave creating the <code>Expense Item</code> Model as an exercise. The model will have the following fields</p>
+<ol>
+<li>amount - Number - Floating point value to hold the expense amount</li>
+<li>name - Text - A short description of the expense</li>
+<li>date - Date - The date when the expense was made</li>
+<li>category - Relation - category of the expense (Category has many Expense Items)</li>
+<li>user - Relation - User the expense item belongs (User has many Expense Items)</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-expense-item.png" alt="strapi-expense-item"></p>
+<h3 id="testing-the-rest-api">Testing the REST API</h3>
+<p>Now that our models and controllers are all in place, our API is ready. Let us try it out by visiting <code>http://localhost:1337/categories</code>
+<img src="/img/wp-content/uploads/2020/08/strapi-403.png" alt="strapi-403"></p>
+<p>Oops, we don&rsquo;t have access. While it is a disappointment, it is actually a good thing. By default Strapi doesn&rsquo;t allow access to any resources. We need to configure access rules for the API to be usable. Let us do that by heading back to Strapi admin page.</p>
+<h3 id="enable-api-access">Enable API Access</h3>
+<p>Go to the Strapi Admin page, click the Roles and Permissions on the sidebar and click on the edit button for Authenticate.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-roles-permissions-1.png" alt="strapi-roles-permissions"></p>
+<p>In the Permissions, click <strong>Select All</strong> for Category and Expense-Item and Save. This will allow any user who is logged into to perform all sorts of operations on the Category and Expense Item models.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-select-all.png" alt="strapi-select-all"></p>
+<h3 id="create-a-test-user">Create a test user</h3>
+<p>It can be noticed that the <strong>Roles &amp; Permissions</strong> page shows &ldquo;0 User&rdquo; for the Authenticated role despite us logged in as the admin. That&rsquo;s because Strapi considers Super Admin users different from users created for the <strong>User</strong> content type. So, we will create a new user who will act as the test user.</p>
+<ul>
+<li>On the sidebar click Users under Collection Types</li>
+<li>Click &ldquo;Add new user&rdquo;</li>
+<li>Input username, email and password</li>
+<li>Set confirmed to ON (we are going to skip the whole email confirmation here)</li>
+<li>Click Save</li>
+</ul>
+<p>Now if you switch to the <strong>Roles &amp; Permissions</strong> page, you should see it say &ldquo;1 User&rdquo; in the Authenticated row.</p>
+<h3 id="testing-the-api-as-an-authenticated-user">Testing the API as an authenticated user</h3>
+<p><strong>Side Note:</strong> I will use 
+<a href="https://www.postman.com/" target="_blank" rel="noopener">Postman</a>
+ to test the API. You can use whatever you are comfortable with using this as reference: 
+<a href="https://strapi.io/documentation/v3.x/guides/auth-request.html#login-as-a-reader" target="_blank" rel="noopener">Authenticated Request</a>
+</p>
+<p>In order for the requests to be sent as an authenticated user, we need a use the JWT returned during login and use it as the Bearer Token. So, let us login at <code>http://localhost:1337/auth/local</code>
+<img src="/img/wp-content/uploads/2020/08/strapi-user-auth.png" alt="strapi-user-auth"></p>
+<p>Let us copy that JWT token from the response and use it to test <code>http://localhost:1337/categories</code>
+<img src="/img/wp-content/uploads/2020/08/strapi-get-categories.png" alt="strapi-get-categories"></p>
+<p>The 403 Forbidden error is gone and we have a 200 OK response with empty array <code>[]</code>. Now let us create a Category using a POST request with the same request.</p>
+<ul>
+<li>Set the method to POST</li>
+<li>Switch to the Body Tab</li>
+<li>Select <code>raw</code> and type <code>JSON</code> and</li>
+<li>Enter the data as</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Travel&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;{{$randomHexColor}}&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Side Note:</strong> I like how Postman provides functions to generate values like random colors.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-new-category.png" alt="strapi-new-category">
+<strong>Response</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Travel&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;#535203&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;user&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;created_by&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;updated_by&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2020-08-08T08:01:13.290Z&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;updated_at&#34;</span>: <span style="color:#e6db74">&#34;2020-08-08T08:01:13.290Z&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;expense_items&#34;</span>: []
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A new category has been created with the with the ID 1. But notice that the <code>user</code> attribute is actually null. That is because we didn&rsquo;t pass the &ldquo;user&rdquo; attribute in the POST request. <strong>We shouldn&rsquo;t have to</strong>. That information is already available with Strapi in the form of JWT token we have sent with the request.</p>
+<p><em>How do we make Strapi automatically populate the user field?</em></p>
+<p>Before we answer that, let us test another thing related to this user issue.</p>
+<h3 id="testing-access-control-of-users">Testing Access Control of Users</h3>
+<ol>
+<li>Create another user in the Strapi Admin window, let us call the user <code>intruder</code></li>
+<li>Now log in as the <code>intruder</code> user and get the JWT Token</li>
+<li>Using <code>intruder</code>&rsquo;s JWT token let us send a get request to the <code>/categories</code></li>
+</ol>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-intruder-access.png" alt="strapi-intruder-access"></p>
+<p>The <code>intruder</code> is able to access the category created by <code>test_user</code>. This will happen even if the user value is not null. For example, go to the Strapi Admin and set the user value of the &ldquo;Travel&rdquo; category to <code>test_user</code>
+<img src="/img/wp-content/uploads/2020/08/strapi-set-category-user.png" alt="strapi-set-category-user"></p>
+<p>Now switch back to Postman, don&rsquo;t change anything and rerun the GET <code>/categories</code> request again.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-intruder-access-2.png" alt="strapi-intruder-access-2"></p>
+<p>You will notice that we are still able to access <code>test_user</code>&rsquo;s information as <code>intruder</code>.</p>
+<p>To summarise:</p>
+<ol>
+<li>We created the category as test_user</li>
+<li>We have set the category to belong to test_user</li>
+<li>We made request using intruder&rsquo;s token</li>
+<li>And we are able to access test_user&rsquo;s data</li>
+</ol>
+<p>So, any authenticated user can read anyone&rsquo;s data. Not just read, if you recall the settings from &ldquo;Roles &amp; Permission&rdquo;, they can also change and delete anyone&rsquo;s data. Effective making the entire API useless.</p>
+<h3 id="restricting-access-to-owners">Restricting access to Owners</h3>
+<p>Now we have identified two issues:</p>
+<ol>
+<li>Automatically assigning ownership of a category to the user creating the category (discussed before)</li>
+<li>Restricting access to data owners only</li>
+</ol>
+<p>Both of these can be solved by modifying the Controller logic of the models. We will deal with that in the next part.</p>
+<h2 id="so-far">So far&hellip;</h2>
+<p>The impressive thing about using Strapi for an API is the amount of stuff that comes out of the box.</p>
+<ol>
+<li>Setup the project structure with necessary libraries</li>
+<li>An nice Admin backend</li>
+<li>Create Models with relationships, constraints and validations</li>
+<li>Token based authentication for API access</li>
+</ol>
+<p>All of this without writing a single line of code. If we have used a regular library, we would be swimming in configurations and routes by now.</p>
+<h2 id="next">Next</h2>
+<p>
+<a href="http://arunmozhi.in/2020/08/11/strapi-adding-isowner-policy-to-the-api/" target="_blank" rel="noopener">Strapi - Add Ownership and Control to API</a>
+</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/08/10/product-audience-quadrant/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Product - Audience Quadrant</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/07/06/data-science-first-impressions/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Data Science - First Impressions</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

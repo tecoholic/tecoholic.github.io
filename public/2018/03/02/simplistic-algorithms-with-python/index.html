@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Simplistic Algorithms with Python | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2018/03/02/simplistic-algorithms-with-python/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Simplistic Algorithms with Python</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/python/">#Python</a><span></span>
+    <a href="/tags/coding/">#Coding</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2018-03-02">2018-03-02</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>I have been working on the problems in Codility to get better at the algorithms and also to expand the way I solve problems in general. One common thing I notice with using Python as the language is that, sometimes the solutions are so simple I wonder if I learnt anything at all.</p>
+<p>Take for example, this challenge called 
+<a href="https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/" target="_blank" rel="noopener">GenomicRangeQuery</a>
+ which aims to teach the application of Prefix sums in problem solving. Here is the solution which gets the perfect score of 100% for both accuracy and complexity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solution</span>(S, P, Q):
+</span></span><span style="display:flex;"><span>    mins <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(P)):
+</span></span><span style="display:flex;"><span>        start <span style="color:#f92672">=</span> P[i]
+</span></span><span style="display:flex;"><span>        end <span style="color:#f92672">=</span> Q[i]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        sub <span style="color:#f92672">=</span> S[start:end]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">in</span> sub:
+</span></span><span style="display:flex;"><span>            mins<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#39;C&#39;</span> <span style="color:#f92672">in</span> sub:
+</span></span><span style="display:flex;"><span>            mins<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#39;G&#39;</span> <span style="color:#f92672">in</span> sub:
+</span></span><span style="display:flex;"><span>            mins<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            mins<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> mins
+</span></span></code></pre></div><p>The solution felt like cheating and also, I wasn&rsquo;t sure of the complexity of <strong>in</strong> keyword magic of Python. I searched for a solution in a low level language to understand better. 
+<a href="https://rafal.io/posts/codility-genomic-range-query.html" target="_blank" rel="noopener">Here is it in Java</a>
+. Reproducing for quick comparison.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">genome</span>(String S, <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> P, <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> Q) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> S.<span style="color:#a6e22e">length</span>();
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>len<span style="color:#f92672">][</span>4<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>P.<span style="color:#a6e22e">length</span><span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> S.<span style="color:#a6e22e">charAt</span>(i);
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;A&#39;</span>) arr<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C&#39;</span>) arr<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;G&#39;</span>) arr<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;T&#39;</span>) arr<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>3<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// compute prefixes</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0; j <span style="color:#f92672">&lt;</span> 4; j<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>       arr<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> P.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> P<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> Q<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 0; a <span style="color:#f92672">&lt;</span> 4; a<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">int</span> sub <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span>(x<span style="color:#f92672">-</span>1 <span style="color:#f92672">&gt;=</span> 0) sub <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>x<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>a<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span>(arr<span style="color:#f92672">[</span>y<span style="color:#f92672">][</span>a<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> sub <span style="color:#f92672">&gt;</span> 0){
+</span></span><span style="display:flex;"><span>         result<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">+</span>1;
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><p>Needless to say, the solution is beautiful and as intended (teaches the application of prefix sums).</p>
+<h2 id="pondering">Pondering</h2>
+<p>The difference in the complexity of the two solutions showcases the power and simplicity of Python.</p>
+<p>So what am I doing with Python? I am writing simpler code definitely. It is good. I am also worried that I might not be learning a number of techniques that will help in the long run.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2018/03/27/peer-pairing-algorithm/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Peer Pairing Algorithm</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/52weeks52maps/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">'#52Weeks52Maps'</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

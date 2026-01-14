@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>India on Arunmozhi</title>
+    <link>http://localhost:1313/tags/india/</link>
+    <description>Recent content in India on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Mon, 28 Jan 2019 08:27:46 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/india/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Map of PM Modi&#39;s Domestic Visits</title>
+      <link>http://localhost:1313/2019/01/28/map-of-pm-modis-domestic-visits/</link>
+      <pubDate>Mon, 28 Jan 2019 08:27:46 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/01/28/map-of-pm-modis-domestic-visits/</guid>
+      <description>&lt;p&gt;PM Modi visited Tamil Nadu on 27th January 2019 for the AIIMS Hospital ground breaking ceremony. &#xA;&lt;a href=&#34;https://www.indiatoday.in/india/story/pm-modi-twitter-storm-ahead-tamil-nadu-visit-1440154-2019-01-27&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter was trending&lt;/a&gt;&#xA; with #GoBackModi and #TNWelcomesModi and I was curious about the number of times has PM Modi visited Tamil Nadu before.&lt;/p&gt;&#xA;&lt;p&gt;The PM India site has a neat list of all the visits &#xA;&lt;a href=&#34;http://www.pmindia.gov.in/en/pm-visits/?visittype=domestic_visit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.pmindia.gov.in/en/pm-visits/?visittype=domestic_visit&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;So, I created a map out of it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/01/visits_by_pm_modi-1.png&#34; alt=&#34;Visits_by_PM_Modi.png&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;update&#34;&gt;Update:&lt;/h3&gt;&#xA;&lt;p&gt;This map was replaced after some errors were discovered in the base data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>India Literacy Map with a How-To</title>
+      <link>http://localhost:1313/2019/01/01/india-literacy-map-with-a-how-to/</link>
+      <pubDate>Tue, 01 Jan 2019 01:01:51 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/01/01/india-literacy-map-with-a-how-to/</guid>
+      <description>&lt;p&gt;I published the &#xA;&lt;a href=&#34;http://arunmozhi.in/2018/12/28/updating-the-wikipedia-tamilnadu-literacy-map/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tamilnadu district wise literacy&lt;/a&gt;&#xA; map some days ago and @tshrinivasan asked if I can write a blog on how to do it, and here it is now.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://twitter.com/tecoholic/status/1078953714642182144&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/tecoholic/status/1078953714642182144&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-we-going-to-do&#34;&gt;What are we going to do?&lt;/h2&gt;&#xA;&lt;p&gt;We are going to create India&amp;rsquo;s State Wise Literacy Map. It will be a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Choropleth_map&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choropleth map&lt;/a&gt;&#xA; ℹ️ just like the Tamilnadu one.&lt;/p&gt;&#xA;&lt;h2 id=&#34;things-we-need&#34;&gt;Things we need&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;QGIS - An Open Source software that will be used to process the geographic data and create the map. Download and install it from &#xA;&lt;a href=&#34;https://qgis.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://qgis.org/&lt;/a&gt;&#xA; for your operating system.&lt;/li&gt;&#xA;&lt;li&gt;Base map - The digital map of India with its state boundaries as &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Shapefile&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a shapefile&lt;/a&gt;&#xA;. ℹ️ You search the internet for &amp;ldquo;India states shapefile&amp;rdquo;, there are a number of sources where you can find this. I am going to use the one from the &#xA;&lt;a href=&#34;https://github.com/HindustanTimesLabs/shapefiles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hindustan Times public repository&lt;/a&gt;&#xA;. [shapefiles/india/state_ut/india_2000-2014_state.zip] ⬇️&#xA;&lt;a href=&#34;https://github.com/HindustanTimesLabs/shapefiles/blob/master/india/state_ut/india_2000-2014_state.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&#xA;, Unzip the file and keep it ready. I am choosing the pre-Telangana map because the literacy data is from 2011 which is pre-Telangana.&lt;/li&gt;&#xA;&lt;li&gt;Data on literacy levels of the Indian states. An internet search for &amp;ldquo;India states literacy csv&amp;rdquo; would give a number of results. I am going to use the one from the Census 2011 website. ⬇️&#xA;&lt;a href=&#34;http://censusindia.gov.in/2011-prov-results/paper2/data_files/india/Statement5_Literate&amp;amp;LitRate_State.xls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;get-the-data-ready&#34;&gt;Get the data ready&lt;/h2&gt;&#xA;&lt;p&gt;We have 2 sources of data:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Updating the Wikipedia Tamilnadu Literacy Map</title>
+      <link>http://localhost:1313/2018/12/27/updating-the-wikipedia-tamilnadu-literacy-map/</link>
+      <pubDate>Thu, 27 Dec 2018 22:17:35 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2018/12/27/updating-the-wikipedia-tamilnadu-literacy-map/</guid>
+      <description>&lt;p&gt;On 16th October 2011, I have uploaded a map of Tamilnadu District wise Literacy levels to Wikipedia. It was used in the article about Tamilnadu for a long time, then moved to the &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Education_in_Tamil_Nadu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Education in Tamilnadu&lt;/a&gt;&#xA; article when a separate article was created. But the map was not in line with the &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Maps/Conventions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia Map Conventions&lt;/a&gt;&#xA;. So, took some time this week and updated the map.&lt;/p&gt;&#xA;&lt;h4 id=&#34;updated-version&#34;&gt;Updated Version&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2018/12/Tamil_Nadu_Literacy_Map_2011.png&#34; alt=&#34;Tamil_Nadu_Literacy_Map_2011&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;older-version&#34;&gt;Older version&lt;/h4&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2018/12/2018122413022521Tamil_Nadu_Literacy_Map_2011.png&#34; alt=&#34;2018122413022521Tamil_Nadu_Literacy_Map_2011&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on Arunmozhi</title>
+    <link>http://localhost:1313/tags/azure/</link>
+    <description>Recent content in Azure on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Thu, 24 Dec 2020 06:23:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backup all the files in a directory to Azure Cloud</title>
+      <link>http://localhost:1313/2020/12/24/backup-all-the-files-in-a-directory-to-azure-cloud/</link>
+      <pubDate>Thu, 24 Dec 2020 06:23:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/12/24/backup-all-the-files-in-a-directory-to-azure-cloud/</guid>
+      <description>&lt;p&gt;I had to copy all the files from the home directory into a Azure Blob container today. All the regular folders without any of the dot files and dot folders.&lt;/p&gt;&#xA;&lt;p&gt;Azure CLI provides &#xA;&lt;a href=&#34;https://docs.microsoft.com/en-us/cli/azure/storage/blob?view=azure-cli-latest#az_storage_blob_upload_batch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;batch upload functionality&lt;/a&gt;&#xA; to upload folders. But there are two issues I faced:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I needed to copy all the folders - and I didn&amp;rsquo;t want to run the command for each folder.&lt;/li&gt;&#xA;&lt;li&gt;I wanted to preserve the folder structure in the container as well.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;After some trial and error I settled on this one liner.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

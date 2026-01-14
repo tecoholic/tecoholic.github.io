@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Back to Basics with En Kanakku | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2023/04/16/back-to-basics-with-en-kanakku/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Back to Basics with En Kanakku</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/django/">#Django</a><span></span>
+    <a href="/tags/personal-finance/">#Personal-Finance</a><span></span>
+    <a href="/tags/python/">#Python</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/projects/">Projects</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2023-04-16">2023-04-16</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>Everyday I work on a megalith of a software called Open edX as a part of my work. It is built on top of Django. But here is the thing, it is very big piece of software and most of time I am tweaking something that is one among the many layers of abstraction and business logic.</p>
+<p>This has created a deep desire to get down to the basics and build something. I tried learning Rust. A systems language. How more basic can I get than that? But what do I do with Rust? I don&rsquo;t even know what kind of program I can write with that. A PDF Parser maybe? I downloaded the PDF 1.7 spec and started gathering 8 bits at a time. But Rust is not something that has the same velocity as Python or JavaScript. Understandably so. Compiled vs Interpreted.</p>
+<p>In the meantime, something has also been really bothering me. My personal finance. Every year, I do a round up of my earnings and spends during the tax season and go over my savings. This year around, I have setup 
+<a href="https://www.firefly-iii.org" target="_blank" rel="noopener">Firefly III</a>
+ to consume my bank statement and do it a little easier.</p>
+<blockquote>
+<p>FireFly III is a fantastic software that made me realise a number of things I didn&rsquo;t know about my finances</p>
+</blockquote>
+<h2 id="but">But&hellip;</h2>
+<p>I needed more. I have tasted something sweet and I need more. Here are the things I wanted Firefly to have to make life easier for me</p>
+<ol start="2">
+<li>
+<p>Native support for importing my bank statement. The Firefly Importer does its job, but I needed run an extra service for that and had to create a template for mapping the fields.</p>
+</li>
+<li>
+<p>Native support for importing PDF Credit Card statements. A lot of the details are being missed because all the expenses for a month are reported as a single entry in the bank statement - CC Payment.</p>
+</li>
+<li>
+<p>Automatic Categorisation of transactions. Firefly let us to set up static rules that can help do this, but I found it a little complex and I was always afraid one rule might override another and my categorisation would go for a toss.</p>
+</li>
+</ol>
+<h2 id="so">So&hellip;</h2>
+<p>Why don&rsquo;t I create a simple personal finance application in Python Django? I know the language and the framework. Creating something like this from scratch would allow me to get to the basics of Django. Get back to working with HTTP Responses, redirects, URL resolution, Middleware, Testing&hellip;etc., I use TDD and take help from ChatGPT to get the skeleton code.</p>
+<p>I have also grown tired of the modern frontend development, the complexity is too much. This has helped me reset. Writing HTML in Django templates has been very cathartic. When I do need some interactivity, I plan on using 
+<a href="https://htmx.org" target="_blank" rel="noopener">HTMX</a>
+. No Webpack, No bundling, None of the 1000 things that come with it.</p>
+<p>I know, this doesn&rsquo;t sound as sexy as &ldquo;written in Rust&rdquo;. But, working on this project has been very satisfying. It allows me to revisit things that I haven&rsquo;t used in a long time. Build something I really want to use. And most importantly, takes me back to the basics - well at least to the basics of the abstraction layer Django provides.</p>
+<h2 id="the-project">The Project</h2>
+<p>The Project is named &ldquo;
+<a href="https://github.com/tecoholic/en_kanakku" target="_blank" rel="noopener">En Kanakku</a>
+&rdquo; (என் கணக்கு) which is Tamil for &ldquo;My Accounts&rdquo;. Over the last couple of weeks, I have implemented:</p>
+<ul>
+<li>
+<p>Setup the dependencies and the basic skeleton for the app</p>
+</li>
+<li>
+<p>Created a CSV Importer that can be subclassed to import transactions from any CSV file</p>
+</li>
+<li>
+<p>Used it to create an importer for the Firefly III export</p>
+</li>
+<li>
+<p>Added an admin action to merge account after the import</p>
+</li>
+</ul>
+<p>Now all of the transaction data I had in Firefly has been imported into En Kanakku, along with the accounts and categories. Baby steps&hellip;</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">dev-note: Doom Emacs status line missing icons on fresh install</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2022/12/05/setting-up-my-homeserver-part-3/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Setting up my HomeServer - Part 3</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

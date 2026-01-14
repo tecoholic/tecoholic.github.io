@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Strapi - Adding IsOwner Policy to the API | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/08/11/strapi-adding-isowner-policy-to-the-api/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Strapi - Adding IsOwner Policy to the API</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/api/">#Api</a><span></span>
+    <a href="/tags/js/">#Js</a><span></span>
+    <a href="/tags/strapi/">#Strapi</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-08-11">2020-08-11</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>7 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>Strapi is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API – both REST and GraphQL.</p>
+<p>This is a mini series which outlines:</p>
+<ol>
+<li>
+<a href="https://arunmozhi.in/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/" target="_blank" rel="noopener">Setting up Strapi and creating an API</a>
+</li>
+<li>Adding ownership control to the API endpoints – (you are here)</li>
+<li>Optimising REST API responses</li>
+</ol>
+<h2 id="so-far">So far&hellip;</h2>
+<p>We have created models for the app and have an API setup which works with JWT Authentication without a single line of code. But we have an issue, any authenticated user can read every other user&rsquo;s data.</p>
+<p>This can be rectified using setting up an access policy in the Model&rsquo;s controller file.</p>
+<p><strong>Side Note:</strong> Strapi&rsquo;s Policies section explains how to implement them and configure them for routes 
+<a href="https://strapi.io/documentation/v3.x/concepts/policies.html#how-to-create-a-policy" target="_blank" rel="noopener">here</a>
+. But that doesn&rsquo;t work for <code>IsOwner</code> policy because ownership is object specific and thus has to be implemented in the controller instead of policy configuration.</p>
+<h2 id="writing-the-is-owner-policy">Writing the Is Owner Policy</h2>
+<p>We will be using the 
+<a href="https://strapi.io/documentation/v3.x/guides/is-owner.html" target="_blank" rel="noopener">Create is owner policy</a>
+ document as our reference material to update our API. I will be repeating all of it here with a little more information.</p>
+<p>We have two models defined so far - Category &amp; ExpenseItem. I am going to implement the IsOwner policy for Category and leave ExpenseItem as an exercise. Now, let&rsquo;s go write some code.</p>
+<ul>
+<li>Let us open our text editor and open the <code>api/category/controllers/category.js</code> file</li>
+<li>It should have the following content</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#39;use strict&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* to customize this controller
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {};
+</span></span></code></pre></div><p>All of our code will go into the braces. We will be adding 6 functions:</p>
+<ol>
+<li><strong>create</strong> - the function executed when a new category is created. Here we will make sure that any newly created category is automatically assigned to the user creating the category.</li>
+<li><strong>find</strong> - the function execute when all the objects are listed. For eg., <code>/categories</code>. When a user requests categories, we will filter the results such that the user receives only their&rsquo;s and not others'.</li>
+<li><strong>findOne</strong> - Same as the one above when a single object is accessed with id like <code>/categories/1</code></li>
+<li><strong>count</strong> - the count of objects in a model. We will be counting only the objects created by a particular user</li>
+<li><strong>update</strong> - update a specific object. Only the owner should be able to do it</li>
+<li><strong>delete</strong> - delete a specific object. Only the owner should be able to delete an object.</li>
+</ol>
+<p>The above will cover the 4 CRUD operations and the 2 extra ones (listing and counting).</p>
+<h3 id="create-function">Create function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">parseMultipartData</span>, <span style="color:#a6e22e">sanitizeEntity</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;strapi-utils&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Create a new Category
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx The Request Context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">entity</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">is</span>(<span style="color:#e6db74">&#39;multipart&#39;</span>)) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">files</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">parseMultipartData</span>(<span style="color:#a6e22e">ctx</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">data</span>, { <span style="color:#a6e22e">files</span> });
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> });
+</span></span><span style="display:flex;"><span>},
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Strapi is built on Koa.js and thus uses async await instead of callbacks. Let us break down the logic of the function and see what&rsquo;s happening.</p>
+<ul>
+<li>the function is passed in the Request context which has the all the request related information like the form data, the user identified in the request (from our JWT token)..etc.,</li>
+<li>we check if it is a <code>multipart</code> form which would mean we have uploaded files to deal with.</li>
+<li>we parse the form for data and files, set the user as the user executing the request and use the Strapi service for our model to create a new entity.</li>
+<li>if it is not a multipart form, then we just set the user of the request as an extra field into the request data and create the category using the Strapi service</li>
+<li>finally we need to return the new category as a response - We use strapi&rsquo;s function <code>sanitizeEntity</code> to pass in the newly created entity and the model.</li>
+</ul>
+<p><strong>Side Note:</strong> I know the Category model doesn&rsquo;t have any files attached to it and the IF block with &lsquo;multipart&rsquo; check is not necessary in this situation. But I am leaving it here for two reasons:</p>
+<ol>
+<li>If in the future, we want to support logos or some form of header image for the <code>Category</code> model, we don&rsquo;t have to come back and update the code again.</li>
+<li>This might act as a reference implementation for someone reading the blog and might use it on a model with files and don&rsquo;t want them to wonder files are not getting saved.</li>
+</ol>
+<p>If you really want to have a lean code base then the just 3 lines would be sufficient</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Create a new Category
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx The Request Context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> });
+</span></span><span style="display:flex;"><span>},
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h4 id="testing-the-create-logic">Testing the create logic</h4>
+<p>Now we can re-run the POST request to create a new category in POST and verify that the user is automatically set for the category.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_new_category_with_user.png" alt="strapi_new_category_with_user"></p>
+<h3 id="update-function">Update function</h3>
+<p>Now that we have the create function auto assigning the user for the categories, let us implement restrictions for updates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Update a category
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx the request context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">params</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">entity</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Find the category matching the ID and the user
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">category</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">find</span>({
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;user.id&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">category</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">unauthorized</span>(<span style="color:#e6db74">`You can&#39;t update this entry`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Update the category
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">is</span>(<span style="color:#e6db74">&#39;multipart&#39;</span>)) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">files</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">parseMultipartData</span>(<span style="color:#a6e22e">ctx</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">update</span>({ <span style="color:#a6e22e">id</span> }, <span style="color:#a6e22e">data</span>, {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">files</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">update</span>({ <span style="color:#a6e22e">id</span> }, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> });
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><p>The update function adds an extra step of fetching the category and making sure that the category with that ID and userID exists before reading the request data. If the category doesn&rsquo;t exist, then it returns a <code>Unauthorized</code> error. If it exists, then it updates the category and returns the updated information.</p>
+<p>We can verify it with a <strong>PUT</strong> request to http://localhost:1337/categories/</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_update_category.png" alt="strapi_update_category"></p>
+<p>Notice that the <em>Food</em> category has now been updated to <em>Food &amp; Drinks</em>. Not just that, using the JWT token of the <em>intruder</em> user wouldn&rsquo;t work either.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_update_unauthorized.png" alt="strapi_update_unauthorized"></p>
+<h3 id="find-function">Find function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* List all the categories beloinging to the requesting user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx the request context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">entities</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">_q</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entities</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">search</span>({
+</span></span><span style="display:flex;"><span>...<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;user.id&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">entities</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">find</span>({
+</span></span><span style="display:flex;"><span>...<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;user.id&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">entities</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">entity</span> =&gt; <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> }));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The find function checks if the query is a search query or a filter and calls the corresponding function. We also pass the <code>'user.id'</code> of the requesting user along with other query params from the request to filter the search results. Now when we request the url http://localhost:1337/categories, the response contains only the objects of the requesting user.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_get_categories_test_user.png" alt="strapi_get_categories_test_user"></p>
+<p>Now let us see what we get when we request as a different user</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_get_categories_intruder.png" alt="strapi_get_categories_intruder"></p>
+<h3 id="findone-function">FindOne function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Get the category with a specific ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx the request context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">findOne</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">params</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">findOne</span>({ <span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#39;user.id&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">entity</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">unauthorized</span>(<span style="color:#e6db74">`You can&#39;t view this entry`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> });
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><p>Fetching the category with <code>id=3</code> as the owner (test_user)</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_get_one_category_test_user.png" alt="strapi_get_one_category_test_user"></p>
+<p>Trying to get test_user&rsquo;s category as the intruder</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_get_one_category_intruder.png" alt="strapi_get_one_category_intruder"></p>
+<h3 id="count-function">Count function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Count of the categories of the requesting user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx the request context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">count</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">_q</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">countSearch</span>({
+</span></span><span style="display:flex;"><span>...<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;user.id&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">count</span>({
+</span></span><span style="display:flex;"><span>...<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">query</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;user.id&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><p>Count of test user</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_category_count.png" alt="strapi_category_count"></p>
+<h3 id="delete-function">Delete function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Delete a record
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* @param {*} ctx the request context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">ctx</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">category</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#a6e22e">find</span>({
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;user.id&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">category</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">unauthorized</span>(<span style="color:#e6db74">`You can&#39;t delete this entry`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">entity</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">category</span>.<span style="color:#66d9ef">delete</span>({ <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">id</span> });
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sanitizeEntity</span>(<span style="color:#a6e22e">entity</span>, { <span style="color:#a6e22e">model</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">strapi</span>.<span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">category</span> });
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><p>Delete as a intruder - Unauthorized</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_delete_intruder.png" alt="strapi_delete_intruder"></p>
+<p>Delete as the owner - test_user</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi_delete_test_user.png" alt="strapi_delete_test_user"></p>
+<h3 id="final-code-for-the-controller">Final code for the controller</h3>
+<p>Here is the complete controller code with all the functions.</p>
+<p>[gist https://gist.github.com/tecoholic/ee101b0efbf76b63b63826ebebe2c8b9]</p>
+<h2 id="so-far-">So far &hellip;</h2>
+<ul>
+<li>Created a project</li>
+<li>Added the models</li>
+<li>Setup the API</li>
+<li>Added the IsOwner policy to the controller</li>
+</ul>
+<h2 id="next">Next</h2>
+<p>Let&rsquo;s do a little bit of optimisation of the API responses. If we notice the GET request responses, the relations are always fully populated. For example, if we do a GET <code>/categories</code> each of these categories will have the user object in it. And if you add some expense items to a category, then all of those will be returned in the GET response as well. We will try to reduce this a bit and make it more streamlined in the next part.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/08/18/strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Strapi - Optimizing REST API responses by preventing auto-population of relations</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/08/10/product-audience-quadrant/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Product - Audience Quadrant</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Arunmozhi</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Thu, 23 Oct 2025 10:56:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude-Code</title>
+      <link>http://localhost:1313/tags/claude-code/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/claude-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>http://localhost:1313/tags/rust/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/tags/software/</link>
+      <pubDate>Mon, 13 Oct 2025 11:27:43 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/tags/technology/</link>
+      <pubDate>Mon, 13 Oct 2025 11:27:43 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ui</title>
+      <link>http://localhost:1313/tags/ui/</link>
+      <pubDate>Mon, 13 Oct 2025 11:27:43 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mise</title>
+      <link>http://localhost:1313/tags/mise/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/mise/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openedx</title>
+      <link>http://localhost:1313/tags/openedx/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/openedx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TIL</title>
+      <link>http://localhost:1313/tags/til/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/til/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutor</title>
+      <link>http://localhost:1313/tags/tutor/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/tutor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devtool</title>
+      <link>http://localhost:1313/tags/devtool/</link>
+      <pubDate>Fri, 06 Sep 2024 10:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/devtool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nodejs</title>
+      <link>http://localhost:1313/tags/nodejs/</link>
+      <pubDate>Fri, 06 Sep 2024 10:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>http://localhost:1313/tags/hardware/</link>
+      <pubDate>Fri, 23 Aug 2024 04:52:28 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keyboard</title>
+      <link>http://localhost:1313/tags/keyboard/</link>
+      <pubDate>Fri, 23 Aug 2024 04:52:28 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/keyboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keychron</title>
+      <link>http://localhost:1313/tags/keychron/</link>
+      <pubDate>Fri, 23 Aug 2024 04:52:28 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/keychron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Review</title>
+      <link>http://localhost:1313/tags/review/</link>
+      <pubDate>Fri, 23 Aug 2024 04:52:28 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Documentation</title>
+      <link>http://localhost:1313/tags/documentation/</link>
+      <pubDate>Fri, 21 Jun 2024 08:20:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/documentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitea</title>
+      <link>http://localhost:1313/tags/gitea/</link>
+      <pubDate>Fri, 21 Jun 2024 08:20:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/gitea/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Hosting</title>
+      <link>http://localhost:1313/tags/self-hosting/</link>
+      <pubDate>Fri, 21 Jun 2024 08:20:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/self-hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homeserver</title>
+      <link>http://localhost:1313/tags/homeserver/</link>
+      <pubDate>Wed, 03 Apr 2024 03:07:14 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/homeserver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nomad</title>
+      <link>http://localhost:1313/tags/nomad/</link>
+      <pubDate>Wed, 03 Apr 2024 03:07:14 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/nomad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Polars</title>
+      <link>http://localhost:1313/tags/polars/</link>
+      <pubDate>Tue, 26 Dec 2023 05:04:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/polars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pytest</title>
+      <link>http://localhost:1313/tags/pytest/</link>
+      <pubDate>Tue, 26 Dec 2023 05:04:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/pytest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fediverse</title>
+      <link>http://localhost:1313/tags/fediverse/</link>
+      <pubDate>Tue, 26 Sep 2023 11:22:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/fediverse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Misskey</title>
+      <link>http://localhost:1313/tags/misskey/</link>
+      <pubDate>Tue, 26 Sep 2023 11:22:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/misskey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Doom-Emacs</title>
+      <link>http://localhost:1313/tags/doom-emacs/</link>
+      <pubDate>Tue, 12 Sep 2023 11:10:47 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/doom-emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emacs</title>
+      <link>http://localhost:1313/tags/emacs/</link>
+      <pubDate>Tue, 12 Sep 2023 11:10:47 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/emacs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pyenv</title>
+      <link>http://localhost:1313/tags/pyenv/</link>
+      <pubDate>Tue, 12 Sep 2023 11:10:47 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/pyenv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pyright</title>
+      <link>http://localhost:1313/tags/pyright/</link>
+      <pubDate>Tue, 12 Sep 2023 11:10:47 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/pyright/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Django</title>
+      <link>http://localhost:1313/tags/django/</link>
+      <pubDate>Sun, 16 Apr 2023 16:53:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal-Finance</title>
+      <link>http://localhost:1313/tags/personal-finance/</link>
+      <pubDate>Sun, 16 Apr 2023 16:53:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/personal-finance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet</title>
+      <link>http://localhost:1313/tags/internet/</link>
+      <pubDate>Mon, 05 Dec 2022 01:56:24 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/internet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bookmarking</title>
+      <link>http://localhost:1313/tags/bookmarking/</link>
+      <pubDate>Mon, 27 Jun 2022 08:06:09 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/bookmarking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>http://localhost:1313/tags/search/</link>
+      <pubDate>Mon, 27 Jun 2022 08:06:09 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Electric-Vehicles</title>
+      <link>http://localhost:1313/tags/electric-vehicles/</link>
+      <pubDate>Wed, 13 Apr 2022 01:24:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/electric-vehicles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ford</title>
+      <link>http://localhost:1313/tags/ford/</link>
+      <pubDate>Wed, 13 Apr 2022 01:24:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/ford/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>http://localhost:1313/tags/podcast/</link>
+      <pubDate>Wed, 13 Apr 2022 01:24:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/podcast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Experience</title>
+      <link>http://localhost:1313/tags/experience/</link>
+      <pubDate>Mon, 06 Dec 2021 03:59:33 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rustlang</title>
+      <link>http://localhost:1313/tags/rustlang/</link>
+      <pubDate>Sun, 20 Jun 2021 16:53:32 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/rustlang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure</title>
+      <link>http://localhost:1313/tags/azure/</link>
+      <pubDate>Thu, 24 Dec 2020 06:23:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nlp</title>
+      <link>http://localhost:1313/tags/nlp/</link>
+      <pubDate>Sat, 19 Dec 2020 05:09:55 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spacy</title>
+      <link>http://localhost:1313/tags/spacy/</link>
+      <pubDate>Sat, 19 Dec 2020 05:09:55 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/spacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>http://localhost:1313/tags/js/</link>
+      <pubDate>Thu, 27 Aug 2020 06:44:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thought</title>
+      <link>http://localhost:1313/tags/thought/</link>
+      <pubDate>Sat, 22 Aug 2020 09:49:16 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/thought/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Api</title>
+      <link>http://localhost:1313/tags/api/</link>
+      <pubDate>Tue, 18 Aug 2020 12:54:59 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Strapi</title>
+      <link>http://localhost:1313/tags/strapi/</link>
+      <pubDate>Tue, 18 Aug 2020 12:54:59 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/strapi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Business</title>
+      <link>http://localhost:1313/tags/business/</link>
+      <pubDate>Mon, 10 Aug 2020 04:18:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/business/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product</title>
+      <link>http://localhost:1313/tags/product/</link>
+      <pubDate>Mon, 10 Aug 2020 04:18:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/product/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/tags/data/</link>
+      <pubDate>Mon, 06 Jul 2020 14:37:09 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>http://localhost:1313/tags/coding/</link>
+      <pubDate>Wed, 13 May 2020 07:33:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/tags/tools/</link>
+      <pubDate>Wed, 13 May 2020 07:33:49 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jupyter</title>
+      <link>http://localhost:1313/tags/jupyter/</link>
+      <pubDate>Wed, 22 Apr 2020 05:03:57 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webapp</title>
+      <link>http://localhost:1313/tags/webapp/</link>
+      <pubDate>Tue, 07 Apr 2020 04:35:22 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/webapp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>D3js</title>
+      <link>http://localhost:1313/tags/d3js/</link>
+      <pubDate>Wed, 11 Mar 2020 02:58:50 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/d3js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>http://localhost:1313/tags/vue/</link>
+      <pubDate>Wed, 11 Mar 2020 02:58:50 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/vue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Media</title>
+      <link>http://localhost:1313/tags/media/</link>
+      <pubDate>Mon, 24 Feb 2020 09:54:24 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Sun, 23 Feb 2020 08:09:23 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Investing</title>
+      <link>http://localhost:1313/tags/investing/</link>
+      <pubDate>Tue, 31 Dec 2019 22:32:52 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/investing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apollo</title>
+      <link>http://localhost:1313/tags/apollo/</link>
+      <pubDate>Sat, 21 Dec 2019 15:19:10 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/apollo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graphql</title>
+      <link>http://localhost:1313/tags/graphql/</link>
+      <pubDate>Sat, 21 Dec 2019 15:19:10 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/graphql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Sun, 10 Nov 2019 06:58:20 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mastodon</title>
+      <link>http://localhost:1313/tags/mastodon/</link>
+      <pubDate>Sun, 10 Nov 2019 06:58:20 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/mastodon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flask</title>
+      <link>http://localhost:1313/tags/flask/</link>
+      <pubDate>Fri, 27 Sep 2019 03:05:01 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/flask/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Osm</title>
+      <link>http://localhost:1313/tags/osm/</link>
+      <pubDate>Wed, 24 Jul 2019 03:42:22 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/osm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Map</title>
+      <link>http://localhost:1313/tags/map/</link>
+      <pubDate>Sun, 16 Jun 2019 11:43:30 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/map/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tamilnadu</title>
+      <link>http://localhost:1313/tags/tamilnadu/</link>
+      <pubDate>Sun, 16 Jun 2019 11:43:30 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/tamilnadu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post-Format-Image</title>
+      <link>http://localhost:1313/tags/post-format-image/</link>
+      <pubDate>Sat, 15 Jun 2019 13:08:32 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/post-format-image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sqlalchemy</title>
+      <link>http://localhost:1313/tags/sqlalchemy/</link>
+      <pubDate>Tue, 26 Feb 2019 04:52:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/sqlalchemy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Society</title>
+      <link>http://localhost:1313/tags/society/</link>
+      <pubDate>Sun, 03 Feb 2019 18:54:05 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/society/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Student</title>
+      <link>http://localhost:1313/tags/student/</link>
+      <pubDate>Sun, 03 Feb 2019 18:54:05 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/student/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>India</title>
+      <link>http://localhost:1313/tags/india/</link>
+      <pubDate>Mon, 28 Jan 2019 08:27:46 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/india/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qgis</title>
+      <link>http://localhost:1313/tags/qgis/</link>
+      <pubDate>Tue, 08 Jan 2019 13:35:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/qgis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wikipedia</title>
+      <link>http://localhost:1313/tags/wikipedia/</link>
+      <pubDate>Thu, 27 Dec 2018 22:17:35 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/wikipedia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Idea</title>
+      <link>http://localhost:1313/tags/idea/</link>
+      <pubDate>Sun, 25 Nov 2018 04:04:41 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/idea/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chennai</title>
+      <link>http://localhost:1313/tags/chennai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/chennai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev-Notes</title>
+      <link>http://localhost:1313/tags/dev-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/dev-notes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>http://localhost:1313/tags/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ILUGC</title>
+      <link>http://localhost:1313/tags/ilugc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/ilugc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meetup</title>
+      <link>http://localhost:1313/tags/meetup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/meetup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/tags/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/notes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opticks</title>
+      <link>http://localhost:1313/tags/opticks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/opticks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Schools</title>
+      <link>http://localhost:1313/tags/schools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/schools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tamil</title>
+      <link>http://localhost:1313/tags/tamil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/tamil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/tags/windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/tags/windows/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Personal Bookmarking using YACY &amp; yacy-it | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2022/06/27/personal-bookmarking-using-yacy-yacy-it/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Personal Bookmarking using YACY & yacy-it</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/bookmarking/">#Bookmarking</a><span></span>
+    <a href="/tags/internet/">#Internet</a><span></span>
+    <a href="/tags/search/">#Search</a><span></span>
+    <a href="/tags/technology/">#Technology</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/projects/">Projects</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2022-06-27">2022-06-27</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>A recent post on HackerNews titled 
+<a href="https://news.ycombinator.com/item?id=31848210" target="_blank" rel="noopener">Ask HN: Does anybody still use bookmarking services?</a>
+ caught my attention. Specifically, the top response which mentioned a distributed Search Engine YACY.</p>
+<p>The author of the post mentions how, he has configured it to be a standalone personal search engine. The workflow is something like this:</p>
+<ol>
+<li>Browse the web</li>
+<li>Come across an interesting link that you need to bookmark</li>
+<li>Add the URL to the YACY Crawler and crawl to the depth=0, which crawls just that page and indexes it.</li>
+<li>Next time you need it, just search for any word that might be present on the page.</li>
+</ol>
+<p>This is brilliant, because, I don&rsquo;t have to spend time putting it the right folder (like in browser bookmark) or tagging it with right keywords (as I do in Notion collections). The full text indexing takes care of this automatically.</p>
+<p>But, I do have to spend time adding the URL to the YACY Crawler. The user actions are:</p>
+<ul>
+<li>I have to open <code>http://localhost:8090/CrawlStartSite.html</code></li>
+<li>Copy the URL of the page I need to bookmark</li>
+<li>Paste it in the Crawling page and start the crawler</li>
+<li>Close the Tab.</li>
+</ul>
+<p>Now, this is high friction. The mental load saved by not tagging a bookmark is easily eaten away by doing all of the above.</p>
+<h2 id="yacy-it"><strong>yacy-it</strong></h2>
+<p>Since I like the YACY functionality so much, I decided I will reduce the friction by writing a Firefox Browser Extension - 
+<a href="https://github.com/tecoholic/yacy-it" target="_blank" rel="noopener">https://github.com/tecoholic/yacy-it</a>
+</p>
+<p>This extension uses the 
+<a href="https://wiki.yacy.net/index.php/Dev:APICrawler" target="_blank" rel="noopener">YACY API</a>
+ to start crawling of the current tab&rsquo;s URL which I click the extension&rsquo;s icon next to the address bar.</p>
+<p>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/yacy-it/" target="_blank" rel="noopener"><img src="/img/wp-content/uploads/2022/06/get-the-addon.png?w=172" alt=""></a>
+</p>
+<p><strong>Note:</strong> If you notice error messages when using the addon, you might have to configure YaCy for CORS headers as described here 
+<a href="https://github.com/tecoholic/yacy-it#configuring-yacy" target="_blank" rel="noopener">https://github.com/tecoholic/yacy-it#configuring-yacy</a>
+</p>
+<p><img src="/img/wp-content/uploads/2022/07/screenshot.png?w=523" alt=""></p>
+<p>Add pages to YaCy index directly from the address bar</p>
+<p><img src="/img/wp-content/uploads/2022/07/selection_048.png?w=840" alt=""></p>
+<p>Right-click on a Link and add it to YaCy Index</p>
+<p><img src="/img/wp-content/uploads/2022/07/yacy-it-preferences.png?w=716" alt=""></p>
+<p>If you running YaCy on the cloud or in a different computer on the network, set it in the Extension Preferences</p>
+<h2 id="tip---search-your-bookmarks-directly-from-the-address-bar"><strong>Tip</strong> - Search your bookmarks directly from the address bar</h2>
+<p>You can search through YaCy indexed links from your addressbar by added the YaCy as a search engine in Firefox as describe here =&gt; 
+<a href="https://community.searchlab.eu/t/adding-yacy-to-firefox-search-menue/95" target="_blank" rel="noopener">https://community.searchlab.eu/t/adding-yacy-to-firefox-search-menue/95</a>
+</p>
+<ol>
+<li>Go to <strong>Setting/Preferences</strong> =&gt; <strong>Search</strong> and select &ldquo;<strong>Add search bar in toolbar</strong>&rdquo;</li>
+<li>Now Go to the YaCy homepage at http://localhost:8090</li>
+<li>Click the &ldquo;Lens&rdquo; icon to open the list of search engines</li>
+<li>This should now show the YaCy icon with a tiny + icon. Click that to add it as a search engine.</li>
+<li>Go back to search settings and select &ldquo;<strong>Use the address bar for search and navigation</strong>&rdquo; to hide the search box</li>
+<li>Scroll down to <strong>Search shortcuts</strong> -&gt; double click the <strong>Keyword</strong> column next to the Yacy and enter a keyword eg., <code>@yacy</code> or <code>@bm</code></li>
+<li>Now you can search Yacy from the address bar like <code>@yacy &lt;keyword&gt;</code> or <code>@bm &lt;keyword&gt;</code> to look through your bookmarks.</li>
+</ol>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2022/11/24/setting-up-my-homeserver-part-1/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Setting up my HomeServer - Part 1</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Podcast Notes: Darren Palmer on the EV Revolution</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

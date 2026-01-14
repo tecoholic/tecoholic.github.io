@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Idea on Arunmozhi</title>
+    <link>http://localhost:1313/tags/idea/</link>
+    <description>Recent content in Idea on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Sun, 25 Nov 2018 04:04:41 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/idea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating an Icon for my blog</title>
+      <link>http://localhost:1313/2018/11/25/creating-an-icon-for-my-blog/</link>
+      <pubDate>Sun, 25 Nov 2018 04:04:41 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2018/11/25/creating-an-icon-for-my-blog/</guid>
+      <description>&lt;p&gt;When I moved the site from Jekyll to Wordpress, I was asked to create a site icon by Wordpress. I was trying to play around with the letter from &amp;ldquo;t&amp;rdquo; from my screen name &amp;ldquo;tecoholic&amp;rdquo; in a couple of Vector editors using different fonts, handrawn symbols &amp;hellip;etc., and finally landed on what I know best. Write a Python script for it. So here it is, my blog icon and the generator. It is just a stacking of &amp;ldquo;T&amp;quot;s but somehoe looks like the corner of ancient Chinese houses.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

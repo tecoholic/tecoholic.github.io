@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+NER Annotator / NER Tagger for Spacy | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/12/19/ner-annotator-ner-tagger-for-spacy/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>NER Annotator / NER Tagger for Spacy</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/nlp/">#Nlp</a><span></span>
+    <a href="/tags/python/">#Python</a><span></span>
+    <a href="/tags/spacy/">#Spacy</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/projects/">Projects</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-12-19">2020-12-19</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <blockquote>
+<p>NER Annotator is now available to use directly from the browser</p>
+<p>
+<a href="https://tecoholic.github.io/ner-annotator/" target="_blank" rel="noopener">https://tecoholic.github.io/ner-annotator/</a>
+</p>
+</blockquote>
+<h2 id="background">Background</h2>
+<p>As with most things, this started with a problem. 
+<a href="https://twitter.com/kmathan" target="_blank" rel="noopener">Dr. K. Mathan</a>
+ is an Epidemiologist tracking Covid-19. He wanted to automated extraction of details from government bulletins for data collection. It was a tedious manual process of reading the bulletins and entering the data by hand. Since the bulletins has paragraphs of text with text in them, I was looking to see if I can leverage any NLP (Natural Language Processing) tools to automate parts of it.</p>
+<h2 id="named-entity-recognition">Named Entity Recognition</h2>
+<p>The search led to the discovery of Named Entity Recognition (NER) using 
+<a href="https://spacy.io/" target="_blank" rel="noopener">spaCy</a>
+ and the 
+<a href="https://sematext.com/blog/entity-extraction-with-spacy/" target="_blank" rel="noopener">simplicity of code required</a>
+ to tag the information and automate the extraction. It kind of blew away my worries of doing Parts of Speech (POS) tagging and then custom writing an extraction algorithm. So, copied some text from 
+<a href="https://stopcorona.tn.gov.in/daily-bulletin/" target="_blank" rel="noopener">Tamil Nadu Government Covid Bulletins</a>
+ and set out test out the effectiveness of the solution. It worked pretty well for the small amount of training data (3 lines) vs extracted data (26 lines).</p>
+<p><img src="/img/wp-content/uploads/2020/12/ner_attempt_1.jpeg?w=1024" alt=""></p>
+<p>Trying out NER based extraction in Google Colab Notebook using spaCy</p>
+<p>But it had one serious issue. <strong>Generating Training Data</strong>. Generating training data for NER Annotation is a pain. It is infact the most difficult task in the entire process. The library is so simple and friendly to use, it is generating the training data that is difficult.</p>
+<h2 id="creating-ner-annotator">Creating NER Annotator</h2>
+<p>NER Annotation is fairly a common use case and there are multiple tagging software available for that purpose. But the problem is they are either paid, too complex to setup, requires you to create an account or signup, and sometimes doesn&rsquo;t generate the output in spaCy&rsquo;s format. The one that seemed dead simple was Manivannan Murugavel&rsquo;s 
+<a href="https://github.com/ManivannanMurugavel/spacy-ner-annotator" target="_blank" rel="noopener">spacy-ner-annotator</a>
+. That&rsquo;s what I used for generating test data for the above example. But it is kind of buggy, the indices were out of place and I had to manually change a number of them before I could successfully use it.</p>
+<p>After a painfully long weekend, I decided, it is time to just build one of my own. Manivannan&rsquo;s tagger just uses JavaScript to create the training data JSON and then requires a conversion using a Python Script before it can be used. I decided to make it a little more bug proof.</p>
+<p>This version of NER Annotator would:</p>
+<ol>
+<li>Use a Python backend to tokenize and detokenize text for tagging and generating training data.</li>
+<li>The UI will let me select tokens (idea copied from 
+<a href="https://prodi.gy/" target="_blank" rel="noopener">Prodigy</a>
+ from the spaCy team), so I don&rsquo;t have to be pixel perfect in my selections.</li>
+<li>Generate JSON which can be directly loaded instead of having to post-process it with Python script.</li>
+</ol>
+<h3 id="the-project">The Project</h3>
+<p>I created the NER with the above goals as a Free and Open Source project and released it under MIT License.</p>
+<p><strong>Github Link</strong>: 
+<a href="https://github.com/tecoholic/ner-annotator" target="_blank" rel="noopener">https://github.com/tecoholic/ner-annotator</a>
+</p>
+<p><img src="/img/wp-content/uploads/2020/12/start_page.png?w=1024" alt=""></p>
+<p><img src="/img/wp-content/uploads/2020/12/tagging.png?w=1024" alt=""></p>
+<h3 id="credits">Credits</h3>
+<p>Thanks to 
+<a href="https://www.linkedin.com/in/philipvollet" target="_blank" rel="noopener">Philip Vollet</a>
+ noticing it and sharing it on LinkedIn and Twitter, the project has gotten about 107 stars on Github and 14 forks, which is much more reach than I hoped for.</p>
+<p>Thanks to 
+<a href="https://twitter.com/1littlecoder" target="_blank" rel="noopener">@1littlecoder</a>
+ for making a 
+<a href="https://www.youtube.com/watch?v=mmCmqOWHC5A" target="_blank" rel="noopener">YouTube video</a>
+ of the tool and showing the full process of tagging some text, training data and performing extractions.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/12/24/backup-all-the-files-in-a-directory-to-azure-cloud/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Backup all the files in a directory to Azure Cloud</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/08/27/featured-on-thenextweb/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Featured on TheNextWeb & Lifehacker</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

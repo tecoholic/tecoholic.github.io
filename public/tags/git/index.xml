@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Arunmozhi</title>
+    <link>http://localhost:1313/tags/git/</link>
+    <description>Recent content in Git on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Wed, 18 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Avoiding Accidental Push to Upstream</title>
+      <link>http://localhost:1313/2024/09/18/avoid-accidental-push-to-upstream/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2024/09/18/avoid-accidental-push-to-upstream/</guid>
+      <description>&lt;p&gt;As anyone who works with multiple remotes in Git and has rights to many of them, I run into the issue of pushing to the wrong remote.&#xA;The main issue is I will simply use &lt;code&gt;git push origin&lt;/code&gt; while a simple &lt;code&gt;git push&lt;/code&gt; might be sufficient.&#xA;After trying and failing many times to get rid of this muscle memory, here are the 2 options I have come up with.&lt;/p&gt;&#xA;&lt;h3 id=&#34;option-1-dont-set-origin&#34;&gt;Option 1: Don&amp;rsquo;t set origin&lt;/h3&gt;&#xA;&lt;p&gt;A Git clone usually sets the remote as &lt;code&gt;origin&lt;/code&gt;. I change this right after a clone to something more descriptive of the source like &lt;code&gt;upstream&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

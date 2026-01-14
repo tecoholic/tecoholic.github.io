@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  Technology | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/tags/technology/" >
+  <link href="http://localhost:1313/tags/technology/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/tags/technology/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>Technology</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2025/10/13/hamburger-menus-on-desktop-are-bad/">
+          <div class="postHeader">
+            <span class="postTitle">Hamburger menus on desktop are bad</span>
+            
+            
+            <time class="postDate" datetime="2025-10-13">2025-10-13</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 2 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I am no UI expert. So, the statement is more of a personal opinion.</p>
+<p>I believe Hamburder menus in desktop software are just bad. There is no place for them whatsoever. In a mobile UI where space is limited, they make total sense.</p>
+<p>In a 24/27-inch monitor, having to click a 48px icon to see the list of item that perfectly fit in a single line of the menu bar is just &hellip; bad. That&rsquo;s all.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/12/05/setting-up-my-homeserver-part-3/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 3</span>
+            
+            
+            <time class="postDate" datetime="2022-12-05">2022-12-05</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 5 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>I have so far written about:</p>
+<ul>
+<li>
+<p>
+<a href="https://arunmozhi.in/2022/11/24/setting-up-my-homeserver-part-1/" target="_blank" rel="noopener">the hardware and the OS</a>
+ and</p>
+</li>
+<li>
+<p>how I 
+<a href="https://arunmozhi.in/2022/11/26/setting-up-my-homeserver-part-2/" target="_blank" rel="noopener">handle the networking</a>
+</p>
+</li>
+</ul>
+<p>and this post is about how I use 
+<a href="https://www.nomadproject.io/" target="_blank" rel="noopener">Nomad</a>
+ to deploy software.</p>
+<h3 id="but-before-that">But before that&hellip;</h3>
+<p>I have some updates in the networking department. I had mentioned in Part 2 that, I use Nginx as a reverse proxy to route traffic from the internet into my public apps like Misskey.</p>
+<p>By picking up the cues from 
+<a href="https://captnemo.in/blog/2018/04/22/home-server-networking/" target="_blank" rel="noopener">Nemo&rsquo;s setup</a>
+, I experimented with 
+<a href="https://traefik.io/traefik/" target="_blank" rel="noopener">Traefik</a>
+ and replace Nginx with Traefik. It was made easier by the fact that 
+<a href="https://traefik.io/blog/traefik-proxy-fully-integrates-with-hashicorp-nomad/" target="_blank" rel="noopener">Traefik fully supports Nomad service discovery</a>
+. That means, I don&rsquo;t have to run something like Consul just to handle the service to Traefik Proxy mapping.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/11/26/setting-up-my-homeserver-part-2/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 2</span>
+            
+            
+            <time class="postDate" datetime="2022-11-26">2022-11-26</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>In 
+<a href="https://arunmozhi.in/2022/11/24/setting-up-my-homeserver-part-1/" target="_blank" rel="noopener">part 1</a>
+, I wrote about the hardware, operating system and the software deployment method and tools used in my home server. In this one, I am going to cover one topic that I am least experienced in - <strong>Networking</strong></p>
+<h2 id="problem-exposing-the-server-to-the-internet">Problem: Exposing the server to the internet</h2>
+<p>At the heart of it, this the only thing in <em>Networking</em> I really wanted to achieve. Ideally the following is all I should have needed:</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/11/24/setting-up-my-homeserver-part-1/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 1</span>
+            
+            
+            <time class="postDate" datetime="2022-11-24">2022-11-24</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="preamble">Preamble</h2>
+<p>I had an old 
+<a href="https://www.intel.in/content/www/in/en/products/details/nuc.html" target="_blank" rel="noopener">Intel NUC</a>
+ lying around that I always wanted to put it to good use. I had set it up as a home media server using 
+<a href="https://www.plex.tv/" target="_blank" rel="noopener">Plex</a>
+ a couple years back, but streaming services and the newer content coupled with 100-300Mbps Fiber Internet connections have kind of made it redundant.</p>
+<p>So, when finally a couple of weeks back when I wanted to switch from Twitter to Mastodon, I got the idea to just host an instance for myself. But Mastodon was in Ruby and I was at the time reading through the 
+<a href="https://www.w3.org/TR/activitypub/" target="_blank" rel="noopener">ActivityPub Protocol specifications</a>
+ to see if I can create an account using just a couple of scripts and a bunch of JSON files. I didn&rsquo;t get far in the experiment, but someone ended up finding out 
+<a href="https://misskey-hub.net/" target="_blank" rel="noopener">Misskey</a>
+. I setup a Misskey instance on Digital Ocean and set out to preparing the NUC for a home-server.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/06/27/personal-bookmarking-using-yacy-yacy-it/">
+          <div class="postHeader">
+            <span class="postTitle">Personal Bookmarking using YACY &amp; yacy-it</span>
+            
+            
+            <time class="postDate" datetime="2022-06-27">2022-06-27</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>A recent post on HackerNews titled 
+<a href="https://news.ycombinator.com/item?id=31848210" target="_blank" rel="noopener">Ask HN: Does anybody still use bookmarking services?</a>
+ caught my attention. Specifically, the top response which mentioned a distributed Search Engine YACY.</p>
+<p>The author of the post mentions how, he has configured it to be a standalone personal search engine. The workflow is something like this:</p>
+<ol>
+<li>Browse the web</li>
+<li>Come across an interesting link that you need to bookmark</li>
+<li>Add the URL to the YACY Crawler and crawl to the depth=0, which crawls just that page and indexes it.</li>
+<li>Next time you need it, just search for any word that might be present on the page.</li>
+</ol>
+<p>This is brilliant, because, I don&rsquo;t have to spend time putting it the right folder (like in browser bookmark) or tagging it with right keywords (as I do in Notion collections). The full text indexing takes care of this automatically.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/">
+          <div class="postHeader">
+            <span class="postTitle">Podcast Notes: Darren Palmer on the EV Revolution</span>
+            
+            
+            <time class="postDate" datetime="2022-04-13">2022-04-13</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 6 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="preamble">Preamble</h2>
+<p>I listen to podcasts while doing chores like cooking, travelling in public transport, doing dishes&hellip;etc., In most cases, I just absorb what I can with the partial attention I provide to the podcast. Recently I thought, I would listen to some of them with a bit more attention, like a lecture and take some notes. I learnt a lot in this one from how EV range anxiety is a non-problem to wineries hedge their quality of wine my mixing grapes from different fields.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2021/12/06/goodbye-brave/">
+          <div class="postHeader">
+            <span class="postTitle">Goodbye! Brave</span>
+            
+            
+            <time class="postDate" datetime="2021-12-06">2021-12-06</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p><strong>Final Update</strong> (moved old updates to bottom)</p>
+<blockquote>
+<p>Brave supports Chrome extensions. The problem was with the author’s version of Brave; it was roughly a year old. Very old versions of Brave didn’t include service keys (necessary for interacting with Brave’s privacy-preserving proxy-service), whereas modern versions do (which is why you and I are able to install extensions without any issue)</p>
+<p>Sampson from Brave</p>
+</blockquote>
+<p>To explain - the place I have installed Brave hasn&rsquo;t made available any newer versions of the browser since December 2020. So the keys it shipped with have become outdated. Since no-update was available, I didn&rsquo;t see the usual orange &ldquo;Update&rdquo; button on the taskbar.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/07/06/data-science-first-impressions/">
+          <div class="postHeader">
+            <span class="postTitle">Data Science - First Impressions</span>
+            
+            
+            <time class="postDate" datetime="2020-07-06">2020-07-06</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 5 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>After 
+<a href="http://arunmozhi.in/2020/06/15/thinking-about-the-next-step-as-a-python-developer/" target="_blank" rel="noopener">some thoughts</a>
+ on what to learn next, I enrolled myself into 
+<a href="https://www.coursera.org/professional-certificates/ibm-data-science" target="_blank" rel="noopener">IBM Data Science Professional Certificate</a>
+ program. It is beginner level program to provide the necessary foundations for Data Science. I have completed 3 courses so far:</p>
+<ol>
+<li>What is Data Science?</li>
+<li>Tools for Data Science</li>
+<li>Data Science Methodology</li>
+</ol>
+<p>I liked all the courses so far. Despite IBM Cloud tools&rsquo; big presence, the courses cover the concepts in a somewhat generic way.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/06/28/text-plain-mime-type-and-python/">
+          <div class="postHeader">
+            <span class="postTitle">text/plain MIME Type and Python</span>
+            
+            
+            <time class="postDate" datetime="2020-06-28">2020-06-28</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>When you do <code>echo &quot;x&quot; &gt; my_file</code> and then check its MIME type using <code>file --mime-type my_file</code> it would say <code>text/plain</code>. But, when you do the same in Python by</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;my_file_2&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>fp<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;x&#34;</span>)
+</span></span></code></pre></div><p>and then check the MIME type it would say <code>application/octet-stream</code>. What&rsquo;s the difference?</p>
+<h3 id="for-the-impatient">For the impatient</h3>
+<p><strong>echo</strong> adds a new line to file which tells the <strong>file</strong> utility it is a text file.</p>
+<h3 id="for-the-curious">For the curious</h3>
+<p>When I saw 
+<a href="https://stackoverflow.com/questions/62617361/how-to-write-a-one-character-file-using-python-with-mime-type-text-plain" target="_blank" rel="noopener">this question on StackOverflow</a>
+, I was really stumped due to the following reasons:</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/05/13/thoughts-on-the-git-branch-pr-model/">
+          <div class="postHeader">
+            <span class="postTitle">Thoughts on The Git Branch PR Model</span>
+            
+            
+            <time class="postDate" datetime="2020-05-13">2020-05-13</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <blockquote>
+<p>This is just ramblings of someone who is overwhelmed when having to adapt to a new model of working with Git. There will perhaps be nothing of value here.</p>
+</blockquote>
+<p>Git - Such a central part of everyday work. Something I learnt a decade ago. Must have spent a full month learning it well including the forking and Pull Request model from Github. Since then nothing major has changed in my workflow. It is the same routine. If it is a OpenSource project - fork the project, work on the dev branch (sometimes even master depending on how the project is maintained) and issue a pull request with the changes. If it is a team project, have a dev branch where I pushed changes. If there is a feature or refactor that will affect other people&rsquo;s work, then create a branch (a feature branch) and work on the branch. Once the work is done, rebase it on the dev branch and merge it to dev.</p>
+        </div>
+      </div>
+    
+  </div>
+
+  <nav class="pagination" role="navigation" aria-label="Pagination"><span class="pagination-status">
+    page 1 / 2
+  </span><a class="pagination-next" href="/tags/technology/page/2/" rel="next">
+    older posts »
+  </a></nav>
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Claude-Code on Arunmozhi</title>
+    <link>http://localhost:1313/tags/claude-code/</link>
+    <description>Recent content in Claude-Code on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Thu, 23 Oct 2025 10:56:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing a Python Script - Some Surprises</title>
+      <link>http://localhost:1313/2025/10/23/optimizing-a-python-script-and-some-surprises/</link>
+      <pubDate>Thu, 23 Oct 2025 10:56:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2025/10/23/optimizing-a-python-script-and-some-surprises/</guid>
+      <description>&lt;p&gt;I have recently started using Claude Code and have found it very useful for experimentation and investigation type tasks.&#xA;Today I had to work on a processing a large text file with some patterns to be replaced in 2 stages&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;at an individual line level&lt;/li&gt;&#xA;&lt;li&gt;at a passage level&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I wrote the initial script using Python Regexes. Each of the stage has multiple regexes. And being the&#xA;simple minded programmer that I am, I simply used a for loop to use each regex and do a substiturion.&#xA;This was fine for a 20MB input file that it was written for. Then I got a 12 GB file to process.&#xA;After running for 2 hours, it was at about 5 out of the 35 million lines.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

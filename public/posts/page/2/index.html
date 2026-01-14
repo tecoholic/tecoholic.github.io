@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Posts | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/posts/" >
+  <link href="http://localhost:1313/posts/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/posts/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+
+<div>
+  <div class="listHeader">
+    <h1>Posts</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/26/how-to-set-uploads-space-limit-per-user-on-misskey/">
+          <div class="postHeader">
+            <span class="postTitle">How to set uploads space limit per user on Misskey?</span>
+            
+            
+            <time class="postDate" datetime="2023-09-26">2023-09-26</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            1 minute
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>Change the Policy of the role applied to the user. Since I have a single person instance, I just needed to update the default Policy Template from the Control Panel</p>
+<ol start="2">
+<li>
+<p>Go to Control Panel</p>
+</li>
+<li>
+<p>Click Roles</p>
+</li>
+<li>
+<p>Either change the &ldquo;Role Template&rdquo; if you have no roles defined, or edit the role governing the users for whom the limit needs to be changed.</p>
+</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png?w=1024" alt=""></p>
+<ol start="4">
+<li>Their &ldquo;Roles&rdquo; page should show the new limit under <strong>driveCapacityMb</strong> and also their &ldquo;Drive&rdquo; page in Basic Settings</li>
+</ol>
+<p><img src="/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.44.40-pm-1.png?w=610" alt=""></p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/12/dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs/">
+          <div class="postHeader">
+            <span class="postTitle">dev-note: Getting pyenv and pyright to work in Doom Emacs</span>
+            
+            
+            <time class="postDate" datetime="2023-09-12">2023-09-12</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            2 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>Getting Pyenv and Pyright to play nice in python-mode on Doom Emacs requires sticking to a few rules. I discovered these after multiple attempts of trial and error. All the following things might not be needed. But I got things to work only when I set all of these up.</p>
+<p>So, best advice is - start here and try to reduce it down.</p>
+<h3 id="emacs-config">Emacs Config</h3>
+<ul>
+<li>Edit your <code>.doom.d/init.el</code></li>
+</ul>
+<ol start="2">
+<li>
+<p>Enable both <code>lsp</code> and <code>tree-sitter</code> in the tools. <code>tree-sitter</code> is not probably needed for this. But, I wanted to use it, so.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/09/12/dev-note-doom-emacs-status-line-missing-icons-on-fresh-install/">
+          <div class="postHeader">
+            <span class="postTitle">dev-note: Doom Emacs status line missing icons on fresh install</span>
+            
+            
+            <time class="postDate" datetime="2023-09-12">2023-09-12</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            1 minute
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>Let&rsquo;s say you set up 
+<a href="https://github.com/doomemacs/doomemacs" target="_blank" rel="noopener">Doom Emacs</a>
+ from scratch for the first time, and you followed the instructions correctly and install the <code>all-the-icons</code> fonts when prompted, saw the icons properly displayed in the dashboard (launch window), but once you open a file, the status line starts showing random characters, instead of icons.</p>
+<blockquote>
+<p>You need to install nerd-icons using <code>M-x nerd-icons-install-fonts</code> because the doom-modline has switched from all-the-icons to nerd-icons</p>
+<p>
+<a href="https://github.com/seagle0128/doom-modeline/issues/310" target="_blank" rel="noopener">https://github.com/seagle0128/doom-modeline/issues/310</a>
+</p>
+</blockquote>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2023/04/16/back-to-basics-with-en-kanakku/">
+          <div class="postHeader">
+            <span class="postTitle">Back to Basics with En Kanakku</span>
+            
+            
+            <time class="postDate" datetime="2023-04-16">2023-04-16</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            3 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>Everyday I work on a megalith of a software called Open edX as a part of my work. It is built on top of Django. But here is the thing, it is very big piece of software and most of time I am tweaking something that is one among the many layers of abstraction and business logic.</p>
+<p>This has created a deep desire to get down to the basics and build something. I tried learning Rust. A systems language. How more basic can I get than that? But what do I do with Rust? I don&rsquo;t even know what kind of program I can write with that. A PDF Parser maybe? I downloaded the PDF 1.7 spec and started gathering 8 bits at a time. But Rust is not something that has the same velocity as Python or JavaScript. Understandably so. Compiled vs Interpreted.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/12/05/setting-up-my-homeserver-part-3/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 3</span>
+            
+            
+            <time class="postDate" datetime="2022-12-05">2022-12-05</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            5 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>I have so far written about:</p>
+<ul>
+<li>
+<p>
+<a href="https://arunmozhi.in/2022/11/24/setting-up-my-homeserver-part-1/" target="_blank" rel="noopener">the hardware and the OS</a>
+ and</p>
+</li>
+<li>
+<p>how I 
+<a href="https://arunmozhi.in/2022/11/26/setting-up-my-homeserver-part-2/" target="_blank" rel="noopener">handle the networking</a>
+</p>
+</li>
+</ul>
+<p>and this post is about how I use 
+<a href="https://www.nomadproject.io/" target="_blank" rel="noopener">Nomad</a>
+ to deploy software.</p>
+<h3 id="but-before-that">But before that&hellip;</h3>
+<p>I have some updates in the networking department. I had mentioned in Part 2 that, I use Nginx as a reverse proxy to route traffic from the internet into my public apps like Misskey.</p>
+<p>By picking up the cues from 
+<a href="https://captnemo.in/blog/2018/04/22/home-server-networking/" target="_blank" rel="noopener">Nemo&rsquo;s setup</a>
+, I experimented with 
+<a href="https://traefik.io/traefik/" target="_blank" rel="noopener">Traefik</a>
+ and replace Nginx with Traefik. It was made easier by the fact that 
+<a href="https://traefik.io/blog/traefik-proxy-fully-integrates-with-hashicorp-nomad/" target="_blank" rel="noopener">Traefik fully supports Nomad service discovery</a>
+. That means, I don&rsquo;t have to run something like Consul just to handle the service to Traefik Proxy mapping.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/11/26/setting-up-my-homeserver-part-2/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 2</span>
+            
+            
+            <time class="postDate" datetime="2022-11-26">2022-11-26</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            3 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>In 
+<a href="https://arunmozhi.in/2022/11/24/setting-up-my-homeserver-part-1/" target="_blank" rel="noopener">part 1</a>
+, I wrote about the hardware, operating system and the software deployment method and tools used in my home server. In this one, I am going to cover one topic that I am least experienced in - <strong>Networking</strong></p>
+<h2 id="problem-exposing-the-server-to-the-internet">Problem: Exposing the server to the internet</h2>
+<p>At the heart of it, this the only thing in <em>Networking</em> I really wanted to achieve. Ideally the following is all I should have needed:</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/11/24/setting-up-my-homeserver-part-1/">
+          <div class="postHeader">
+            <span class="postTitle">Setting up my HomeServer - Part 1</span>
+            
+            
+            <time class="postDate" datetime="2022-11-24">2022-11-24</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            4 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <h2 id="preamble">Preamble</h2>
+<p>I had an old 
+<a href="https://www.intel.in/content/www/in/en/products/details/nuc.html" target="_blank" rel="noopener">Intel NUC</a>
+ lying around that I always wanted to put it to good use. I had set it up as a home media server using 
+<a href="https://www.plex.tv/" target="_blank" rel="noopener">Plex</a>
+ a couple years back, but streaming services and the newer content coupled with 100-300Mbps Fiber Internet connections have kind of made it redundant.</p>
+<p>So, when finally a couple of weeks back when I wanted to switch from Twitter to Mastodon, I got the idea to just host an instance for myself. But Mastodon was in Ruby and I was at the time reading through the 
+<a href="https://www.w3.org/TR/activitypub/" target="_blank" rel="noopener">ActivityPub Protocol specifications</a>
+ to see if I can create an account using just a couple of scripts and a bunch of JSON files. I didn&rsquo;t get far in the experiment, but someone ended up finding out 
+<a href="https://misskey-hub.net/" target="_blank" rel="noopener">Misskey</a>
+. I setup a Misskey instance on Digital Ocean and set out to preparing the NUC for a home-server.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/06/27/personal-bookmarking-using-yacy-yacy-it/">
+          <div class="postHeader">
+            <span class="postTitle">Personal Bookmarking using YACY & yacy-it</span>
+            
+            
+            <time class="postDate" datetime="2022-06-27">2022-06-27</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            3 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>A recent post on HackerNews titled 
+<a href="https://news.ycombinator.com/item?id=31848210" target="_blank" rel="noopener">Ask HN: Does anybody still use bookmarking services?</a>
+ caught my attention. Specifically, the top response which mentioned a distributed Search Engine YACY.</p>
+<p>The author of the post mentions how, he has configured it to be a standalone personal search engine. The workflow is something like this:</p>
+<ol>
+<li>Browse the web</li>
+<li>Come across an interesting link that you need to bookmark</li>
+<li>Add the URL to the YACY Crawler and crawl to the depth=0, which crawls just that page and indexes it.</li>
+<li>Next time you need it, just search for any word that might be present on the page.</li>
+</ol>
+<p>This is brilliant, because, I don&rsquo;t have to spend time putting it the right folder (like in browser bookmark) or tagging it with right keywords (as I do in Notion collections). The full text indexing takes care of this automatically.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/04/13/podcast-notes-darren-palmer-on-the-ev-revolution/">
+          <div class="postHeader">
+            <span class="postTitle">Podcast Notes: Darren Palmer on the EV Revolution</span>
+            
+            
+            <time class="postDate" datetime="2022-04-13">2022-04-13</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            6 minutes
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <h2 id="preamble">Preamble</h2>
+<p>I listen to podcasts while doing chores like cooking, travelling in public transport, doing dishes&hellip;etc., In most cases, I just absorb what I can with the partial attention I provide to the podcast. Recently I thought, I would listen to some of them with a bit more attention, like a lecture and take some notes. I learnt a lot in this one from how EV range anxiety is a non-problem to wineries hedge their quality of wine my mixing grapes from different fields.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2022/02/03/clean-python-compiled-files-pyc-using-py3clean/">
+          <div class="postHeader">
+            <span class="postTitle">Clean Python compiled files (.pyc) using py3clean</span>
+            
+            
+            <time class="postDate" datetime="2022-02-03">2022-02-03</time>
+          </div>
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span class="sr-only">reading time</span>
+            1 minute
+          </div>
+          
+        </a>
+        <div class="postExcerpt">
+          <p>Recently ran into some issues with Python compiled files <code>__pycache__</code> and <code>*.pyc</code> files not getting deleted when doing <code>git checkout</code>. The files have been created when I mounted the folder as a volume in a docker container and had different rights than the current user. So, I needed to use <code>sudo</code> to remove them recursively in the project.</p>
+<p>That&rsquo;s when I learnt of this cool new tool called <code>py3clean</code>. Simply run <code>py3clean &lt;folder&gt;</code> and it will remove all the Python compiled files recursively.</p>
+        </div>
+      </div>
+    
+  </div>
+
+<nav class="pagination" role="navigation" aria-label="Pagination"><a class="pagination-prev" href="/posts/" rel="prev">
+    « newer posts
+  </a><span class="pagination-status">
+    page 2 / 15
+  </span><a class="pagination-next" href="/posts/page/3/" rel="next">
+    older posts »
+  </a></nav>
+
+</div>
+
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

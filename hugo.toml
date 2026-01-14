@@ -1,0 +1,76 @@
+baseURL = "https://arunmozhi.in/"
+languageCode = "en-us"
+title = "Arunmozhi"
+theme = "nightfall"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  user = "Arunmozhi"
+  hostname = "arunmozhi.in"
+  openLinksInNewTab = true
+  displayDateFormat = "2006-01-02"
+
+  showMetadata = true
+  showPublishedDate = true
+  showReadingTime = true
+  showTags = true
+  showAuthors = true
+  showCategories = true
+
+  [params.author]
+    name = "Arunmozhi"
+    email = "arun@arunmozhi.in"
+    avatar = "/img/avatar.png"
+    avatarSize = "size-xs"
+
+[[params.social]]
+  key = 0
+  name = "github"
+  url = "https://github.com/tecoholic"
+  icon = "fa-brands fa-github"
+  target = "_blank"
+  aria = "GitHub Profile"
+
+[[params.social]]
+  key = 1
+  name = "stackoverflow"
+  url = "https://stackoverflow.com/users/8765631/arunmozhi"
+  icon = "fa-brands fa-stack-overflow"
+  target = "_blank"
+  aria = "StackOverflow Profile"
+
+[[params.social]]
+  key = 2
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/tecoholic/"
+  icon = "fa-brands fa-linkedin"
+  target = "_blank"
+  aria = "LinkedIn Profile"
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    url = "/posts/"
+    weight = 1
+  [[menu.header]]
+    name = "about"
+    url = "/about/"
+    weight = 2
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

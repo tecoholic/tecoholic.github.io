@@ -1,0 +1,14 @@
+---
+title: "Hello!"
+slug: "hello"
+---
+
+Hello!
+
+I have grown up thinking everything in this world runs because, it is the just the ***convenient*** way to run them, ***not*** because it is the ***right*** way. Hence, in my opinion, *Education* mother of all knowledge, know-how and process is flawed to the core. The state of Indian education is something that every paper columnist writes about when he is run out. Because there is so much to analyse, so many ways through which things go wrong and too many places where fingers could be pointed. I have never ever seen a article appreciating Indian education system from my secondary schooling to post-graduate degree, which is *one decade*. Even though things like *Right To Education* has come up, the flaws they contain seem to increase the complexity of an already super-complicated problem.
+
+Why hasn&#8217;t the situation got better in these 10 years? I know nothing about it. I have been a student cribbing about the wrong ways things are done. I was never in a position where I had the ability to decide, ability to influence, ability to question and the ability to do anything about the education I received. Things are going to change.
+
+I have decided to take up a two year fellowship with Teach For India &#8211; A NGO working to improve the education of low income community children. I am going to teach third or fourth standard kids for two years. This is going to be an opportunity to see things, no, experience things from the other side, understand the working of this troubled system of Indian Education. I don&#8217;t have the ability to extract the abstract of what I see and experience.<del datetime="2015-04-03T18:06:44+00:00"> I plan to use this blog to write as-is form of my experiences and review them after two years.</del>
+
+<del datetime="2015-04-03T18:06:44+00:00">This space will document my journey &#8220;Through Education&#8221; for the next two years.</del>

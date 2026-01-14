@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Huawei - HarmonyOS &amp; LiteOS combo system | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2021/12/29/huawei-harmonyos-liteos-combo-system/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Huawei - HarmonyOS & LiteOS combo system</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/general/">General</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2021-12-29">2021-12-29</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>I recently bought a smart watch that will let me go for a run without 350 grams of electronics (my phone) jiggling in my pocket at every step. It is a 
+<a href="https://amzn.to/3z5F1lF" target="_blank" rel="noopener">Honor Magic Watch 2</a>
+. It&rsquo;s probably the cheap &amp; beast option (costs about 12K) which supports onboard music storage. Now, I can go for a run with just watch and Bluetooth earphones :)</p>
+<h3 id="the-liteos">The LiteOS</h3>
+<p>Now the watch doesn&rsquo;t support 3rd party apps like the pricier WearOS ones like the 
+<a href="https://amzn.to/3qzZGKu" target="_blank" rel="noopener">Samsung Galaxy Watches</a>
+. How to make this thing smarter? Google lookup revealed that this thing is basically a clone of Huawei Watch 2 and they both run an operating system called 
+<a href="https://www.huawei.com/en/technology-insights/publications/huawei-tech/84/lite-os-smart-iot" target="_blank" rel="noopener">LiteOS</a>
+ - which is a low power IoT OS developed by Huawei for its smart devices. The cool thing is, the OS is actually Open Source - 
+<a href="https://github.com/LiteOS/LiteOS" target="_blank" rel="noopener">https://github.com/LiteOS/LiteOS</a>
+ (BSD-3 Licensed).</p>
+<p>While it might be OpenSource, it still doesn&rsquo;t solve &ldquo;making it smarter&rdquo;.</p>
+<ul>
+<li>The watch&rsquo;s source code is not open source - just the OS</li>
+<li>There is no SDK to develop apps, so there is no documented way to know it&rsquo;s APIs</li>
+</ul>
+<h3 id="harmonyos">HarmonyOS</h3>
+<p>Unsurprisingly Huawei is aware of the problem and they have been developing more modern OS called 
+<a href="https://www.harmonyos.com/en/" target="_blank" rel="noopener">HarmonyOS</a>
+, which will allow them to overcome this. HarmonyOS is being positioned as an alternate to Android for cross device integration. It runs on everything from watches, phones, tablets, to TVs.</p>
+<p>How did Huawei develop such an OS so fast? 
+<a href="https://www.techadvisor.com/news/software/harmony-os-3798558/" target="_blank" rel="noopener">Turns out it is just a fork of Android</a>
+ that has been rebranded/code obfuscated&hellip; or whatever. Basically a copy.</p>
+<h3 id="the-battery">The Battery</h3>
+<p>One of the good thing about the LiteOS watches is their battery life. They are rated for 7 - 4 days of usage. Having used it for a week now, I will say it is kind of true. Even with GPS + Bluetooth Music on for 40 mins a day, it can still go for 4 days.</p>
+<p>Now if Google&rsquo;s WearOS can only provide a battery life of 24 - 48 hours, how can HarmonyOS which is a clone be any better?</p>
+<h3 id="enter-the-combo-os">Enter the combo OS</h3>
+<p>Huawei has done what we Linux users have been doing for decades - dual booting OS. Well, not exactly, but close. So the newer watches like Huawei Watch 3, come with 
+<a href="https://www.wired.co.uk/article/huawei-harmony-os-20-tablets-watches" target="_blank" rel="noopener">both LiteOS and HarmonyOS loaded onto them</a>
+.</p>
+<p>For &ldquo;smarter&rdquo; requirements, HarmonyOS takes over, and for essentials, the LiteOS subs in. It is kind of a smart solution. With this combo solution, Huawei seems to bringing the best of both worlds to their watches.</p>
+<h5 id="sidenote">Sidenote</h5>
+<p>The Honor watch also has a Huawei designed custom chip called Kirin which runs the LiteOS. So they could be going Apple&rsquo;s way in Chip + Kernel + OS level integration.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2022/02/03/clean-python-compiled-files-pyc-using-py3clean/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Clean Python compiled files (.pyc) using py3clean</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2021/12/06/goodbye-brave/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Goodbye! Brave</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

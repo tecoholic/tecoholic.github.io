@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Python Flaskஐ நிறுவுவது எப்படி? | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2019/09/28/python-flask-installation-tamil/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Python Flaskஐ நிறுவுவது எப்படி?</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/python-flask-tamil/">Python-Flask-Tamil</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2019-09-28">2019-09-28</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>இந்தக்கட்டுரை நீங்கள் ஏற்கனவே உங்கள் கணினியில் Python install செய்து வைத்துள்ளீர்கள் எனும் கோணத்தில் இருந்து எழுத்தப்பட்டது. Python உங்கள் கணினியில் இல்லை என்றால், 
+<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a>
+ சென்று, பதிவிறக்கி உங்கள் கணினியில் நிறுவிக்கொள்ளவும்.</p>
+<ol>
+<li>Python 3</li>
+</ol>
+<hr>
+<p>நீங்கள் MacOS அல்லது Linux பயன்படுத்துபவராக இருந்தால் 90% உங்கள் கணினியில் Python 2 இருக்கும். நீங்கள் Python 3-ஐ நிறுவிக்கொள்ளுதல் சிறப்பு.</p>
+<blockquote>
+<p>ℹ️ அனைத்து விதாமன Operating System-க்கும் Python 3 நிறுவுவது பற்றிய தகவலுக்கு 
+<a href="https://realpython.com/installing-python/" target="_blank" rel="noopener">https://realpython.com/installing-python/</a>
+</p>
+</blockquote>
+<p>உங்கள் கணினியில் உள்ள &ldquo;Command Line&rdquo; அல்லது &ldquo;Terminal&rdquo; செயலியைத் திறந்து கீழே கொடுக்கப்பட்டுள்ளவற்றை செய்யவும்.</p>
+<p><strong>சிறுகுறிப்பு:</strong> நான் MacOS பயன்படுத்துகிறேன், எனவே என்னுடைய Commandகள், MacOSக்கும், Linuxக்கும் சரியாகப்பொருந்தும். Windows பயன்படுத்துபவர்களுக்கு ஒரு சிலவை வேறு படலாம், கவனத்தில் கொள்ளவும்.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python --version
+</span></span></code></pre></div><p>இது உங்கள் கணினியில் உள்ள கணினியில் இருக்கும் Pythonனின் பதிப்பைக்காட்டும். என்னுடைய இரண்டு கணினிகளின் வெளியீடு இதோ.</p>
+<p><img src="/img/wp-content/uploads/2019/09/tecoholic_multi_____ssh__and_zsh.png" alt="Python Version Check"></p>
+<p>ஒன்றில் Python 2 இருப்பதைக்காணலாம். நீங்கள் Python 3 நிறுவினாலும், ஒரு சில சமயம் Python 2வே பிரதானமாக இருக்கும். அப்படி இருந்தால் கவலைப்படத் தேவையில்லை. <code>python3 --version</code> என்று அடித்துப்பார்த்து Python 3 இருக்கிறதா என்று சோதித்துக்கொள்ளவும்.</p>
+<h2 id="2-virtual-environment"><img src="/img/wp-content/uploads/2019/09/python3-version.png" alt="python3-version.png">
+2. Virtual Environment</h2>
+<p>Flask நிறுவுவதில் முதல் வேலை, அதற்கென தனி ஒரு virtual environemnt-ஐ உருவாக்குவது. இது நம்முடைய project சம்பந்தமான மற்றும் தேவையான விசயங்களை மட்டும் ஒரு இடத்தில் வைத்துக்கொள்ள உதவும். இன்னும் விளக்கமாக்ச்சொன்னால், இன்று நாம் ஒரு இணைய செயலியை எழுத முனைகிறோம், எனவே நாம் Flask நிறுவுகிறோம். நாளை நாம் PyQt துணைகொண்டு ஒரு desktop செயலியை உருவாக்க முயலும் பொழுது அதை நிறுவ வேண்டும். இரண்டுக்கும் சம்பந்தம் கிடையாது, எனவே அவைகளை system Python இல் நிறுவுவதைவிட, நாம் அவைகளுக்கு எனத் தனியாக ஒரு environmentஐ உருவாக்கி அவைகளை தனித்தனியே நிறுவி வைத்துவிட்டோம் என்றால், நாளை எந்த ஒரு மாற்றம் செய்தாலும், அது அந்த ஒரு projectஐ மட்டுமே பாதிக்குமோ தவிற நமதுக் கணினியில் இருக்கும் எல்லாவற்றையும் பாதிக்காது.</p>
+<p>என்னடா இவன் &ldquo;environment&rdquo; உருவாக்கு என்கிறானே, இதுவே ஒரு பெரிய வேலையாக இருக்கும் போல இருக்கே என்று நீங்கள் பயப்பட வேண்டாம். அதற்கு Python நிறுவும் பொழுது கூடவே வந்த virtualenv என்ற கருவியைப் பயண்படுத்திக்கொள்ளலாம். Command line சென்று, நம் projectக்கு ஒரு directoryயை உருவாக்கி, அதில் ஒரு virtual environment ஐ உருவாக்குங்கள்.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir flask-project
+</span></span><span style="display:flex;"><span>cd flask-project
+</span></span><span style="display:flex;"><span>virtualenv env --python<span style="color:#f92672">=</span>python3
+</span></span></code></pre></div><p><img src="/img/wp-content/uploads/2019/09/create-virtualenv.png" alt="create-virtualenv.png"></p>
+<p>இப்பொழுது நீங்கள் <code>ls</code> என்று உள்ளிட்டுப் பார்த்தீர்களேயானால், அங்கு <code>env</code> என்று ஒரு folder இருப்பதைப் பார்க்களாம். இதுவே உங்கள் projectஇன் virtual environment.</p>
+<ol start="3">
+<li>Flask</li>
+</ol>
+<hr>
+<p>இப்பொழுது நாம் உருவாக்கிய virtual environmentக்குள் Flaskஐ நிறுவலாம். முதலில் அதனை activate செய்ய வேண்டும். அப்படி செய்யத்தவறினால், நாம் செய்யும் மாற்றங்கள் எல்லாம் கணினியின் system librariesஐப் பாதிக்கும்.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source env/bin/activate
+</span></span></code></pre></div><p><img src="/img/wp-content/uploads/2019/09/venv-ectivated.png" alt="venv-ectivated.png"></p>
+<p>Activate ஆனவுடன், நம்முடை environmentஇன் பெயர் command lineஇல் முன்னே சேர்ந்து கொண்டதைக்காணலாம். இது நமக்கு நாம் எந்த environmentஇல் வேலை செய்யப்போகிறோம் என்பதைக் காட்டும். இப்பொழுது Flaskஐ நிறுவலாம்.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install Flask
+</span></span></code></pre></div><p><img src="/img/wp-content/uploads/2019/09/flask_installed.png" alt="flask_installed.png"></p>
+<p>Flask நிறுவியாயிற்று. அதைக்கொண்டு செயலிகளை எப்படி உருவாக்குவது என்பதை அடுத்து வரும் கட்டுரைகளில் பார்ப்போம்.</p>
+<p>உங்களுக்கு இதில் எதேனும் ஐயங்கள் இருந்தால் கீழ பதிவிடவும். நன்றி.</p>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"><img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons Licence"></a>
+<br>
+This work is licensed under a 
+<a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2019/09/29/flask-first-application-tamil/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Flaskஇல் நம் முதல் செயலி</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2019/09/27/what-is-python-flask/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Python Flask என்றால் என்ன?</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

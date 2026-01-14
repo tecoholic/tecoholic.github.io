@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flask on Arunmozhi</title>
+    <link>http://localhost:1313/tags/flask/</link>
+    <description>Recent content in Flask on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Fri, 27 Sep 2019 03:05:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Flask என்றால் என்ன?</title>
+      <link>http://localhost:1313/2019/09/27/what-is-python-flask/</link>
+      <pubDate>Fri, 27 Sep 2019 03:05:01 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/09/27/what-is-python-flask/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Python Flask என்பது ஒரு இணைய மென்பொருள்க் குறுங்கட்டமைப்பு.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;இணய-மனபரளக-கறஙகடடமபப---எனன-சலறஙக&#34;&gt;இணைய மென்பொருள்க் குறுங்கட்டமைப்பா - என்ன சொல்றீங்க?&lt;/h3&gt;&#xA;&lt;p&gt;Flask ஒரு micro web framework. அது ஒரு web application (இணைய செயலி) எழுதத் தேவையான எல்லா வரைமுறைகளையும் நமக்கு வகுத்துத் தருகிறது. அதே சமயம், அப்படி எழுதப்படும் செயலிகள் எல்லாவற்றிலும் எல்லா செயல்பாடுகளும் உள்ளடங்க வேண்டும் என்ற கட்டாயம் இல்லை. நாம் ஒரே ஒரு கோப்பு (file) கொண்டும் ஒரு முழு செயலியை உருவாக்கலாம், அல்லது ஓராயிரம் கோப்புகள் கொண்டும் உருவாக்காலாம். அது முழுக்க முழுக்க நம் தேவையைப் பொருத்தது.&lt;/p&gt;&#xA;&lt;p&gt;எடுத்துக்காட்டாக, இந்த 👇 நாங்கே வரிகளில் ஒரு முழு செயலியை உருவாக்கிவிட முடியும்.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Parsing &amp; Validating JSON in Flask Requests</title>
+      <link>http://localhost:1313/2019/08/16/parsing-validating-json-in-flask-requests/</link>
+      <pubDate>Fri, 16 Aug 2019 06:00:10 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/08/16/parsing-validating-json-in-flask-requests/</guid>
+      <description>&lt;p&gt;This is a follow up to the previous article: &#xA;&lt;a href=&#34;http://arunmozhi.in/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simplifying JSON parsing in Flask routes using decorators&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;In the previous article we focused on simplifying the JSON parsing using decorators. The aim was to not repeat the same logic in every route adhering to the DRY principle. I will focus on what goes on inside the decorator in this article.&lt;/p&gt;&#xA;&lt;p&gt;I ended the last article with the following decorator (kindly see the implementation of &lt;code&gt;@required_params&lt;/code&gt; in the previous article)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Simplifying JSON parsing in Flask routes using decorators</title>
+      <link>http://localhost:1313/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/</link>
+      <pubDate>Fri, 26 Jul 2019 04:28:36 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/07/26/simplifying-json-parsing-in-flask-routes-using-decorators/</guid>
+      <description>&lt;p&gt;Flask is simple and effective when it comes to reading input parameters from the URL. For example, take a look at this simple route.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@app.route&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/todo/&amp;lt;int:id&amp;gt;/&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;task&lt;/span&gt;(id):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; jsonify({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: id, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;task&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Write code&amp;#34;&lt;/span&gt;})&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You specify a parameter called &lt;code&gt;id&lt;/code&gt; and set its type as &lt;code&gt;int&lt;/code&gt;, Flask automatically parses the value from the URL converts it to an integer and makes it available as a parameter in the &lt;code&gt;task&lt;/code&gt; function.&lt;/p&gt;&#xA;&lt;p&gt;But it becomes harder when we start working with JSON being passed on as inputs when we build APIs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adding Unique Constraints After the Fact in SQLAlchemy [Copy]</title>
+      <link>http://localhost:1313/2019/02/26/adding-unique-constraints-after-the-fact-in-sqlalchemy-copy/</link>
+      <pubDate>Tue, 26 Feb 2019 04:52:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/02/26/adding-unique-constraints-after-the-fact-in-sqlalchemy-copy/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post is originally from &#xA;&lt;a href=&#34;https://skien.cc/blog/2014/01/31/adding-unique-contraints-after-the-fact-in-sqlalchemy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://skien.cc/blog/2014/01/31/adding-unique-contraints-after-the-fact-in-sqlalchemy/&lt;/a&gt;&#xA;. But the URL is throwing a 404 and I could access the page only from the Google cache. I am copying it here in case it goes missing in the future.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a href=&#34;https://twitter.com/taubeneck/status/1100591684096806913&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/taubeneck/status/1100591684096806913&lt;/a&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Dealing with ghost/outdated service entries in Nomad | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2024/04/03/dealing-with-ghost-outdated-service-entries-in-nomad/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Dealing with ghost/outdated service entries in Nomad</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/homeserver/">#Homeserver</a><span></span>
+    <a href="/tags/nomad/">#Nomad</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/notes/">Notes</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2024-04-03">2024-04-03</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>1 minute</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>I have run into this issue multiple times with Nomad. For some reason, when jobs are redeployed/restarted, the service registration isn&rsquo;t removed. This causes my Traefik reverse proxy to send requests to a non-existing allocation in Nomad.</p>
+<p>Last time this happened, I think I completely nuked the Nomad setup and setup everything from scratch. This time around, I finally figured out the right way to do things.</p>
+<ol start="2">
+<li>
+<p>Use <code>nomad service list</code> to get a list of the services</p>
+</li>
+<li>
+<p>The use <code>nomad service info -verbose &lt;service_name&gt;</code> to get the service registrations for the app having the issue.</p>
+</li>
+<li>
+<p>Open the UI and click on the <strong>Job</strong> &gt; <strong>Services</strong> and click on the allocations to identify the dead allocation</p>
+</li>
+<li>
+<p>Note the allocation ID and get the corresponding <strong>ID</strong> from the service info</p>
+</li>
+<li>
+<p>Finally, remove the ghost entry with <code>nomad service delete &lt;service-name&gt; &lt;ID&gt;</code></p>
+</li>
+</ol>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2024/06/21/gitea-git-push-doesnt-work-after-moving-server-to-new-ip/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Gitea - git push doesn't work after moving server to new IP</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2023/12/26/none/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Writing testable code with Polars and Pytest</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

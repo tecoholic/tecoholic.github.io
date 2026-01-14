@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Strapi - Optimizing REST API responses by preventing auto-population of relations | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/08/18/strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Strapi - Optimizing REST API responses by preventing auto-population of relations</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/api/">#Api</a><span></span>
+    <a href="/tags/js/">#Js</a><span></span>
+    <a href="/tags/strapi/">#Strapi</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-08-18">2020-08-18</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>3 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>Strapi is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API – both REST and GraphQL.</p>
+<p>This is a mini series which outlines:</p>
+<ol>
+<li>
+<a href="https://arunmozhi.in/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/" target="_blank" rel="noopener">Setting up Strapi and creating an API</a>
+</li>
+<li>
+<a href="https://arunmozhi.in/2020/08/11/strapi-adding-isowner-policy-to-the-api/" target="_blank" rel="noopener">Adding ownership control to the API endpoints</a>
+</li>
+<li>Optimising REST API responses – (you are here)</li>
+</ol>
+<h2 id="so-far-">So far &hellip;</h2>
+<p>We have created a REST API for an expense management application with category support. We have JWT token based auth which came with Strapi to authenticate users. We have implemented the <strong>IsOwner</strong> policy in the controllers to restrict data access.</p>
+<h2 id="optimizing-the-responses-while">Optimizing the Responses while</h2>
+<p>The API by default automatically populates relationships and sends in all the related data. It is very useful for some cases and completely a overkill for others. Take the following for example.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-expense-items.png?w=926" alt=""></p>
+<p>I have setup 5 Expense Items in the Admin dashboard for our <code>test_user</code>. 4 of them are under the category &lsquo;Travel&rsquo; and one of them is under the category &lsquo;Food&rsquo;. Now when we fetch the categories, let us see what we get.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-expense-response.png?w=1024" alt=""></p>
+<p>When making a GET request to <code>/categories</code>, we are not only getting the categories but also all the expense items which are under every category. When a user has thousands of expense items, we cannot be querying the DB for all of them whenever a GET request is made to categories. That would cause serious performance issues.</p>
+<h3 id="preventing-auto-population-of-relations">Preventing auto-population of relations</h3>
+<p>We can turn this off by setting the <code>autoPopulate</code> flag to false in the model.</p>
+<ul>
+<li>Open the file <code>/api/category/models/category.settings.json</code></li>
+<li>Add the line <code>&quot;autoPopulate&quot;: false</code> in the the <code>expense-items</code> block as shown below</li>
+<li>Let us also disable auto-population of the user. We have already implemented the IsOwner policy for all requests, so only the owner is going to be requesting their own categories and the user field is redundant data.</li>
+</ul>
+<pre tabindex="0"><code>{
+  &#34;kind&#34;: &#34;collectionType&#34;,
+  &#34;collectionName&#34;: &#34;categories&#34;,
+  &#34;info&#34;: {
+    &#34;name&#34;: &#34;Category&#34;
+  },
+  &#34;options&#34;: {
+    &#34;increments&#34;: true,
+    &#34;timestamps&#34;: true
+  },
+  &#34;attributes&#34;: {
+    &#34;name&#34;: {
+      &#34;type&#34;: &#34;string&#34;,
+      &#34;required&#34;: true,
+      &#34;minLength&#34;: 2
+    },
+    &#34;color&#34;: {
+      &#34;type&#34;: &#34;string&#34;
+    },
+    &#34;user&#34;: {
+      &#34;plugin&#34;: &#34;users-permissions&#34;,
+      &#34;model&#34;: &#34;user&#34;,
+      &#34;via&#34;: &#34;categories&#34;,
+      &#34;autoPopulate&#34;: false
+    },
+    &#34;expense_items&#34;: {
+      &#34;via&#34;: &#34;category&#34;,
+      &#34;collection&#34;: &#34;expense-item&#34;,
+      &#34;autoPopulate&#34;: false
+    }
+  }
+}
+</code></pre><p>Now as soon as we save the file, the Strapi dev server should restart. Now we can run the same GET <code>/categories</code> request to verify the results.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-no-relations-data.png?w=1024" alt=""></p>
+<p>There is no expense items in the response. Just the categories.</p>
+<p>We can use this method to turn of auto population of any relation in any of the Content Types we have created. This way the API returns only what we intend it to return.</p>
+<h2 id="optimising-the-login-response">Optimising the Login response</h2>
+<p>Let us take a look at the login response.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-login-response.png?w=1024" alt=""></p>
+<p>We can see that it contains all the categories and expense items of the user. This would put disastrous load on the system as the data size grows. So, let us turn off auto-populate for the users as well.</p>
+<ul>
+<li>Open <code>/extensions/user-permissions/models/User.settings.json</code></li>
+<li>Scroll to the bottom and add <code>&quot;autoPopulate&quot;: false</code> to the entries <code>categories</code> and <code>expense_items</code></li>
+</ul>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-user-settings.png?w=781" alt=""></p>
+<p>Now, let us login again and check the response.</p>
+<p><img src="/img/wp-content/uploads/2020/08/strapi-optimized-login.png?w=1024" alt=""></p>
+<p>No categories or expense items in the response, just the JWT token user object and the roles. Now every time a user logs in Strapi won&rsquo;t be querying the database for everything related to the user.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This concludes this mini series. By applying the changes presented in this series, Strapi can be used a REST API backend not just for CMS purposes with strong public frontend, but also as a good backend for User focused web applications.</p>
+<p>In my journey as a web developer, Strapi blew my mind the same way Django did almost a decade back with its built-in Admin UI. The amount of power Strapi packs right off the box is amazing.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/08/22/rediscovering-web-development/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Rediscovering Web Development</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/08/11/strapi-adding-isowner-policy-to-the-api/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Strapi - Adding IsOwner Policy to the API</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

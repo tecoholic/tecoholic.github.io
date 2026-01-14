@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Employing VueJS reactivity to update D3.js Visualisations – Part 2 | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>Employing VueJS reactivity to update D3.js Visualisations – Part 2</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/d3js/">#D3js</a><span></span>
+    <a href="/tags/vue/">#Vue</a></dd>
+            
+            
+            
+                
+<dt>categories</dt>
+<dd><span></span>
+    <a href="/categories/coding/">Coding</a></dd>
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="2020-03-11">2020-03-11</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>In 
+<a href="https://arunmozhi.in/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1/" target="_blank" rel="noopener">Part 1</a>
+, I wrote about using Vue&rsquo;s reactivity directly in the SVG DOM elements and also pointed out that it could become difficult to manage as the visualisation grew in complexity.</p>
+<p>We used D3 utilities for computation and Vue for the state management. In this post we are going to use D3 for both computation and state management with some help from Vue.</p>
+<p>Let us 
+<a href="https://arunmozhi.in/2020/03/10/adding-d3-js-visualisations-to-vuejs-components/" target="_blank" rel="noopener">go back to our original</a>
+ inverted bar chart and the code where we put all the D3 stuff inside the <code>mounted()</code> callback.</p>
+<p>I am going to add a button to the interface so we can generate some interactivity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>&lt;template&gt;
+</span></span><span style="display:flex;"><span> &lt;section&gt;
+</span></span><span style="display:flex;"><span> &lt;h1&gt;Simple Chart&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;button @click=&#34;updateValues()&#34;&gt;Update Values&lt;/button&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;div id=&#34;dia&#34;&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span> &lt;/section&gt;
+</span></span><span style="display:flex;"><span>&lt;/template&gt;
+</span></span></code></pre></div><p>&hellip; and define the <code>updateValues()</code> inside the methods in the script</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">VisualComponent</span><span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> data: function() {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> return {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> values: [1, 2, 3, 4, 5]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> mounted() {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> // all the d3 code in here
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> methods: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> updateValues() {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> const count = Math.floor(Math.random() * 10)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> this.values = Array.from(Array(count).keys())
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span></code></pre></div><p>Now, every time the button is clicked, a random number of elements (0 to 10) will be set to the <code>values</code> property of the component. Time to make the visualization update automatically. How do we do that?</p>
+<h3 id="using-vue-watchers">Using Vue Watchers</h3>
+<p>Watchers in Vue provide us a way track changes on values and do custom things. We are going to combine that with 
+<a href="https://bost.ocks.org/mike/join/" target="_blank" rel="noopener">our knowledge of D3&rsquo;s joins</a>
+ to update out visualization.</p>
+<p>First I am going to make a couple of changes so we can access the visualization across all the functions in the component. We currently have this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span> <span style="color:#a6e22e">mounted</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#dia&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">400</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">svg</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">enter</span>()
+</span></span><span style="display:flex;"><span> ...
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><ol>
+<li>We are going to remove the <code>data</code> and replace it with <code>this.values</code>. This will allow us to access the data anywhere from the visualization</li>
+<li>We are going to track the <code>svg</code> as a component data value instead of a local constant.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span> ...
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">values</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">svg</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span> <span style="color:#75715e">// property to reference the visualization
+</span></span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> },
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">mounted</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#dia&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">400</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">svg</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">data</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">values</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">enter</span>()
+</span></span><span style="display:flex;"><span> ...
+</span></span></code></pre></div><p>Now we can access the data and the visualization from anywhere in the Vue Component. Let us add a watcher that will track the values and update the visualization</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+</span></span><span style="display:flex;"><span> ...
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">values</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// Bind the new values array to the rectangles
+</span></span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bars</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">svg</span>.<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;rect&#39;</span>).<span style="color:#a6e22e">data</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">values</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// Remove any extra bars that might be there
+</span></span></span><span style="display:flex;"><span> <span style="color:#75715e">// We will use D3&#39;s exit() selection for that
+</span></span></span><span style="display:flex;"><span> <span style="color:#a6e22e">bars</span>.<span style="color:#a6e22e">exit</span>().<span style="color:#a6e22e">remove</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// Add any extra bars that we might need
+</span></span></span><span style="display:flex;"><span> <span style="color:#75715e">// We will use D3&#39;s enter() selection for that
+</span></span></span><span style="display:flex;"><span> <span style="color:#a6e22e">bars</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">enter</span>()
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;rect&#39;</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">i</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#ae81ff">25</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// Let us set the height for both existing and new bars
+</span></span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">merge</span>(<span style="color:#a6e22e">bars</span>)
+</span></span><span style="display:flex;"><span> .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;height&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span> })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>There we have it - a visualization that will update based on the user&rsquo;s interaction.</p>
+<p><img src="/img/wp-content/uploads/2020/03/updating_d3_with_vue.gif" alt="Updating_D3_with_Vue"></p>
+<h3 id="notes">Notes</h3>
+<ol>
+<li>If we compare this technique to the previous one, it does seem like we are writing more verbose JavaScript than necessary. But if you had written D3 at all, you would find this verbose JS better to manage than the previous one.</li>
+<li>Performance - One concern when switching from Vue&rsquo;s direct component reactivity to DOM based updates using D3 is the performance. I don&rsquo;t have a clear picture on that matter. But the good thing is, D3&rsquo;s update mechanism changes only what is necessary similar to that of Vue&rsquo;s update mechanism. So I don&rsquo;t think we will be very far when it comes to performance.</li>
+<li>One important advantage of this method is we can make using the <strong>animation</strong> capabilities that comes with D3js</li>
+</ol>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/2020/04/06/simplifying-a-factory-pattern-function-that-has-grown-complex/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">Simplifying a Factory Pattern function that has grown complex</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">Employing VueJS reactivity to update D3.js Visualisations - Part 1</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

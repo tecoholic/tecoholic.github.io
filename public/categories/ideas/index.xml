@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ideas on Arunmozhi</title>
+    <link>http://localhost:1313/categories/ideas/</link>
+    <description>Recent content in Ideas on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Fri, 01 Nov 2019 14:09:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ideas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Investment Strategy: SIP vs SMA 50</title>
+      <link>http://localhost:1313/2019/11/01/investment-strategy-sip-vs-sma-50/</link>
+      <pubDate>Fri, 01 Nov 2019 14:09:12 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/11/01/investment-strategy-sip-vs-sma-50/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Big one. Scroll to the bottom to see it.&lt;/p&gt;&#xA;&lt;p&gt;I tend to believe investment is a long term activity. It is something I will be engaged in till my end. So the money is going to be invested for about 40 - 50 years. With that long an outlook, a low cost Index fund in Equity is as good as anything. I set out to see if there is a better strategy to be executed than doing a monthly cost averaging or Systematic Investment Plan (SIP).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pop-Out a box effect in DaVinci Resolve 16</title>
+      <link>http://localhost:1313/2019/10/08/pop-out-a-box-effect-in-davinci-resolve-16/</link>
+      <pubDate>Tue, 08 Oct 2019 04:36:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/10/08/pop-out-a-box-effect-in-davinci-resolve-16/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://www.blackmagicdesign.com/in/products/davinciresolve/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/10/1508177128_1366318-e1570508489301.jpg&#34; alt=&#34;1508177128_1366318&#34;&gt;&lt;/a&gt;&#xA; I have been working on some video editing using &#xA;&lt;a href=&#34;https://www.blackmagicdesign.com/in/products/davinciresolve/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DaVinci Resolve 16&lt;/a&gt;&#xA; for the Tutorial videos I have been posting on YouTube. One of the most used effect in tutorial videos is the pop-out effect (I don&amp;rsquo;t really know the exact name) where a portion of the screen is cut and enlarged while the rest of the screen is darkened to bring the focus to that particular area of the frame.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Investing in GILT funds</title>
+      <link>http://localhost:1313/2019/08/12/investing-in-gilt-funds/</link>
+      <pubDate>Mon, 12 Aug 2019 04:30:40 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/08/12/investing-in-gilt-funds/</guid>
+      <description>&lt;p&gt;A series of graphs and simple analysis about Gilt Funds.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/all.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/observation1.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/observation2.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/observation3.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/observation4.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/08/observation5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

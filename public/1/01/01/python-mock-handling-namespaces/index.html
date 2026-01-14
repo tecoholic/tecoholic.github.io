@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+&#39;Python mock &amp;#8211; Handling namespaces&#39; | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/1/01/01/python-mock-handling-namespaces/" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+        <h1>'Python mock &#8211; Handling namespaces'</h1>
+        
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                 
+                 
+                 <dd><time datetime="0001-01-01">0001-01-01</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>2 minutes</dd>
+            
+        </dl>
+    </section>
+    
+        <div>
+            <p>Unit testing a big python application comes with its own set of worries which includes mocking calls to parts of code which we will test somewhere else.</p>
+<p>Let us say I have a <strong>utils.py</strong> (every project has one anyways)</p>
+<p>{% highlight python %}</p>
+<h1 id="utilspy">utils.py</h1>
+<p>def word_length(name):
+# here it is a trivial function
+# assume that this is a costly network/DB call
+return len(name)
+{% endhighlight %}</p>
+<p>And I have another module which uses <strong>word_length</strong> using the <strong>from module import function</strong> syntax.</p>
+<p>{% highlight python %}</p>
+<h1 id="userpy">user.py</h1>
+<p>from project.utils import word_length</p>
+<p>def calculate(name):
+length = word_length(name)
+return length
+{% endhighlight %}</p>
+<p>Now I want to unit test all the functions in <strong>user.py</strong> and since I am going to test just the user module and want to avoid costly calls made by my utils module I am going to mock out calls to <code>word_length</code> using Python mock library.</p>
+<p>{% highlight python %}</p>
+<h1 id="test_userpy">test_user.py</h1>
+<p>from project.user import calculate</p>
+<p>from mock import patch</p>
+<p>@patch(&lsquo;project.utils.word_length&rsquo;)
+def test_calculate(mock_length):
+mock_length.return_value = 10
+assert calculate(&lsquo;hello&rsquo;) == 5
+{% endhighlight %}</p>
+<p>One would expect this assertion to fail because we have mocked out the word_length to return 10. But this passes and our mock is not working. Why? Because <strong>NAMESPACE</strong>. Here we have patched the function in the namespace utils. But we have imported the function to the user.py namespace by using <code>from module import function</code>. So we need to patch the function in the user namespace where it is used and not in the utils where it is defined. So change the line</p>
+<p>{% highlight python %}
+@patch(&lsquo;project.utils.word_length&rsquo;)</p>
+<h1 id="to">to</h1>
+<p>@patch(&lsquo;project.user.word_length&rsquo;)
+{% endhighlight %}</p>
+<p>But what if we have used simply like</p>
+<p>{% highlight python %}</p>
+<h1 id="userpy-1">user.py</h1>
+<p>import utils</p>
+<p>def calculate(name):
+length = utils.word_length(name)
+return length
+{% endhighlight %}</p>
+<p>This time we can straight away use the <code>@patch('project.utils.word_length')</code> as we are importing the entire module and namespace remains as such.</p>
+
+        </div>
+
+        
+        <nav class="postNav" aria-label="Post navigation">
+            
+                <a class="postNav-prev postNav-button" href="/1/01/01/peoples-mobile/">
+                    <span class="postNav-label"><span aria-hidden="true" class="postNav-arrow">←</span> Newer</span>
+                    <span class="postNav-title">'People&#8217;s Mobile'</span>
+                </a>
+            
+            
+                <a class="postNav-next postNav-button" href="/1/01/01/session-signup-a-coding-project/">
+                    <span class="postNav-label">Older <span aria-hidden="true" class="postNav-arrow">→</span></span>
+                    <span class="postNav-title">'Session Signup &#8211; A Coding Project'</span>
+                </a>
+            
+        </nav>
+        
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

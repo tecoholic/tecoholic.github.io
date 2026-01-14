@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+  Vue | Arunmozhi
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.154.5">
+
+
+<link rel="canonical" href="http://localhost:1313/tags/vue/" >
+  <link href="http://localhost:1313/tags/vue/index.xml" rel="alternate" type="application/rss+xml" title="Arunmozhi" >
+  <link href="http://localhost:1313/tags/vue/index.xml" rel="feed" type="application/rss+xml" title="Arunmozhi" >
+
+
+
+
+<link href="/css/style.min.66302fa6c122ab7804faa4bd6465554ac4d746c25294af622826d0445b79ab94.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>Arunmozhi@arunmozhi.in ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/posts/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/about/" title="" >
+                        ~/about</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div>
+  <div class="listHeader">
+    <h1>Vue</h1>
+  </div>
+
+  
+
+  
+  
+
+  <div role="list">
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2/">
+          <div class="postHeader">
+            <span class="postTitle">Employing VueJS reactivity to update D3.js Visualisations – Part 2</span>
+            
+            
+            <time class="postDate" datetime="2020-03-11">2020-03-11</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>In 
+<a href="https://arunmozhi.in/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1/" target="_blank" rel="noopener">Part 1</a>
+, I wrote about using Vue&rsquo;s reactivity directly in the SVG DOM elements and also pointed out that it could become difficult to manage as the visualisation grew in complexity.</p>
+<p>We used D3 utilities for computation and Vue for the state management. In this post we are going to use D3 for both computation and state management with some help from Vue.</p>
+<p>Let us 
+<a href="https://arunmozhi.in/2020/03/10/adding-d3-js-visualisations-to-vuejs-components/" target="_blank" rel="noopener">go back to our original</a>
+ inverted bar chart and the code where we put all the D3 stuff inside the <code>mounted()</code> callback.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/03/11/employing-vuejs-reactivity-to-update-d3-js-visualisations-part-1/">
+          <div class="postHeader">
+            <span class="postTitle">Employing VueJS reactivity to update D3.js Visualisations - Part 1</span>
+            
+            
+            <time class="postDate" datetime="2020-03-11">2020-03-11</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 4 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>In the previous post I wrote about 
+<a href="https://arunmozhi.in/2020/03/10/adding-d3-js-visualisations-to-vuejs-components/" target="_blank" rel="noopener">how we can add D3.js Visualizations to a Vue component</a>
+. I took a plain HTML, JavaScript D3.js viz and converted it to a static visualization inside the Vue component.</p>
+<p>One of the important reasons why we use a modern framework like VueJS is to build dynamic interfaces that react to user inputs. Now in this post, let us see how we can leverage that to create dynamic visualisations that react to changes in the underlying data as well.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2020/03/10/adding-d3-js-visualisations-to-vuejs-components/">
+          <div class="postHeader">
+            <span class="postTitle">Adding D3.js Visualisations to VueJS components</span>
+            
+            
+            <time class="postDate" datetime="2020-03-10">2020-03-10</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 3 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <p>D3.JS is an amazing library to create data visualizations. But it relies on manipulating the DOM Elements of the web page. When building a website with VueJS we are thinking in terms of reactive components and not in terms of static DOM elements. Successfully using D3.js in Vue components is dependent on our clear understanding of the the Vue life cycle. Because at some point the reactive component becomes a DOM element that we see in the browser. That is when we can start using D3.js to manipulate our DOM elements.</p>
+        </div>
+      </div>
+    
+      <div class="postListItem" role="listitem">
+        <a class="postListLink" href="http://localhost:1313/2019/12/21/two-days-with-python-graphql/">
+          <div class="postHeader">
+            <span class="postTitle">Two Days with Python &amp; GraphQL</span>
+            
+            
+            <time class="postDate" datetime="2019-12-21">2019-12-21</time>
+          </div>
+
+          
+          
+          
+          
+          
+          <div class="readingTime">
+            reading time: 9 minutes
+          </div>
+          
+        </a>
+
+        <div class="postExcerpt">
+          <h2 id="background">Background</h2>
+<p>An web application needed to be built. An external API will give me a list of information packets as JSON. The JSON has the information and the user object. The application&rsquo;s job is to store this data in a local database and provide an user interface to sort and filter this data. Simple enough.</p>
+<p>GraphQL kept coming up on on the internet. A number of tools were saying they support GraphQL in their home pages and was making me curious. The requirement also said:</p>
+        </div>
+      </div>
+    
+  </div>
+
+  
+
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2026 Arunmozhi, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

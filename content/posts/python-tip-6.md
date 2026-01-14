@@ -1,0 +1,26 @@
+---
+title: "Python Tip #6 - Merging Dictionaries"
+date: 2018-09-24
+slug: "python-tip-6"
+categories:
+  - PythonTips
+tags:
+  - python
+  - coding
+---
+
+Merge or combine dictionaries
+
+```python
+d1 = { "a": 1 }
+d2 = { "b": 2 }
+
+# Adding elements of one dictionary to another
+d1.update(d2)  # d1 => { "a": 1, "b": 2 }
+
+# Create a new dict with values from other dictionaries
+d3 = { **d1, **d2 }  # d3 => { "a": 1, "b": 2 }
+d4 = { **d3, "c": 3 }  # d4 => { "a": 1, "b": 2, "c": 3 }
+```
+
+> ** is the unpacking operator

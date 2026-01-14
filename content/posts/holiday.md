@@ -1,0 +1,53 @@
+---
+title: "Holiday"
+slug: "holiday"
+---
+
+&#8220;Come dear, come. Oh! How long has it been since I last saw you?&#8221; &#8211; greeted Ponnamma. It is always a 6 month wait for 6 days with her only grandson Rasu Kutti. In no time, there is an animated conversation between Ponnamma and Rasu. It always starts with the train and moves through everything in the village from the barking next house dog to weekly market under the banyan tree. Nobody knows or remembers how they end their conversation.
+
+\***
+
+&#8220;Geeta, get your bags to the hall, we shall leave in a few minutes.&#8221;  
+&#8220;Coming ma&#8221;  
+5 minutes. Still no bags in the hall.  
+&#8220;Geetaa, get your bags to the hall, it&#8217;s time.&#8221;  
+&#8220;Coming ma&#8221;, Geeta shouted with a irritated stress on the &#8220;m&#8221;  
+15 minutes.  
+&#8220;GEETA, I SAID GET YOUR BAGS TO THE HALL&#8221;. A cyclist stopped on the read and look around, before pedaling away.  
+&#8220;What is she doing in her room?&#8221; asked a 60+ old man. That was Geeta&#8217;s mother&#8217;s father &#8211; let us leave it that way.  
+&#8220;Must be reading a book. I don&#8217;t know how daddy, but she reads more books both of us combined.&#8221;
+
+\***
+
+&#8220;Paati(Grandma), paati, look here&#8221;, it is Rasu with a small puppy in his hands.  
+&#8220;Where did you get it?&#8221;, asked Ponnamma with a surprising look.  
+&#8220;Near the haystack on the way to latrine field. Can I keep it with me?&#8221;
+
+This year Ponnama and Rasu Kutti did not talk about neighbour&#8217;s barking dog.
+
+\***
+
+&#8220;I am taking the upper berth&#8221;, Geeta declared and went to her place. The big people of the family sat down and started talking.  
+&#8220;Are you headed to Mysore?&#8221;, it was the man who had a berth in the same enclosure as the family.  
+&#8220;Yes, we are going on a family trip for the Pongal(A festival celebrated in TamilNadu)&#8221;.  
+&#8220;Aren&#8217;t you celebrating it here?&#8221;  
+&#8220;No, we thought we could use this vacation for a family trip&#8221;  
+&#8220;Oh! I see. I am from Karnataka basically. I heard Pongal is a big festival here. I am happy I got 5 days holidays.&#8221;  
+&#8220;No, it is not that big actually. Pongal is only for two days, but these lowly folk, working class you know, they don&#8217;t care about the business or have any sincerity, they take extra days stating stupid reasons. And so it is 4 days.&#8221; Geeta&#8217;s mother&#8217;s father thought himself suited to clarify such cultural doubts than the young of the family.
+
+\***
+
+&#8220;I will name him Moorthy, paati&#8221;, Rasu announced.  
+&#8220;So be it, darling&#8221;  
+&#8220;Paati, will you look after him after I leave?&#8221;  
+&#8220;Yes darling, I will feed him with all the love I have for you&#8221;, kissed Ponnamma in Rasu&#8217;s forehead and wiped her eyes as he started walking.
+
+\***
+
+&#8220;Geeta. You and your book&#8221;, sighed her mother, &#8220;Why don&#8217;t you talk to your grandfather about the trip instead?&#8221;.  
+&#8220;Come here dear. Leave away the trip. Just tell me what you are reading.&#8221;  
+&#8220;It is novel grandpa, by Charles Dickens. It is about a man called Ebenezer Scrooge&#8230;.&#8221;
+
+\***
+
+Inspired by a observed train conversation.

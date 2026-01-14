@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Media on Arunmozhi</title>
+    <link>http://localhost:1313/tags/media/</link>
+    <description>Recent content in Media on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Mon, 24 Feb 2020 09:54:24 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/media/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lottie - Amazing Animations for the Web</title>
+      <link>http://localhost:1313/2020/02/24/lottie-amazing-animations-for-the-web/</link>
+      <pubDate>Mon, 24 Feb 2020 09:54:24 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/02/24/lottie-amazing-animations-for-the-web/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2020/02/15549-no-wifi.gif&#34; alt=&#34;15549-no-wifi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Modern websites come with some amazing animations. I remember Sentry.io used to have an animation that showed packets of information going through a system and it getting processed in a processor.etc., If you browse Dribble you will see a number of landing page animations that just blow our mind. The most mainstream brand that employs animations is Apple. Their web page was a playground when they launched Apple Arcade.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beautiful and clean diagrams with Keynote</title>
+      <link>http://localhost:1313/2019/09/20/beautiful-and-clean-diagrams-with-keynote/</link>
+      <pubDate>Fri, 20 Sep 2019 06:53:59 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2019/09/20/beautiful-and-clean-diagrams-with-keynote/</guid>
+      <description>&lt;p&gt;Look at this flow chart like diagram. It is a really nice representation for explaining the concepts of Iterators and Generators.&#xA;[caption id=&amp;ldquo;attachment_775&amp;rdquo; align=&amp;ldquo;alignnone&amp;rdquo; width=&amp;ldquo;1272&amp;rdquo;]&lt;img src=&#34;http://localhost:1313/img/wp-content/uploads/2019/09/relationships.png&#34; alt=&#34;Relationships&#34;&gt; By Vincent Driessen[/caption]&lt;/p&gt;&#xA;&lt;p&gt;If you use git, then there is a big chance you might have come across this article &#xA;&lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A successful Git branching model&lt;/a&gt;&#xA; by the same author. There are more pretty diagrams in that post as well. For a very long time I have wondered how those diagrams are made. I decided to find out today and it turns out it was done with: &lt;strong&gt;Keynote&lt;/strong&gt; - the powerpoint equivalent in Mac.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

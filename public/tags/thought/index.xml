@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thought on Arunmozhi</title>
+    <link>http://localhost:1313/tags/thought/</link>
+    <description>Recent content in Thought on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Sat, 22 Aug 2020 09:49:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/thought/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rediscovering Web Development</title>
+      <link>http://localhost:1313/2020/08/22/rediscovering-web-development/</link>
+      <pubDate>Sat, 22 Aug 2020 09:49:16 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/22/rediscovering-web-development/</guid>
+      <description>&lt;p&gt;Despite the rapid advancement of tools and specifications, web development has pretty much involved the same set of actions for a developer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;It all starts with an index.html file&lt;/strong&gt;. An entire decade has been spent on just creating different ways to generate this file. From writing each line of HTML by hand to creating it on the fly using a shadow DOM we have come a long way.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Then comes the data&lt;/strong&gt; that sits on these HTML files and followed by the interaction. The data flows from a data-source. Usually a database. The developer&amp;rsquo;s first task is to figure out a way to get this data from the database on the HTML. This is where a lot of action goes in. So much so that the quintessential phrase &amp;ldquo;Web Developer&amp;rdquo; has been replaced by &amp;ldquo;Frontend&amp;rdquo; and &amp;ldquo;Backend&amp;rdquo; developer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thinking about the next step as a Python Developer</title>
+      <link>http://localhost:1313/2020/06/15/thinking-about-the-next-step-as-a-python-developer/</link>
+      <pubDate>Mon, 15 Jun 2020 12:30:15 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/06/15/thinking-about-the-next-step-as-a-python-developer/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; The analysis is not a bullet proof analysis. Despite writing code, and throwing around numbers, this might still be a random observation. Stack Overflow Job board is a not an indicator of everything. So take everything with a pinch of salt.&lt;/p&gt;&#xA;&lt;h2 id=&#34;python-or-full-stack&#34;&gt;Python or Full Stack?&lt;/h2&gt;&#xA;&lt;p&gt;As someone who identifies as a Python Developer and uses Python as the primary language for programming, thinking about what to learn next is confusing. I primarily do &amp;ldquo;Full Stack development&amp;rdquo;, that is write backend API in Python Flask/Django and use modern JS (React/Vue) for the frontend. But recently I am seeing a disconnect between the idea of &amp;ldquo;Python Developer&amp;rdquo; and &amp;ldquo;Full Stack Developer&amp;rdquo; in the job postings. Full Stack development seems to be defined more or less synonymous to JS development. Python Job postings on the other hand are more closer to dev ops, systems development, data analytics and machine learning.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

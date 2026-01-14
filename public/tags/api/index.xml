@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Arunmozhi</title>
+    <link>http://localhost:1313/tags/api/</link>
+    <description>Recent content in Api on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <lastBuildDate>Tue, 18 Aug 2020 12:54:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Strapi - Optimizing REST API responses by preventing auto-population of relations</title>
+      <link>http://localhost:1313/2020/08/18/strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations/</link>
+      <pubDate>Tue, 18 Aug 2020 12:54:59 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/18/strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations/</guid>
+      <description>&lt;p&gt;Strapi is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API – both REST and GraphQL.&lt;/p&gt;&#xA;&lt;p&gt;This is a mini series which outlines:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;a href=&#34;https://arunmozhi.in/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Setting up Strapi and creating an API&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;a href=&#34;https://arunmozhi.in/2020/08/11/strapi-adding-isowner-policy-to-the-api/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adding ownership control to the API endpoints&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Optimising REST API responses – (you are here)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;so-far-&#34;&gt;So far &amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;We have created a REST API for an expense management application with category support. We have JWT token based auth which came with Strapi to authenticate users. We have implemented the &lt;strong&gt;IsOwner&lt;/strong&gt; policy in the controllers to restrict data access.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strapi - Adding IsOwner Policy to the API</title>
+      <link>http://localhost:1313/2020/08/11/strapi-adding-isowner-policy-to-the-api/</link>
+      <pubDate>Tue, 11 Aug 2020 15:36:09 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/11/strapi-adding-isowner-policy-to-the-api/</guid>
+      <description>&lt;p&gt;Strapi is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API – both REST and GraphQL.&lt;/p&gt;&#xA;&lt;p&gt;This is a mini series which outlines:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;a href=&#34;https://arunmozhi.in/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Setting up Strapi and creating an API&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding ownership control to the API endpoints – (you are here)&lt;/li&gt;&#xA;&lt;li&gt;Optimising REST API responses&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;so-far&#34;&gt;So far&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;We have created models for the app and have an API setup which works with JWT Authentication without a single line of code. But we have an issue, any authenticated user can read every other user&amp;rsquo;s data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strapi - Creating an API without a single line of code</title>
+      <link>http://localhost:1313/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/</link>
+      <pubDate>Sat, 08 Aug 2020 09:01:57 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/2020/08/08/strapi-creating-an-api-without-a-single-line-of-code/</guid>
+      <description>&lt;p&gt;&#xA;&lt;a href=&#34;https://strapi.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Strapi&lt;/a&gt;&#xA; is an Open Source headless CMS based on NodeJS. It provides the backend admin tools to quickly create an API - both REST and GraphQL. I picked this up for a quick project in place of my regular Python frameworks like Flask or Django, because I can have an API up and running without writing a single line of code.&lt;/p&gt;&#xA;&lt;p&gt;This is a mini series which outlines:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Setting up Strapi and creating an API - (you are here)&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;a href=&#34;http://arunmozhi.in/2020/08/11/strapi-adding-isowner-policy-to-the-api/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adding ownership control to the API endpoints&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Optimising REST API responses&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;why-this-series&#34;&gt;Why this series?&lt;/h2&gt;&#xA;&lt;p&gt;There is already wealth of blog posts on using Strapi for creating a variety of websites and apps. But most of them tend to focus on capabilities of vanilla Strapi. I want to focus on a couple of customisations that I made when using it to build a web application.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

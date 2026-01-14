@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on Arunmozhi</title>
+    <link>http://localhost:1313/tags/react/</link>
+    <description>Recent content in React on Arunmozhi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>arun@arunmozhi.in (Arunmozhi)</managingEditor>
+    <webMaster>arun@arunmozhi.in (Arunmozhi)</webMaster>
+    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using React for parts of a Falsk App</title>
+      <link>http://localhost:1313/1/01/01/using-react-for-parts-of-a-flask-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>arun@arunmozhi.in (Arunmozhi)</author>
+      <guid>http://localhost:1313/1/01/01/using-react-for-parts-of-a-flask-app/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background:&lt;/h2&gt;&#xA;&lt;p&gt;As a part of my work, I needed a console like viewer in a web application (like the one used in travis.ci). The frontend is simply Bootstrap 3 and some jQuery JavaScript. I have written a rudimentary one using Bootstrap&amp;rsquo;s Panel and List Groups and using the helper classes to style them. But the appication has grown and it is time we got a really good log viewer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;requirements&#34;&gt;Requirements:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The library should be easy to include in the project without requiring a complete overhaul of the frontend. (Things like Angular, Ember are out)&lt;/li&gt;&#xA;&lt;li&gt;We might decouple the app into a REST API and frontend sometime in the future, so it needs to provide a upgrade path for the full frontend.&lt;/li&gt;&#xA;&lt;li&gt;To me, a Python programmer, it should be easy to get started and start building, without enforcing specific new requirements.&#xA;(e.g., Angular forces TypeScript, I am willing to learn, just not now, not for this one)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;React with JSX syntax, the ability to just drop the the library and use it for only selective parts of the app seemed just right. After trying out the tic-tac-toe tutorial, I ventured to setup it for our project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

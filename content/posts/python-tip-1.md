@@ -1,0 +1,29 @@
+---
+title: "Python Tip #1 - Setting flags without using if statements"
+date: 2018-09-19
+slug: "python-tip-1"
+categories:
+  - PythonTips
+tags:
+  - python
+  - coding
+---
+
+When you have to check for the presence of a value in a list and set a flag based on it, we can avoid typical:
+
+    set default => check => update 
+
+routine in Python and condense it to a single line like this.
+
+```python
+orders = ['pizza', 'coke', 'fries']
+order_book = {}
+
+# Setting an yes or no flag in another dictionary or object
+order_book['pizza'] = False
+if 'pizza' in orders:
+    order_book['pizza'] = True
+
+# Simpler Version
+order_book['pizza'] = 'pizza' in orders
+```
