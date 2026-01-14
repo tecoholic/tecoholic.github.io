@@ -39,7 +39,7 @@ jobs:
         run: npm install -g sass
 
       - name: Build
-        run: hugo --minify
+        run: hugo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
