@@ -23,7 +23,7 @@ simple minded programmer that I am, I simply used a for loop to use each regex a
 This was fine for a 20MB input file that it was written for. Then I got a 12 GB file to process.
 After running for 2 hours, it was at about 5 out of the 35 million lines.
 
-## Let Go
+## Let's Go
 
 As I waited around with the script running, I had a brain wave. What if I wrote this in a compiled
 language and get some performance improvements? So, I launched Claude Code and asked it to rewrite
@@ -81,38 +81,38 @@ from Python version and this time, it was pretty comparable. It also ended up be
 Here are the final results as Claude presented it.
 
 
-Performance Comparison
-
-| Metric          | Complex Rust | Simple Rust | Improvement       |
-|-----------------|--------------|-------------|-------------------|
-| Runtime         | 0.25s        | 0.13s       | 48% faster ✨     |
-| Memory          | 5.09 MB      | 6.05 MB     | +19% (acceptable) |
-| Code Lines      | 350          | 245         | 30% less code     |
-| Readability     | ⭐⭐⭐       | ⭐⭐⭐⭐⭐  | Much better       |
-| Maintainability | Low          | High        | Much easier       |
-
-  vs All Implementations
-
-| Implementation | Runtime | Memory | Code Lines | Readability |
-|----------------|---------|--------|------------|-------------|
-| Rust (Simple)  | 0.13s   | 6 MB   | 245        | ⭐⭐⭐⭐⭐  |
-| Python         | 2.03s   | 25 MB  | 280        | ⭐⭐⭐⭐⭐  |
-| Go (Optimized) | 2.69s   | 11 MB  | 398        | ⭐⭐⭐      |
-| Go (Regex)     | 3.80s   | 13 MB  | 300        | ⭐⭐⭐⭐    |
-
-**🏆 Rust wins on ALL metrics!**
-
-**Key Insight:** Simplicity Wins!
-
-Why is the simple version faster?
-
-Rust's regex crate is incredibly well-optimized:
-- Uses Thompson NFA + lazy DFA algorithms
-- SIMD acceleration for literal matching
-- Optimized by regex experts over years
-- Often faster than hand-rolled code
-
-**Lesson:** Don't prematurely optimize! Trust well-designed libraries.
+> ### Performance Comparison
+> 
+> | Metric          | Complex Rust | Simple Rust | Improvement       |
+> |-----------------|--------------|-------------|-------------------|
+> | Runtime         | 0.25s        | 0.13s       | 48% faster ✨     |
+> | Memory          | 5.09 MB      | 6.05 MB     | +19% (acceptable) |
+> | Code Lines      | 350          | 245         | 30% less code     |
+> | Readability     | ⭐⭐⭐       | ⭐⭐⭐⭐⭐  | Much better       |
+> | Maintainability | Low          | High        | Much easier       |
+> 
+>   vs All Implementations
+> 
+> | Implementation | Runtime | Memory | Code Lines | Readability |
+> |----------------|---------|--------|------------|-------------|
+> | Rust (Simple)  | 0.13s   | 6 MB   | 245        | ⭐⭐⭐⭐⭐  |
+> | Python         | 2.03s   | 25 MB  | 280        | ⭐⭐⭐⭐⭐  |
+> | Go (Optimized) | 2.69s   | 11 MB  | 398        | ⭐⭐⭐      |
+> | Go (Regex)     | 3.80s   | 13 MB  | 300        | ⭐⭐⭐⭐    |
+> 
+> **🏆 Rust wins on ALL metrics!**
+> 
+> **Key Insight:** Simplicity Wins!
+> 
+> Why is the simple version faster?
+> 
+> Rust's regex crate is incredibly well-optimized:
+> - Uses Thompson NFA + lazy DFA algorithms
+> - SIMD acceleration for literal matching
+> - Optimized by regex experts over years
+> - Often faster than hand-rolled code
+> 
+> **Lesson:** Don't prematurely optimize! Trust well-designed libraries.
 
 ## Final thoughts
 
