@@ -18,7 +18,7 @@ enableRobotsTXT = true
   user = "Arunmozhi"
   hostname = "arunmozhi.in"
   openLinksInNewTab = true
-  displayDateFormat = "2006-01-02"
+  displayDateFormat = "Jan 2, 2006"
 
   showMetadata = true
   showPublishedDate = true

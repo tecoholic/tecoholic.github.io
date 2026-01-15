@@ -57,6 +57,13 @@
                         </div>
                     {{ end }}
                 </div>
+                <div class="indexMore">
+                    {{ with site.GetPage "section" "posts" }}
+                        <a class="indexMore-link" href="{{ .RelPermalink }}">More</a>
+                    {{ else }}
+                        <a class="indexMore-link" href="/posts/">More</a>
+                    {{ end }}
+                </div>
                 {{ end }}
             </main>
         </div>
