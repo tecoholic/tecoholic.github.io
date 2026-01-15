@@ -1,6 +1,11 @@
 ---
-title: "Impact of Cinema"
-slug: "impact-of-cinema"
+title: Impact of Cinema
+date: '2013-11-14T18:03:34'
+slug: impact-of-cinema
+categories:
+  - Social
+tags:
+  - student
 ---
 
 Impact of Cinema &#8211; One can write reams on it. I will stop with the incident in the classroom in which I teach.

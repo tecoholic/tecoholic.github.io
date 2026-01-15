@@ -1,6 +1,12 @@
 ---
-title: "After 1 Year"
-slug: "after-1-year"
+title: After 1 Year
+date: '2014-04-26T11:56:47'
+slug: after-1-year
+categories:
+  - General
+tags:
+  - documentation
+  - teach for india
 ---
 
 Sitting on the rope cot in my grandparent&#8217;s home near Kodumudi, Erode, listening to Rainbow FM staring at the laptop screen is where I am, when I write this. Very far away from anything related to school, students and teaching &#8211; Physically. Teaching is a job that grows on you and you grow over until both becomes indistinguishable from one another. Looking back after one year of being the worst possible teacher in my own rating, I think I have also become the worst possible blog writer in many people&#8217;s rating.

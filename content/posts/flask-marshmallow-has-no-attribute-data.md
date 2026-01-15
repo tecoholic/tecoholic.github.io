@@ -1,7 +1,7 @@
 ---
-title: "Flask Marshmallow - has no attribute data"
-date: 2019-09-18T02:29:19
-slug: "flask-marshmallow-has-no-attribute-data"
+title: Flask Marshmallow - has no attribute data
+date: '2019-09-18T07:59:19'
+slug: flask-marshmallow-has-no-attribute-data
 categories:
   - Coding
 tags:

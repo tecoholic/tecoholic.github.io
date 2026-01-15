@@ -1,7 +1,7 @@
 ---
-title: "Thinking about the next step as a Python Developer"
-date: 2020-06-15T12:30:15
-slug: "thinking-about-the-next-step-as-a-python-developer"
+title: Thinking about the next step as a Python Developer
+date: '2020-06-15T18:00:15'
+slug: thinking-about-the-next-step-as-a-python-developer
 categories:
   - General
 tags:

@@ -1,6 +1,13 @@
 ---
-title: "The Idea of Democracy"
-slug: "the-idea-of-democracy"
+title: The Idea of Democracy
+date: '2013-06-03T17:24:32'
+slug: the-idea-of-democracy
+categories:
+  - Social
+tags:
+  - experience
+  - media
+  - people
 ---
 
 **Before I begin, (can be skipped)**

@@ -1,9 +1,9 @@
 ---
-title: "Python Flask என்றால் என்ன?"
-date: 2019-09-27T03:05:01
-slug: "what-is-python-flask"
+title: "Python Flask \u0B8E\u0BA9\u0BCD\u0BB1\u0BBE\u0BB2\u0BCD \u0B8E\u0BA9\u0BCD\u0BA9?"
+date: '2019-09-27T08:35:01'
+slug: what-is-python-flask
 categories:
-  - Python-flask-tamil
+  - Python Flask - Tamil
 tags:
   - flask
   - python

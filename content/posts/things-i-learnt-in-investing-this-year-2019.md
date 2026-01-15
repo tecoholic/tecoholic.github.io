@@ -1,7 +1,7 @@
 ---
-title: "Things I Learnt in Investing this Year - 2019"
-date: 2019-12-31T22:32:52
-slug: "things-i-learnt-in-investing-this-year-2019"
+title: Things I Learnt in Investing this Year - 2019
+date: '2020-01-01T04:02:52'
+slug: things-i-learnt-in-investing-this-year-2019
 categories:
   - General
 tags:

@@ -1,6 +1,13 @@
 ---
-title: "'People&#8217;s Mobile'"
-slug: "peoples-mobile"
+title: '''People&#8217;s Mobile'''
+date: '2015-04-16T22:16:10'
+slug: peoples-mobile
+categories:
+  - Social
+tags:
+  - idea
+  - society
+  - technology
 ---
 
 **Caution:** This is a bit wild man.

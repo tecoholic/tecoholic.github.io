@@ -1,7 +1,7 @@
 ---
-title: "What is the relation between the SC population and SC literacy?"
-date: 2019-01-16T13:08:28
-slug: "what-is-the-relation-between-the-sc-population-and-sc-literacy"
+title: What is the relation between the SC population and SC literacy?
+date: '2019-01-16T18:38:28'
+slug: what-is-the-relation-between-the-sc-population-and-sc-literacy
 categories:
   - Social
 ---

@@ -1,12 +1,12 @@
 ---
-title: "Podcast Notes: Darren Palmer on the EV Revolution"
-date: 2022-04-13T01:24:49
-slug: "podcast-notes-darren-palmer-on-the-ev-revolution"
+title: 'Podcast Notes: Darren Palmer on the EV Revolution'
+date: '2022-04-13T06:54:49'
+slug: podcast-notes-darren-palmer-on-the-ev-revolution
 categories:
   - Notes
 tags:
+  - Ford
   - electric-vehicles
-  - ford
   - podcast
   - technology
 ---

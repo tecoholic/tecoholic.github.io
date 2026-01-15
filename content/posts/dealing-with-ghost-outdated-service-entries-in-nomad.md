@@ -1,7 +1,7 @@
 ---
-title: "Dealing with ghost/outdated service entries in Nomad"
-date: 2024-04-03T03:07:14
-slug: "dealing-with-ghost-outdated-service-entries-in-nomad"
+title: Dealing with ghost/outdated service entries in Nomad
+date: '2024-04-03T08:37:14'
+slug: dealing-with-ghost-outdated-service-entries-in-nomad
 categories:
   - Notes
 tags:

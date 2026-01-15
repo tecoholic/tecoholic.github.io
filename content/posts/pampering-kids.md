@@ -1,6 +1,11 @@
 ---
-title: "Pampering kids"
-slug: "pampering-kids"
+title: Pampering kids
+date: '2013-11-26T21:45:58'
+slug: pampering-kids
+categories:
+  - Social
+tags:
+  - student
 ---
 
 There are two kids in my class who have better reading, writing comprehension skills that half the class, which should make them &#8220;above-average&#8221; in conventional sense. Both have a problem &#8211; attitude. Their parents tell me they were the toppers of the yesteryear. I had given C-D grades to them during the 1st term exam and the parents were very upset. I didn&#8217;t know the kids this well back then and thought them to be just normal kids. As the parents coming barging in with complaints and pointing fingers at me, I was taken aback thinking I was perhaps not seeing them as to what they are capable of doing. I was apprehensive of meeting their parents thinking that it was my fault. Perhaps I have made a bad evaluation of their papers. I was just three months into being a teacher.

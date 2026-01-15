@@ -1,9 +1,9 @@
 ---
-title: "Python Flaskஐ நிறுவுவது எப்படி?"
-date: 2019-09-28T03:30:04
-slug: "python-flask-installation-tamil"
+title: "Python Flask\u0B90 \u0BA8\u0BBF\u0BB1\u0BC1\u0BB5\u0BC1\u0BB5\u0BA4\u0BC1 \u0B8E\u0BAA\u0BCD\u0BAA\u0B9F\u0BBF?"
+date: '2019-09-28T09:00:04'
+slug: python-flask-installation-tamil
 categories:
-  - Python-flask-tamil
+  - Python Flask - Tamil
 ---
 
 இந்தக்கட்டுரை நீங்கள் ஏற்கனவே உங்கள் கணினியில் Python install செய்து வைத்துள்ளீர்கள் எனும் கோணத்தில் இருந்து எழுத்தப்பட்டது. Python உங்கள் கணினியில் இல்லை என்றால், https://www.python.org/downloads/ சென்று, பதிவிறக்கி உங்கள் கணினியில் நிறுவிக்கொள்ளவும்.

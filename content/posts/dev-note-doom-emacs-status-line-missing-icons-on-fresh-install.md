@@ -1,7 +1,7 @@
 ---
-title: "dev-note: Doom Emacs status line missing icons on fresh install"
-date: 2023-09-12T09:10:27
-slug: "dev-note-doom-emacs-status-line-missing-icons-on-fresh-install"
+title: 'dev-note: Doom Emacs status line missing icons on fresh install'
+date: '2023-09-12T14:40:27'
+slug: dev-note-doom-emacs-status-line-missing-icons-on-fresh-install
 categories:
   - Notes
 tags:

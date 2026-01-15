@@ -1,7 +1,7 @@
 ---
-title: "Keychron K15 Pro - 1 Week Review"
-date: 2024-08-23T04:52:28
-slug: "keychron-k15-pro-1-week-review"
+title: Keychron K15 Pro - 1 Week Review
+date: '2024-08-23T10:22:28'
+slug: keychron-k15-pro-1-week-review
 categories:
   - General
 tags:

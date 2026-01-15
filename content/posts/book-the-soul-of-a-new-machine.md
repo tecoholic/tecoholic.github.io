@@ -1,6 +1,12 @@
 ---
-title: "'Book &#8211; The Soul of a New Machine'"
-slug: "book-the-soul-of-a-new-machine"
+title: '''Book &#8211; The Soul of a New Machine'''
+date: '2014-11-01T19:11:31'
+slug: book-the-soul-of-a-new-machine
+categories:
+  - Books
+tags:
+  - book
+  - technology
 ---
 
 **The Soul of a New Machine** by ***Tracy Kidder*** is one of the best books I have read in my life. The book is a chronicle of how project Eagle came into being at the company Data Central and its progress. The most important thing about the book is it doesn&#8217;t chronicle the technological milestones, rather the people and their, let me say, soul.

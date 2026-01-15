@@ -1,6 +1,7 @@
 ---
-title: "Internet Dot Org"
-slug: "internet-dot-org"
+title: Internet Dot Org
+date: '2015-10-01T09:10:08'
+slug: internet-dot-org
 categories:
   - General
 ---

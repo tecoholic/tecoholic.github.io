@@ -1,9 +1,10 @@
 ---
-title: "Literacy Gap of SC community in TN districts"
-date: 2019-01-12T15:08:16
-slug: "literacy-gap-of-sc-community-in-tn-districts"
+title: Literacy Gap of SC community in TN districts
+date: '2019-01-12T20:38:16'
+slug: literacy-gap-of-sc-community-in-tn-districts
 categories:
   - Projects
+  - Social
 tags:
   - map
   - society

@@ -1,6 +1,13 @@
 ---
-title: "'Zimbalaka &#8211; Zim file creator for Offline Wikipedia'"
-slug: "zimbalaka-an-openzim-creator"
+title: '''Zimbalaka &#8211; Zim file creator for Offline Wikipedia'''
+date: '2015-05-15T11:40:09'
+slug: zimbalaka-an-openzim-creator
+categories:
+  - Projects
+tags:
+  - Coding
+  - python
+  - wikipedia
 ---
 
 OpenZim is a Wikimedia developed format for offline reading of Wikipedia. Read more [here][1]. But the project was sadly sidelined and the support from MediaWiki, the software that runs Wikipedia sites, was also removed.

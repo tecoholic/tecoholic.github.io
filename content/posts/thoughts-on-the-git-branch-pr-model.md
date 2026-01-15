@@ -1,14 +1,15 @@
 ---
-title: "Thoughts on The Git Branch PR Model"
-date: 2020-05-13T07:33:49
-slug: "thoughts-on-the-git-branch-pr-model"
+title: Thoughts on The Git Branch PR Model
+date: '2020-05-13T13:03:49'
+slug: thoughts-on-the-git-branch-pr-model
 categories:
   - General
 tags:
-  - coding
+  - Coding
   - software
   - technology
   - tools
+draft: true
 ---
 
 > This is just ramblings of someone who is overwhelmed when having to adapt to a new model of working with Git. There will perhaps be nothing of value here.

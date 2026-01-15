@@ -1,18 +1,23 @@
 ---
-title: "Python Pitfalls"
-slug: "python-pitfalls"
+title: Python Pitfalls
+date: '2015-07-25T09:20:57'
+slug: python-pitfalls
+categories:
+  - Coding
+tags:
+  - python
 ---
 
 I was woken up today with the following question:
 
-{% highlight python %}
+```python
 def foo(x=[]):
     x.append(1)
     return x
 
 >>> foo()
 >>> foo()
-{% endhighlight %}
+```
 
 What could be the output? The answer is  
 

@@ -1,6 +1,12 @@
 ---
-title: "Why Net-Neutrality? Or Why not tiered pricing?"
-slug: "why-net-neutrality-or-why-not-tiered-pricing"
+title: Why Net-Neutrality? Or Why not tiered pricing?
+date: '2015-01-21T19:23:10'
+slug: why-net-neutrality-or-why-not-tiered-pricing
+categories:
+  - Social
+tags:
+  - internet
+  - technology
 ---
 
 **Update:** Kindly read the follow up article [Net-neutrality. This is why.][1]

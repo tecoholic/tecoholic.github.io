@@ -1,7 +1,7 @@
 ---
-title: "Building a quick and dirty data collection app with React, Google Sheets and AWS S3"
-date: 2020-04-07T04:35:22
-slug: "building-a-quick-and-dirty-data-collection-app-with-react-google-sheets-and-aws-s3"
+title: Building a quick and dirty data collection app with React, Google Sheets and AWS S3
+date: '2020-04-07T10:05:22'
+slug: building-a-quick-and-dirty-data-collection-app-with-react-google-sheets-and-aws-s3
 categories:
   - Projects
 tags:

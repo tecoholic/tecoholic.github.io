@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #1 - Setting flags without using if statements"
-date: 2018-09-19
-slug: "python-tip-1"
+title: 'Python Tip #1 - Setting flags without using if statements'
+date: '2018-09-19T19:47:12'
+slug: python-tip-1
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 When you have to check for the presence of a value in a list and set a flag based on it, we can avoid typical:

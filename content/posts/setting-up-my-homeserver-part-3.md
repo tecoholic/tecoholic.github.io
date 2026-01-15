@@ -1,7 +1,7 @@
 ---
-title: "Setting up my HomeServer - Part 3"
-date: 2022-12-05T01:56:24
-slug: "setting-up-my-homeserver-part-3"
+title: Setting up my HomeServer - Part 3
+date: '2022-12-05T07:26:24'
+slug: setting-up-my-homeserver-part-3
 categories:
   - Projects
 tags:

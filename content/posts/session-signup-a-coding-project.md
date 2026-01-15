@@ -1,6 +1,13 @@
 ---
-title: "'Session Signup &#8211; A Coding Project'"
-slug: "session-signup-a-coding-project"
+title: '''Session Signup &#8211; A Coding Project'''
+date: '2014-11-30T21:49:48'
+slug: session-signup-a-coding-project
+categories:
+  - Projects
+tags:
+  - documentation
+  - internet
+  - teach for india
 ---
 
 _**Update:** This project never took off from the drawing board._

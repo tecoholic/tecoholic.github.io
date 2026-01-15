@@ -1,7 +1,7 @@
 ---
-title: "dev-note: Getting pyenv and pyright to work in Doom Emacs"
-date: 2023-09-12T11:10:47
-slug: "dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs"
+title: 'dev-note: Getting pyenv and pyright to work in Doom Emacs'
+date: '2023-09-12T16:40:47'
+slug: dev-note-getting-pyenv-and-pyright-to-work-in-doom-emacs
 categories:
   - Notes
 tags:

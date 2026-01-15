@@ -1,7 +1,7 @@
 ---
-title: "Goodbye! Brave"
-date: 2021-12-06T03:59:33
-slug: "goodbye-brave"
+title: Goodbye! Brave
+date: '2021-12-06T09:29:33'
+slug: goodbye-brave
 categories:
   - General
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "Do Government Teachers Deserve Better Pay Than Private Teachers in Tamilnadu?"
-date: 2019-02-03T18:54:05
-slug: "do-government-teachers-deserve-better-pay-than-private-teachers-in-tamilnadu"
+title: Do Government Teachers Deserve Better Pay Than Private Teachers in Tamilnadu?
+date: '2019-02-04T00:24:05'
+slug: do-government-teachers-deserve-better-pay-than-private-teachers-in-tamilnadu
 categories:
   - Social
 tags:

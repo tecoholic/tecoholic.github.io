@@ -1,6 +1,11 @@
 ---
-title: "The Social Media Dilemma"
-slug: "the-social-media-dilemma"
+title: The Social Media Dilemma
+date: '2015-06-18T10:17:01'
+slug: the-social-media-dilemma
+categories:
+  - Social
+tags:
+  - technology
 ---
 
 Woke up today morning and saw [this piece][1] on High Frequency Trading. I have already read Michael Lewis&#8217;*Flash Boys* and *The Big Short* which has kindled a strong dislike towards this HFT, not before dreaming about millions by doing it. When I hit this

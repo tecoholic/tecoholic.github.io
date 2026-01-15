@@ -1,9 +1,10 @@
 ---
-title: "Backup all the files in a directory to Azure Cloud"
-date: 2020-12-24T06:23:15
-slug: "backup-all-the-files-in-a-directory-to-azure-cloud"
+title: Backup all the files in a directory to Azure Cloud
+date: '2020-12-24T11:53:15'
+slug: backup-all-the-files-in-a-directory-to-azure-cloud
 categories:
   - Coding
+  - Notes
 tags:
   - azure
 ---

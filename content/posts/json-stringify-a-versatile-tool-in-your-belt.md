@@ -1,7 +1,7 @@
 ---
-title: "JSON.stringify - A versatile tool in your belt"
-date: 2020-02-05T04:30:02
-slug: "json-stringify-a-versatile-tool-in-your-belt"
+title: JSON.stringify - A versatile tool in your belt
+date: '2020-02-05T10:00:02'
+slug: json-stringify-a-versatile-tool-in-your-belt
 categories:
   - Coding
 tags:

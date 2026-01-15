@@ -1,7 +1,7 @@
 ---
-title: "Jupyter - Finding the point when a line graph crosses the threshold"
-date: 2020-04-22T05:03:57
-slug: "jupyter-finding-the-point-when-a-line-graph-crosses-the-threshold"
+title: Jupyter - Finding the point when a line graph crosses the threshold
+date: '2020-04-22T10:33:57'
+slug: jupyter-finding-the-point-when-a-line-graph-crosses-the-threshold
 categories:
   - Coding
 tags:

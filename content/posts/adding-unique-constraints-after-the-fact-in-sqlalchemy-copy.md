@@ -1,7 +1,7 @@
 ---
-title: "Adding Unique Constraints After the Fact in SQLAlchemy [Copy]"
-date: 2019-02-26T04:52:15
-slug: "adding-unique-constraints-after-the-fact-in-sqlalchemy-copy"
+title: Adding Unique Constraints After the Fact in SQLAlchemy [Copy]
+date: '2019-02-26T10:22:15'
+slug: adding-unique-constraints-after-the-fact-in-sqlalchemy-copy
 categories:
   - Coding
 tags:

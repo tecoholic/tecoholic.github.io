@@ -1,7 +1,7 @@
 ---
-title: "Learning Rust - Day 1"
-date: 2021-06-20T16:53:32
-slug: "learning-rust-day-1"
+title: Learning Rust - Day 1
+date: '2021-06-20T22:23:32'
+slug: learning-rust-day-1
 categories:
   - Coding
 tags:

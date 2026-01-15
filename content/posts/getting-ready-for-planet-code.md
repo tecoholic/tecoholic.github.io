@@ -1,6 +1,13 @@
 ---
-title: "Getting ready for planet CODE"
-slug: "getting-ready-for-planet-code"
+title: Getting ready for planet CODE
+date: '2015-04-06T20:13:59'
+slug: getting-ready-for-planet-code
+categories:
+  - Coding
+  - General
+tags:
+  - documentation
+  - thought
 ---
 
 With the end of [TeachForIndia][1] Fellowship around the corner, I am contemplating on jumping into the programming world. So here is a checklist of things that I am going to put up in place and document it along the way.

@@ -1,7 +1,7 @@
 ---
-title: "Simplifying JSON parsing in Flask routes using decorators"
-date: 2019-07-26T04:28:36
-slug: "simplifying-json-parsing-in-flask-routes-using-decorators"
+title: Simplifying JSON parsing in Flask routes using decorators
+date: '2019-07-26T09:58:36'
+slug: simplifying-json-parsing-in-flask-routes-using-decorators
 categories:
   - Coding
 tags:

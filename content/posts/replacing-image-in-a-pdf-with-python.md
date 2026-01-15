@@ -1,7 +1,7 @@
 ---
-title: "Replacing image in a PDF with Python"
-date: 2019-01-29T10:38:34
-slug: "replacing-image-in-a-pdf-with-python"
+title: Replacing image in a PDF with Python
+date: '2019-01-29T16:08:34'
+slug: replacing-image-in-a-pdf-with-python
 categories:
   - Coding
 tags:

@@ -1,6 +1,15 @@
 ---
-title: "Amateurs We Are"
-slug: "amateurs-we-are"
+title: Amateurs We Are
+date: '2013-03-22T22:35:03'
+slug: amateurs-we-are
+categories:
+  - Social
+tags:
+  - activism
+  - media
+  - people
+  - student
+  - tamil
 ---
 
 > This post is a **highly opinionated** piece on the Student Hunger Strike Movement for Tamil Eelam. The views are my own and doesn&#8217;t reflect anyone else&#8217;s.

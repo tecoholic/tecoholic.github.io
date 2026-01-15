@@ -1,6 +1,13 @@
 ---
-title: "The Setup"
-slug: "the-setup"
+title: The Setup
+date: '2014-04-26T18:32:41'
+slug: the-setup
+categories:
+  - General
+tags:
+  - documentation
+  - experience
+  - teach for india
 ---
 
 Continuing from the previous post, let me write down everything that defined my work setup.

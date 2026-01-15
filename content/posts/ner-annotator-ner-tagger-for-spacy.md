@@ -1,7 +1,7 @@
 ---
-title: "NER Annotator / NER Tagger for Spacy"
-date: 2020-12-19T05:09:55
-slug: "ner-annotator-ner-tagger-for-spacy"
+title: NER Annotator / NER Tagger for Spacy
+date: '2020-12-19T10:39:55'
+slug: ner-annotator-ner-tagger-for-spacy
 categories:
   - Projects
 tags:

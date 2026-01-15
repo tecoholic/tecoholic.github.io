@@ -1,7 +1,7 @@
 ---
-title: "Updating the Wikipedia Tamilnadu Literacy Map"
-date: 2018-12-27T22:17:35
-slug: "updating-the-wikipedia-tamilnadu-literacy-map"
+title: Updating the Wikipedia Tamilnadu Literacy Map
+date: '2018-12-28T03:47:35'
+slug: updating-the-wikipedia-tamilnadu-literacy-map
 categories:
   - Maps
 tags:

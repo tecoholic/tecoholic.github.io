@@ -1,6 +1,13 @@
 ---
-title: "Obsession"
-slug: "obsession"
+title: Obsession
+date: '2014-11-30T11:48:27'
+slug: obsession
+categories:
+  - General
+tags:
+  - Coding
+  - github
+  - thought
 ---
 
 I have been observing a pattern in my life over the past few months. I am obsessed about something in the evenings and the free time. It was books for a month, Far Cry 3 for another, and has recently turned into Chess.

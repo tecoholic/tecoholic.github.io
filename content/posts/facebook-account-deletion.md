@@ -1,6 +1,13 @@
 ---
-title: "Facebook Account Deletion"
-slug: "facebook-account-deletion"
+title: Facebook Account Deletion
+date: '2015-01-10T01:56:29'
+slug: facebook-account-deletion
+categories:
+  - Social
+tags:
+  - experience
+  - internet
+  - technology
 ---
 
 I just now deleted my Facebook account.

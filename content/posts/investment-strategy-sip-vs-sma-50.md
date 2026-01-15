@@ -1,7 +1,7 @@
 ---
-title: "Investment Strategy: SIP vs SMA 50"
-date: 2019-11-01T14:09:12
-slug: "investment-strategy-sip-vs-sma-50"
+title: 'Investment Strategy: SIP vs SMA 50'
+date: '2019-11-01T19:39:12'
+slug: investment-strategy-sip-vs-sma-50
 categories:
   - Ideas
 ---

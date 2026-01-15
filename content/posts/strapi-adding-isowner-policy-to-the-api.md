@@ -1,7 +1,7 @@
 ---
-title: "Strapi - Adding IsOwner Policy to the API"
-date: 2020-08-11T15:36:09
-slug: "strapi-adding-isowner-policy-to-the-api"
+title: Strapi - Adding IsOwner Policy to the API
+date: '2020-08-11T21:06:09'
+slug: strapi-adding-isowner-policy-to-the-api
 categories:
   - Coding
 tags:

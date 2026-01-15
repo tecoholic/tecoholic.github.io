@@ -1,6 +1,9 @@
 ---
-title: "'#52Weeks52Maps'"
-slug: "52weeks52maps"
+title: '''#52Weeks52Maps'''
+date: '2014-09-30T16:43:55'
+slug: 52weeks52maps
+categories:
+  - Projects
 ---
 
 An ambitious project to use my free time.

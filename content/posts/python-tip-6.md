@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #6 - Merging Dictionaries"
-date: 2018-09-24
-slug: "python-tip-6"
+title: 'Python Tip #6 - Merging Dictionaries'
+date: '2018-09-24T10:51:03'
+slug: python-tip-6
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 Merge or combine dictionaries

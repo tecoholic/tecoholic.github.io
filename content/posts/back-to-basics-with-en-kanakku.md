@@ -1,12 +1,12 @@
 ---
-title: "Back to Basics with En Kanakku"
-date: 2023-04-16T16:53:12
-slug: "back-to-basics-with-en-kanakku"
+title: Back to Basics with En Kanakku
+date: '2023-04-16T22:23:12'
+slug: back-to-basics-with-en-kanakku
 categories:
   - Projects
 tags:
   - django
-  - personal-finance
+  - personal finance
   - python
 ---
 

@@ -1,13 +1,12 @@
 ---
-title: "Dams of Tamil Nadu"
-date: 2019-06-15T13:08:32
-slug: "dams-of-tamil-nadu"
+title: Dams of Tamil Nadu
+date: '2019-06-15T18:38:32'
+slug: dams-of-tamil-nadu
 categories:
   - Maps
 tags:
-  - post-format-image
+  - Tamilnadu
   - map
-  - tamilnadu
 ---
 
 Water has become one thing that has everyone in Tamil Nadu talking about. So, I sat down to visualize the #dams of #TamilNadu

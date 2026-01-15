@@ -1,7 +1,7 @@
 ---
-title: "Rediscovering Web Development"
-date: 2020-08-22T09:49:16
-slug: "rediscovering-web-development"
+title: Rediscovering Web Development
+date: '2020-08-22T15:19:16'
+slug: rediscovering-web-development
 categories:
   - General
 tags:

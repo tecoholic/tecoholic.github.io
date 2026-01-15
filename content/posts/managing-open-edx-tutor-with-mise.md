@@ -1,7 +1,7 @@
 ---
-title: "Managing Open edX Tutor with mise"
-date: 2024-09-18
-slug: "managing-open-edx-tutor-with-mise"
+title: Managing Open edX Tutor with mise
+date: '2024-09-18T14:45:45'
+slug: managing-open-edx-tutor-with-mise
 categories:
   - Projects
 tags:

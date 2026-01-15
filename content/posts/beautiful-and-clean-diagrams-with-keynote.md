@@ -1,7 +1,7 @@
 ---
-title: "Beautiful and clean diagrams with Keynote"
-date: 2019-09-20T06:53:59
-slug: "beautiful-and-clean-diagrams-with-keynote"
+title: Beautiful and clean diagrams with Keynote
+date: '2019-09-20T12:23:59'
+slug: beautiful-and-clean-diagrams-with-keynote
 categories:
   - General
 tags:

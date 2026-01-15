@@ -1,7 +1,7 @@
 ---
-title: "Huawei - HarmonyOS & LiteOS combo system"
-date: 2021-12-29T03:19:28
-slug: "huawei-harmonyos-liteos-combo-system"
+title: Huawei - HarmonyOS & LiteOS combo system
+date: '2021-12-29T08:49:28'
+slug: huawei-harmonyos-liteos-combo-system
 categories:
   - General
 ---

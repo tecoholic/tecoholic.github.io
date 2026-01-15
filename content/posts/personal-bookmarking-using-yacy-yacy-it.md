@@ -1,7 +1,7 @@
 ---
-title: "Personal Bookmarking using YACY & yacy-it"
-date: 2022-06-27T08:06:09
-slug: "personal-bookmarking-using-yacy-yacy-it"
+title: Personal Bookmarking using YACY & yacy-it
+date: '2022-06-27T13:36:09'
+slug: personal-bookmarking-using-yacy-yacy-it
 categories:
   - Projects
 tags:

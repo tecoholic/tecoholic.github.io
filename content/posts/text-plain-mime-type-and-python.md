@@ -1,7 +1,7 @@
 ---
-title: "text/plain MIME Type and Python"
-date: 2020-06-28T03:43:32
-slug: "text-plain-mime-type-and-python"
+title: text/plain MIME Type and Python
+date: '2020-06-28T09:13:32'
+slug: text-plain-mime-type-and-python
 categories:
   - Coding
 tags:

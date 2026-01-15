@@ -1,7 +1,7 @@
 ---
-title: "Strapi - Creating an API without a single line of code"
-date: 2020-08-08T09:01:57
-slug: "strapi-creating-an-api-without-a-single-line-of-code"
+title: Strapi - Creating an API without a single line of code
+date: '2020-08-08T14:31:57'
+slug: strapi-creating-an-api-without-a-single-line-of-code
 categories:
   - Coding
 tags:

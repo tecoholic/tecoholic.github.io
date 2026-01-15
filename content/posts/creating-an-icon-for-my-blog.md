@@ -1,7 +1,7 @@
 ---
-title: "Creating an Icon for my blog"
-date: 2018-11-25T04:04:41
-slug: "creating-an-icon-for-my-blog"
+title: Creating an Icon for my blog
+date: '2018-11-25T09:34:41'
+slug: creating-an-icon-for-my-blog
 categories:
   - Projects
 tags:

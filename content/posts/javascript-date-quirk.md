@@ -1,7 +1,7 @@
 ---
-title: "JavaScript Date Quirk"
-date: 2019-12-01T19:55:18
-slug: "javascript-date-quirk"
+title: JavaScript Date Quirk
+date: '2019-12-02T01:25:18'
+slug: javascript-date-quirk
 categories:
   - Coding
 tags:

@@ -1,7 +1,7 @@
 ---
-title: "Strapi - Optimizing REST API responses by preventing auto-population of relations"
-date: 2020-08-18T12:54:59
-slug: "strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations"
+title: Strapi - Optimizing REST API responses by preventing auto-population of relations
+date: '2020-08-18T18:24:59'
+slug: strapi-optimizing-rest-api-responses-by-preventing-auto-population-of-relations
 categories:
   - Coding
 tags:

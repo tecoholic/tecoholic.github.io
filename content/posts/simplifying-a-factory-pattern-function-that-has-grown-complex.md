@@ -1,7 +1,7 @@
 ---
-title: "Simplifying a Factory Pattern function that has grown complex"
-date: 2020-04-06T07:29:05
-slug: "simplifying-a-factory-pattern-function-that-has-grown-complex"
+title: Simplifying a Factory Pattern function that has grown complex
+date: '2020-04-06T12:59:05'
+slug: simplifying-a-factory-pattern-function-that-has-grown-complex
 categories:
   - Coding
 tags:

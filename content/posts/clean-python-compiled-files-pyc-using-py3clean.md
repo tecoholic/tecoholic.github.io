@@ -1,7 +1,7 @@
 ---
-title: "Clean Python compiled files (.pyc) using py3clean"
-date: 2022-02-03T09:53:24
-slug: "clean-python-compiled-files-pyc-using-py3clean"
+title: Clean Python compiled files (.pyc) using py3clean
+date: '2022-02-03T15:23:24'
+slug: clean-python-compiled-files-pyc-using-py3clean
 categories:
   - Coding
 tags:

@@ -1,6 +1,11 @@
 ---
-title: "Indecision and Enterprising"
-slug: "indecision-and-enterprising"
+title: Indecision and Enterprising
+date: '2013-05-26T14:22:35'
+slug: indecision-and-enterprising
+categories:
+  - Social
+tags:
+  - india
 ---
 
 Trains journeys are quirky, just like India. I happened to meet a bank official of a nationalized bank in the last journey. He talked about a lot of things from UPSC exams to anger management, credits to my other co-passenger. If one wants to understand the status of economy, among the many people to meet should be a bank official. The following accounts from him tell a general tale of how India is today.

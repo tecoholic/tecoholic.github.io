@@ -1,7 +1,7 @@
 ---
-title: "Adding D3.js Visualisations to VueJS components"
-date: 2020-03-10T11:02:35
-slug: "adding-d3-js-visualisations-to-vuejs-components"
+title: Adding D3.js Visualisations to VueJS components
+date: '2020-03-10T16:32:35'
+slug: adding-d3-js-visualisations-to-vuejs-components
 categories:
   - Coding
 tags:

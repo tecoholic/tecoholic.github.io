@@ -1,7 +1,7 @@
 ---
-title: "Employing VueJS reactivity to update D3.js Visualisations – Part 2"
-date: 2020-03-11T02:58:50
-slug: "employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2"
+title: "Employing VueJS reactivity to update D3.js Visualisations \u2013 Part 2"
+date: '2020-03-11T08:28:50'
+slug: employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2
 categories:
   - Coding
 tags:

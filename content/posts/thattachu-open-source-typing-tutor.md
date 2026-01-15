@@ -1,6 +1,15 @@
 ---
-title: "'Thattachu &#8211; Open Source Typing Tutor'"
-slug: "thattachu-open-source-typing-tutor"
+title: '''Thattachu &#8211; Open Source Typing Tutor'''
+date: '2015-06-06T07:34:58'
+slug: thattachu-open-source-typing-tutor
+categories:
+  - Projects
+tags:
+  - Coding
+  - documentation
+  - github
+  - society
+  - wikipedia
 ---
 
 Typing tutor is a known ancient domain to work on. There are a number of places online/offline, tangible/intangible places to learn typing. But [Srikanth (@logic)][1] stumbled on a peculiar problem when worked for the [Wikimedia Language Engineering team][2]. The new age Indic input methods involved in computers seem to have no place to learn how to type on them. The only way seems to be &#8211; have a visual reference for the layout and begin typing one key at a time. This might be the most inefficient method of learning to input information. So what do we do?

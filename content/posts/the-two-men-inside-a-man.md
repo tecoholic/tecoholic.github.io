@@ -1,6 +1,12 @@
 ---
-title: "The Two Men Inside a Man"
-slug: "the-two-men-inside-a-man"
+title: The Two Men Inside a Man
+date: '2013-06-03T18:46:33'
+slug: the-two-men-inside-a-man
+categories:
+  - General
+tags:
+  - short story
+  - tamil
 ---
 
 > இந்த கதை என்னுடைய கதை அல்ல, சிறுவயதில் &#8220;Solidaire&#8221; தொலைக்காட்சி பெட்டியில், &#8220;DD1&#8221; ஒளிபரப்பிய பொழுது பார்த்தது. யாரிடமாவது சொல்ல வேண்டும் போல இருந்தது. இந்த வலைதலம்தான் செவிசாய்த்தது.

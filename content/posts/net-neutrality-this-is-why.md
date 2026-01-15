@@ -1,6 +1,12 @@
 ---
-title: "Net-neutrality. This is why."
-slug: "net-neutrality-this-is-why"
+title: Net-neutrality. This is why.
+date: '2015-02-01T20:45:48'
+slug: net-neutrality-this-is-why
+categories:
+  - Social
+tags:
+  - internet
+  - technology
 ---
 
 This post is a reply to the previous post by me titled [Why Net-Neutrality? or Why not tiered pricing?][1].

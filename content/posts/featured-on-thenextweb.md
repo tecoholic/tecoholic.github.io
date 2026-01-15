@@ -1,7 +1,7 @@
 ---
-title: "Featured on TheNextWeb & Lifehacker"
-date: 2020-08-27T06:44:12
-slug: "featured-on-thenextweb"
+title: Featured on TheNextWeb & Lifehacker
+date: '2020-08-27T12:14:12'
+slug: featured-on-thenextweb
 categories:
   - Projects
 tags:

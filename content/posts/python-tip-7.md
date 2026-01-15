@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #7 - getattr()"
-date: 2018-09-25
-slug: "python-tip-7"
+title: 'Python Tip #7 - getattr()'
+date: '2018-09-25T18:40:08'
+slug: python-tip-7
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 Sometimes we have to deal with external objects and their attributes. getattr() can save you at those times.

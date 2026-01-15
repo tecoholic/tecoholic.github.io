@@ -1,6 +1,13 @@
 ---
-title: "A Day of Activism in Anna University"
-slug: "a-day-of-activism-in-anna-university"
+title: A Day of Activism in Anna University
+date: '2013-03-19T12:32:07'
+slug: a-day-of-activism-in-anna-university
+categories:
+  - Social
+tags:
+  - activism
+  - people
+  - tamil
 ---
 
 Anna University, a silent place where political issues rarely rise to the surface saw its own share of Student Activism for a <s>political</s> humanitarian issue on March 18th 2013. This is a recollection of what happened on the day as I know it.

@@ -1,7 +1,7 @@
 ---
-title: "Liquid Fund Tax Partial Withdrawal Calculation"
-date: 2019-09-18T16:56:14
-slug: "liquid-fund-tax-partial-withdrawal-calculation"
+title: Liquid Fund Tax Partial Withdrawal Calculation
+date: '2019-09-18T22:26:14'
+slug: liquid-fund-tax-partial-withdrawal-calculation
 categories:
   - General
 ---

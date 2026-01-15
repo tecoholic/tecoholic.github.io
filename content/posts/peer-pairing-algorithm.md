@@ -1,12 +1,11 @@
 ---
-title: "Peer Pairing Algorithm"
-date: 2018-03-27
-slug: "peer-pairing-algorithm"
+title: Peer Pairing Algorithm
+date: '2018-03-27T11:26:23'
+slug: peer-pairing-algorithm
 categories:
   - Coding
 tags:
   - python
-  - coding
 ---
 
 ## Problem Statement

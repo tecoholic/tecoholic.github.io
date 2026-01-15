@@ -1,7 +1,7 @@
 ---
-title: "Stepping into 2021"
-date: 2020-12-31T18:31:00
-slug: "stepping-into-2021"
+title: Stepping into 2021
+date: '2021-01-01T00:01:00'
+slug: stepping-into-2021
 categories:
   - General
 ---

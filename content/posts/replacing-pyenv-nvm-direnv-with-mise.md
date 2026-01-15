@@ -1,7 +1,7 @@
 ---
-title: "Replacing pyenv, nvm, direnv with Mise"
-date: 2024-09-06T10:00:00
-slug: "replacing-pyenv-nvm-direnv-with-mise"
+title: Replacing pyenv, nvm, direnv with Mise
+date: '2024-09-06T10:00:52'
+slug: replacing-pyenv-nvm-direnv-with-mise
 categories:
   - Coding
 tags:

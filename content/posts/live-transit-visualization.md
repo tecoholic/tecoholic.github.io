@@ -1,6 +1,11 @@
 ---
-title: "Live Transit Visualization"
-slug: "live-transit-visualization"
+title: Live Transit Visualization
+date: '2015-01-15T17:27:11'
+slug: live-transit-visualization
+categories:
+  - Projects
+tags:
+  - Coding
 ---
 
 After a push from [@logic][1], I started working on a project to show live location of suburban trains based on [transit.js][2]. The idea is to make a map similar to [this][3] for many cities, with a choice of schedules (weekday/sunday). But I found the jQuery plugin, transit.js, too hardcoded and disorganised to perform what I wanted to and also to my taste.
@@ -18,7 +23,7 @@ So, I am going to create a simple library that can do this.
 
 Here is the mockup usage of the library:
 
-{% highlight javascript %}
+```javascript
 // Create a new livetransit object with the map type
 var lt = new LiveTransit();
 
@@ -39,7 +44,7 @@ lt.initiateMovement("chennai_velachery.kml", "chennai_velachery_weekday.json");
 lt.changeSchedule( "chennai_velachery_sunday.json" );
 // change the location - city
 lt.changeLocation( "new.kml", "new.json" );
-{% endhighlight %}
+```
 
  [1]: https://twitter.com/logic
  [2]: http://onloop.net/transit/ "transit.js"

@@ -1,12 +1,11 @@
 ---
-title: "Simplistic Algorithms with Python"
-date: 2018-03-02
-slug: "simplistic-algorithms-with-python"
+title: Simplistic Algorithms with Python
+date: '2018-03-02T13:23:12'
+slug: simplistic-algorithms-with-python
 categories:
   - Coding
 tags:
   - python
-  - coding
 ---
 
 I have been working on the problems in Codility to get better at the algorithms and also to expand the way I solve problems in general. One common thing I notice with using Python as the language is that, sometimes the solutions are so simple I wonder if I learnt anything at all.

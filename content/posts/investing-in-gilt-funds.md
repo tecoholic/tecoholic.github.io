@@ -1,7 +1,7 @@
 ---
-title: "Investing in GILT funds"
-date: 2019-08-12T04:30:40
-slug: "investing-in-gilt-funds"
+title: Investing in GILT funds
+date: '2019-08-12T10:00:40'
+slug: investing-in-gilt-funds
 categories:
   - Ideas
 tags:

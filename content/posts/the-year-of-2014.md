@@ -1,6 +1,11 @@
 ---
-title: "The year of 2014"
-slug: "the-year-of-2014"
+title: The year of 2014
+date: '2015-01-01T00:57:30'
+slug: the-year-of-2014
+categories:
+  - General
+tags:
+  - thought
 ---
 
 Basically I attempted two projects as a personal development venture.

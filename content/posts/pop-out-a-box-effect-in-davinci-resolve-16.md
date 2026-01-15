@@ -1,7 +1,7 @@
 ---
-title: "Pop-Out a box effect in DaVinci Resolve 16"
-date: 2019-10-08T04:36:40
-slug: "pop-out-a-box-effect-in-davinci-resolve-16"
+title: Pop-Out a box effect in DaVinci Resolve 16
+date: '2019-10-08T10:06:40'
+slug: pop-out-a-box-effect-in-davinci-resolve-16
 categories:
   - Ideas
 ---

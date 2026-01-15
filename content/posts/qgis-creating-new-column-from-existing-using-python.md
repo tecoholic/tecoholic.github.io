@@ -1,7 +1,7 @@
 ---
-title: "QGIS - Creating new column from existing using Python"
-date: 2019-01-08T13:35:40
-slug: "qgis-creating-new-column-from-existing-using-python"
+title: QGIS - Creating new column from existing using Python
+date: '2019-01-08T19:05:40'
+slug: qgis-creating-new-column-from-existing-using-python
 categories:
   - Coding
 tags:

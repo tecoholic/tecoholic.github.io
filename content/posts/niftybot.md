@@ -1,7 +1,7 @@
 ---
-title: "NiftyBot"
-date: 2019-11-10T06:58:20
-slug: "niftybot"
+title: NiftyBot
+date: '2019-11-10T12:28:20'
+slug: niftybot
 categories:
   - Projects
 tags:

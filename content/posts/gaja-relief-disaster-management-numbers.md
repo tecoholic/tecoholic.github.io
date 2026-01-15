@@ -1,7 +1,7 @@
 ---
-title: "Gaja Relief & Disaster Management Numbers"
-date: 2018-11-29T04:22:34
-slug: "gaja-relief-disaster-management-numbers"
+title: Gaja Relief & Disaster Management Numbers
+date: '2018-11-29T09:52:34'
+slug: gaja-relief-disaster-management-numbers
 categories:
   - Social
 ---

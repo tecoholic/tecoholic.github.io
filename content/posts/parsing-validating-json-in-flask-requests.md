@@ -1,7 +1,7 @@
 ---
-title: "Parsing & Validating JSON in Flask Requests"
-date: 2019-08-16T06:00:10
-slug: "parsing-validating-json-in-flask-requests"
+title: Parsing & Validating JSON in Flask Requests
+date: '2019-08-16T11:30:10'
+slug: parsing-validating-json-in-flask-requests
 categories:
   - Coding
 tags:

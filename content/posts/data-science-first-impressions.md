@@ -1,7 +1,7 @@
 ---
-title: "Data Science - First Impressions"
-date: 2020-07-06T14:37:09
-slug: "data-science-first-impressions"
+title: Data Science - First Impressions
+date: '2020-07-06T20:07:09'
+slug: data-science-first-impressions
 categories:
   - General
 tags:

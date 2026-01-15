@@ -1,12 +1,12 @@
 ---
-title: "Using React for parts of a Falsk App"
-slug: "using-react-for-parts-of-a-flask-app"
+title: Using React for parts of a Falsk App
+date: '2017-10-22T21:14:26'
+slug: using-react-for-parts-of-a-flask-app
 categories:
   - Coding
 tags:
+  - js
   - python
-  - react
-  - coding
 ---
 
 ## Background:

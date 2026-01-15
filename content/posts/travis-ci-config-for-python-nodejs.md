@@ -1,6 +1,11 @@
 ---
-title: "Travis CI config for Python + NodeJS"
-slug: "travis-ci-config-for-python-nodejs"
+title: Travis CI config for Python + NodeJS
+date: '2015-07-20T22:44:45'
+slug: travis-ci-config-for-python-nodejs
+categories:
+  - Coding
+tags:
+  - python
 ---
 
 I currently work with the [Gluu Federation][1] &#8211; an open source company. My present job is to build a Web UI for the cluster management using the available API. 

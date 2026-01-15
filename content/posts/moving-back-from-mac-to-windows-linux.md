@@ -1,7 +1,7 @@
 ---
-title: "Moving back from Mac to Windows + Linux"
-date: 2019-12-12T14:02:30
-slug: "moving-back-from-mac-to-windows-linux"
+title: Moving back from Mac to Windows + Linux
+date: '2019-12-12T19:32:30'
+slug: moving-back-from-mac-to-windows-linux
 categories:
   - General
 tags:

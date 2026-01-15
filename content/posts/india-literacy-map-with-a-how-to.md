@@ -1,7 +1,7 @@
 ---
-title: "India Literacy Map with a How-To"
-date: 2019-01-01T01:01:51
-slug: "india-literacy-map-with-a-how-to"
+title: India Literacy Map with a How-To
+date: '2019-01-01T06:31:51'
+slug: india-literacy-map-with-a-how-to
 categories:
   - Maps
 tags:

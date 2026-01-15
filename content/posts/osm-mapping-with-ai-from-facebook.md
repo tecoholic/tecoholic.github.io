@@ -1,7 +1,7 @@
 ---
-title: "OSM Mapping with AI from Facebook"
-date: 2019-07-24T03:42:22
-slug: "osm-mapping-with-ai-from-facebook"
+title: OSM Mapping with AI from Facebook
+date: '2019-07-24T09:12:22'
+slug: osm-mapping-with-ai-from-facebook
 categories:
   - General
 tags:

@@ -1,9 +1,9 @@
 ---
-title: "PyCharmஇல் Flask செயலி உருவாக்குவது எப்படி?"
-date: 2019-09-30T04:30:39
-slug: "how-to-develop-flask-in-pycharm-tamil"
+title: "PyCharm\u0B87\u0BB2\u0BCD Flask \u0B9A\u0BC6\u0BAF\u0BB2\u0BBF \u0B89\u0BB0\u0BC1\u0BB5\u0BBE\u0B95\u0BCD\u0B95\u0BC1\u0BB5\u0BA4\u0BC1 \u0B8E\u0BAA\u0BCD\u0BAA\u0B9F\u0BBF?"
+date: '2019-09-30T10:00:39'
+slug: how-to-develop-flask-in-pycharm-tamil
 categories:
-  - Python-flask-tamil
+  - Python Flask - Tamil
 ---
 
 PyCharm என்பது ஒரு ஒருங்கினைந்த நிரலாக்க மென்பொருள். ஆங்கிலத்தில் Integrated Development Environment (IDE) என செல்லும் ஒரு நிரலாக்கக் கருவி. நாம் செய்யும் வேலையின் தரம் நாம் பயன்படுத்தும் கருவிகளைக்கொண்டே இருக்கிறது. ஒரு சிற்பிக்கு அது நன்றாகத் தெரியும். மென்பொருள் உருவாக்கம் சிலை செதுக்குவதைக் காட்டிலும் கடினமான விடயமா என்று தெரியாது, உறுதியாகச் சிக்கலான ஒன்று என்றே நான் கூறுவேன். எனவே நாம் பயன்படுத்தும் கருவிகளும் அதற்கு நிகரானதாக இருக்கு வேண்டும். Notepad, Notedpad++, Emacs, Eclipse, VIM, Atom, VS Code என பலவற்றில் நிரல் எழுதி இப்பொழுது கடைசி 3 ஆண்டுகளாக வருடம் 7-8ஆயிரம் செலவழித்து Professional Edition வாங்கிப் பயன்படுத்தும் அளவிற்கு உடன் நிற்பது PyCharmதான்.

@@ -1,7 +1,7 @@
 ---
-title: "Product - Audience Quadrant"
-date: 2020-08-10T04:18:40
-slug: "product-audience-quadrant"
+title: Product - Audience Quadrant
+date: '2020-08-10T09:48:40'
+slug: product-audience-quadrant
 categories:
   - Notes
 tags:

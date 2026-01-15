@@ -1,9 +1,9 @@
 ---
-title: "Flaskஇல் நம் முதல் செயலி"
-date: 2019-09-29T04:16:05
-slug: "flask-first-application-tamil"
+title: "Flask\u0B87\u0BB2\u0BCD \u0BA8\u0BAE\u0BCD \u0BAE\u0BC1\u0BA4\u0BB2\u0BCD \u0B9A\u0BC6\u0BAF\u0BB2\u0BBF"
+date: '2019-09-29T09:46:05'
+slug: flask-first-application-tamil
 categories:
-  - Python-flask-tamil
+  - Python Flask - Tamil
 ---
 
 சென்ற கட்டுரையில் [Flask-ஐ நிறுவுவது எப்படி](https://arunmozhi.in/2019/09/28/python-flask-installation-tamil/) என்று பார்த்தோம். இந்தக்கட்டுரையில் Flaskஇல் ஒரு இணைய செயலியை (Web application) உருவாக்குவது பற்றி பார்ப்போம்.

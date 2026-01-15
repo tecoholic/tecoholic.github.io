@@ -1,7 +1,7 @@
 ---
-title: "Python Technical Interview - An Experience"
-date: 2019-01-23T05:41:37
-slug: "python-technical-interview-an-experience"
+title: Python Technical Interview - An Experience
+date: '2019-01-23T11:11:37'
+slug: python-technical-interview-an-experience
 categories:
   - Coding
 tags:

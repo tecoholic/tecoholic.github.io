@@ -1,7 +1,7 @@
 ---
-title: "Two Days with Python & GraphQL"
-date: 2019-12-21T15:19:10
-slug: "two-days-with-python-graphql"
+title: Two Days with Python & GraphQL
+date: '2019-12-21T20:49:10'
+slug: two-days-with-python-graphql
 categories:
   - Coding
 tags:

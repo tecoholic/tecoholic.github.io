@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #5 - Get value from dict if key is present"
-date: 2018-09-22
-slug: "python-tip-5"
+title: 'Python Tip #5 - Get value from dict if key is present'
+date: '2018-09-22T15:12:56'
+slug: python-tip-5
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 Check for existence of a key in dictionary and retrieve its value if present.

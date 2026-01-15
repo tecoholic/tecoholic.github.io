@@ -1,7 +1,7 @@
 ---
-title: "gitignore.io - Generating Complex Git Ignore Files Automatically"
-date: 2020-02-23T08:09:23
-slug: "gitignore-io-generating-complex-git-ignore-files-automatically"
+title: gitignore.io - Generating Complex Git Ignore Files Automatically
+date: '2020-02-23T13:39:23'
+slug: gitignore-io-generating-complex-git-ignore-files-automatically
 categories:
   - Coding
 tags:

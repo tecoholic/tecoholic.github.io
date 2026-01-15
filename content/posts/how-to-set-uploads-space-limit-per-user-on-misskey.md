@@ -1,7 +1,7 @@
 ---
-title: "How to set uploads space limit per user on Misskey?"
-date: 2023-09-26T11:22:12
-slug: "how-to-set-uploads-space-limit-per-user-on-misskey"
+title: How to set uploads space limit per user on Misskey?
+date: '2023-09-26T16:52:12'
+slug: how-to-set-uploads-space-limit-per-user-on-misskey
 categories:
   - Notes
 tags:

@@ -1,6 +1,11 @@
 ---
-title: "Unit Testing with CasperJS"
-slug: "unit-testing-with-casperjs"
+title: Unit Testing with CasperJS
+date: '2015-01-15T23:20:37'
+slug: unit-testing-with-casperjs
+categories:
+  - Coding
+tags:
+  - github
 ---
 
 Today I sat down to create a JavaScript library. I wanted to do it the way I have long dreamed of &#8211; TDD (Test Driven Development). There is no dearth of Unit testing libraries and frameworks for JavaScript, so after some reading on the internet settled on CasperJS and PhantomJS combination. CasperJS is just awesome for functional testing, but Unit testing? Even though it supports Unit Testing, it as such is not a dedicated unit testing frameowrk like [Karma][1] or [Protractor][2]. [Read this][3] for more information on TTD frameworks for JS libraries.
@@ -13,7 +18,7 @@ Thanks for this quote, I found that using the `fs` module one can load local fil
 
 Here is the file structure  
 
-{% highlight bash %}
+```bash
 library
 --test
   |--unit
@@ -21,7 +26,7 @@ library
      |--index.html
 --src
   |--livetransit.js
-{% endhighlight %}
+```
 
 And here is are the two tests &#8211; i) uses a webpage based approach; ii) uses module approach
 

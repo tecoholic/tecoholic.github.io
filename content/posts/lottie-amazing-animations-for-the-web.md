@@ -1,7 +1,7 @@
 ---
-title: "Lottie - Amazing Animations for the Web"
-date: 2020-02-24T09:54:24
-slug: "lottie-amazing-animations-for-the-web"
+title: Lottie - Amazing Animations for the Web
+date: '2020-02-24T15:24:24'
+slug: lottie-amazing-animations-for-the-web
 categories:
   - Coding
 tags:

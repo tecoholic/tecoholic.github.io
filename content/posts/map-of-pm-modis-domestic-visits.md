@@ -1,7 +1,7 @@
 ---
-title: "Map of PM Modi's Domestic Visits"
-date: 2019-01-28T08:27:46
-slug: "map-of-pm-modis-domestic-visits"
+title: Map of PM Modi's Domestic Visits
+date: '2019-01-28T13:57:46'
+slug: map-of-pm-modis-domestic-visits
 categories:
   - Maps
 tags:

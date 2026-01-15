@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #3 - Filtering Lists"
-date: 2018-09-21
-slug: "python-tip-3"
+title: 'Python Tip #3 - Filtering Lists'
+date: '2018-09-21T21:31:11'
+slug: python-tip-3
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 Selecting elements from a list that satidfy a condition

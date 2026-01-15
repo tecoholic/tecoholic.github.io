@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #2 - Single Line if Statements"
-date: 2018-09-20
-slug: "python-tip-2"
+title: 'Python Tip #2 - Single Line if Statements'
+date: '2018-09-20T20:32:17'
+slug: python-tip-2
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 ```python

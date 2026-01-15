@@ -1,7 +1,7 @@
 ---
-title: "Gitea - git push doesn't work after moving server to new IP"
-date: 2024-06-21T08:20:15
-slug: "gitea-git-push-doesnt-work-after-moving-server-to-new-ip"
+title: Gitea - git push doesn't work after moving server to new IP
+date: '2024-06-21T13:50:15'
+slug: gitea-git-push-doesnt-work-after-moving-server-to-new-ip
 categories:
   - Notes
 tags:

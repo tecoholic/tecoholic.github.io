@@ -1,6 +1,14 @@
 ---
-title: "Icons/Font related to Indian Culture"
-slug: "iconsfont-related-to-indian-culture"
+title: Icons/Font related to Indian Culture
+date: '2015-04-21T06:48:18'
+slug: iconsfont-related-to-indian-culture
+categories:
+  - Projects
+tags:
+  - idea
+  - india
+  - society
+  - tamil
 ---
 
 There seems to be a clear lack in availability of icons and icon fonts for using in the Indian cultural context. I realized this when we were designing a wedding invitation and we couldn't find any free available material. So I am creating a list of known objects with cultural relevance and create them in my free time. All the icons you see here are available in Wikimedia Commons in Public Domain License. Feel free to do whatever you want with it. I suggest you upload your derived works to keep the spirit.

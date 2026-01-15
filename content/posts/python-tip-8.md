@@ -1,12 +1,11 @@
 ---
-title: "Python Tip #8 - reducing looping by using dicts"
-date: 2018-09-27
-slug: "python-tip-8"
+title: 'Python Tip #8 - reducing looping by using dicts'
+date: '2018-09-27T21:41:39'
+slug: python-tip-8
 categories:
-  - PythonTips
+  - Coding
 tags:
   - python
-  - coding
 ---
 
 In situations where you have a list of objects and have to retrieve then in random order, dictionaries can act as lookup tables.
