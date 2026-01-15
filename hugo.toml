@@ -1,7 +1,8 @@
 baseURL = "https://arunmozhi.in/"
 languageCode = "en-us"
-title = "Arunmozhi"
-theme = "nightfall"
+languagename = "English"
+title = "Arunmozhi aka tecoholic"
+theme = "LoveIt"
 enableRobotsTXT = true
 
 [pagination]
@@ -15,62 +16,50 @@ enableRobotsTXT = true
   tag = "tags"
 
 [params]
-  user = "Arunmozhi"
-  hostname = "arunmozhi.in"
-  openLinksInNewTab = true
-  displayDateFormat = "Jan 2, 2006"
-
-  showMetadata = true
-  showPublishedDate = true
-  showReadingTime = true
-  showTags = true
-  showAuthors = true
-  showCategories = true
-
+  dateformat = "Jan 02, 2006"
   [params.author]
     name = "Arunmozhi"
-    email = "arun@arunmozhi.in"
-    avatar = "/img/avatar.png"
-    avatarSize = "size-xs"
-
-[[params.social]]
-  key = 0
-  name = "github"
-  url = "https://github.com/tecoholic"
-  icon = "fa-brands fa-github"
-  target = "_blank"
-  aria = "GitHub Profile"
-
-[[params.social]]
-  key = 1
-  name = "stackoverflow"
-  url = "https://stackoverflow.com/users/8765631/arunmozhi"
-  icon = "fa-brands fa-stack-overflow"
-  target = "_blank"
-  aria = "StackOverflow Profile"
-
-[[params.social]]
-  key = 2
-  name = "linkedin"
-  url = "https://www.linkedin.com/in/tecoholic/"
-  icon = "fa-brands fa-linkedin"
-  target = "_blank"
-  aria = "LinkedIn Profile"
+  [params.header]
+    [params.header.title]
+      name = "Arunmozhi"
+  [params.home]
+    [params.home.profile]
+      avatarURL = "img/avatar.png"
+      subtitle = ""
+  [params.social]
+    GitHub = "tecoholic"
+    Stackoverflow = "8765631/arunmozhi"
+    Linkedin = "tecoholic"
+  [params.page]
+    [params.page.home]
+      [params.page.home.css]
+        darkOverrides = "css/dark-overrides.css"
+    [params.page.library]
+      [params.page.library.css]
+        darkOverrides = "css/dark-overrides.css"
+  [params.list]
+    dateFormat = "Jan 02, 2006"
+  [params.section]
+    dateFormat = "Jan 02, 2006"
 
 [menu]
-  [[menu.header]]
-    name = "blog"
-    url = "/posts/"
+  [[menu.main]]
     weight = 1
-  [[menu.header]]
-    name = "about"
-    url = "/about/"
+    identifier = "posts"
+    name = "Blog"
+    url = "/blog/"
+  [[menu.main]]
     weight = 2
-
-[outputs]
-  home = ["HTML", "RSS"]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
 
 [markup]
+  [markup.highlight]
+    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[output]
+  home = ["HTML", "RSS", "JSON"]

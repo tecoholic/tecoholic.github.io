@@ -1,0 +1,49 @@
+/* Dark theme overrides to avoid touching the LoveIt submodule. */
+body[theme="dark"],
+body[theme=dark] .home[data-home=posts] .summary .content
+{
+  background-color: #1c1d20;
+  color: #d0d2dc;
+}
+
+body[theme="dark"] a,
+body[theme="dark"] a::before,
+body[theme="dark"] a::after {
+  color: #d0d2dc;
+}
+
+body[theme="dark"] header,
+body[theme="dark"] #header-desktop,
+body[theme="dark"] #header-mobile .header-container .menu {
+  background-color: #1a1b1e;
+}
+
+body[theme="dark"] .search-dropdown .dropdown-menu {
+  background-color: #1c1d20;
+}
+
+body[theme="dark"] .single .content .footnotes,
+body[theme="dark"] .single .content .footnotes a {
+  color: #b1b3bd;
+  font-size: small;
+}
+
+body .home .post-author {
+    display: none;
+}
+
+body .home .post-publish {
+    text-transform: capitalize;
+}
+
+body .home .post-publish time {
+    color: #a9a9b3;
+}
+
+body .single .post-author {
+    display: none;
+}
+
+body .single .post-category {
+    text-transform: capitalize;
+}
