@@ -1,5 +1,5 @@
 ---
-title: '''E-Books &#038; DRM for the Simple Man'''
+title: E-Books - DRM for the Simple Man
 date: '2012-12-01T12:27:55'
 slug: e-books-drm-for-the-simple-man
 categories:

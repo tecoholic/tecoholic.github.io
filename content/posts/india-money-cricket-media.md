@@ -1,5 +1,5 @@
 ---
-title: "'India, Money, Cricket &#038; Media'"
+title: India, Money, Cricket & Media
 slug: "india-money-cricket-media"
 ---
 

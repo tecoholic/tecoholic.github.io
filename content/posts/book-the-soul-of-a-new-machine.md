@@ -1,5 +1,5 @@
 ---
-title: '''Book &#8211; The Soul of a New Machine'''
+title: Book - The Soul of a New Machine
 date: '2014-11-01T19:11:31'
 slug: book-the-soul-of-a-new-machine
 categories:

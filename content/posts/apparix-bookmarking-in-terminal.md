@@ -1,5 +1,5 @@
 ---
-title: '''Apparix &#8211; Bookmarking in terminal'''
+title: Apparix - Bookmarking in terminal
 date: '2015-04-03T17:30:02'
 slug: apparix-bookmarking-in-terminal
 categories:

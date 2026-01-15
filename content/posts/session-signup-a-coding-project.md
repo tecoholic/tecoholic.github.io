@@ -1,5 +1,5 @@
 ---
-title: '''Session Signup &#8211; A Coding Project'''
+title: Session Signup - A Coding Project
 date: '2014-11-30T21:49:48'
 slug: session-signup-a-coding-project
 categories:
@@ -20,4 +20,3 @@ I am thinking of automating the red circle region by writing a web application t
 ### Update 1:
 
 Initiated the project using the Google App Engine. Signed up for a 60 Day & $300 credit Free trail from Google Cloud Services. &#8211; December 2,2014
-

@@ -1,5 +1,5 @@
 ---
-title: "'Before The Journey &#8211; Part 1 &#8211; Corruption'"
+title: Before The Journey - Part 1 - Corruption
 slug: "before-the-journey-part-1-corruption"
 ---
 

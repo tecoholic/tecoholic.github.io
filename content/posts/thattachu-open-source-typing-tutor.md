@@ -1,5 +1,5 @@
 ---
-title: '''Thattachu &#8211; Open Source Typing Tutor'''
+title: Thattachu - Open Source Typing Tutor
 date: '2015-06-06T07:34:58'
 slug: thattachu-open-source-typing-tutor
 categories:

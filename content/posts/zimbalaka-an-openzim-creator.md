@@ -1,5 +1,5 @@
 ---
-title: '''Zimbalaka &#8211; Zim file creator for Offline Wikipedia'''
+title: Zimbalaka - Zim file creator for Offline Wikipedia
 date: '2015-05-15T11:40:09'
 slug: zimbalaka-an-openzim-creator
 categories:

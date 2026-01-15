@@ -1,5 +1,5 @@
 ---
-title: "Employing VueJS reactivity to update D3.js Visualisations \u2013 Part 2"
+title: "Employing VueJS reactivity to update D3.js Visualisations - Part 2"
 date: '2020-03-11T08:28:50'
 slug: employing-vuejs-reactivity-to-update-d3-js-visualisations-part-2
 categories:
@@ -151,4 +151,3 @@ There we have it - a visualization that will update based on the user's interact
 1. If we compare this technique to the previous one, it does seem like we are writing more verbose JavaScript than necessary. But if you had written D3 at all, you would find this verbose JS better to manage than the previous one.
 2. Performance - One concern when switching from Vue's direct component reactivity to DOM based updates using D3 is the performance. I don't have a clear picture on that matter. But the good thing is, D3's update mechanism changes only what is necessary similar to that of Vue's update mechanism. So I don't think we will be very far when it comes to performance.
 3. One important advantage of this method is we can make using the **animation** capabilities that comes with D3js
-
