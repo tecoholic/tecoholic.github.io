@@ -4,17 +4,15 @@ url: "/about/"
 showMetadata: false
 ---
 
-Hi 👋
+Hi! 👋
 
-I am Arunmozhi - a software developer.
-
-More specifically - a Full Stack web developer.
+I am Arunmozhi. A software developer.
 
 ### What do I do?
 
-I help convert ideas into reality. I have built prototypes, first versions, customized existing solutions for early-stage startups and have seen them become production systems used by thousands.
+These days, I mainly work on [Open edX](https://github.com/openedx/) as a Senior Software Engineer for [OpenCraft](https://opencraft.com).
 
-I do that by writing code that converts data into APIs, ML Models into services, and user stories into user interfaces. I create automated tasks in the server, UI components in the browser and everything in between.
+I have previously done different things - a software platform for creating data driven stories, a processing engine for processing data & deploy ML Models, have built and managed cloud infra, create multiple web applications.
 
 ### What's my Stack?
 

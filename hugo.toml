@@ -34,9 +34,10 @@ enableRobotsTXT = true
     [params.page.home]
       [params.page.home.css]
         darkOverrides = "css/dark-overrides.css"
-    [params.page.library]
-      [params.page.library.css]
-        darkOverrides = "css/dark-overrides.css"
+  [params.page.library]
+    [params.page.library.css]
+      darkOverrides = "css/dark-overrides.css"
+      lightOverrides = "css/light-overrides.css"
   [params.list]
     dateFormat = "Jan 02, 2006"
   [params.section]
@@ -61,5 +62,9 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       unsafe = true
 
-[output]
+[outputs]
   home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]

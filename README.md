@@ -1,11 +1,11 @@
 # Arunmozhi Blog
 
-This repository hosts the Hugo version of the blog using the Nightfall theme.
+This repository hosts the Hugo version of the blog using the LoveIt theme.
 
 ## Tech
 
 - Hugo (extended)
-- Theme: Nightfall (git submodule)
+- Theme: LoveIt (git submodule)
 
 ## Local development
 
@@ -33,7 +33,7 @@ hugo --minify
 
 ## Theme
 
-Nightfall is included as a submodule:
+LoveIt is included as a submodule:
 
 ```bash
 git submodule update --init --recursive
@@ -45,10 +45,16 @@ To update:
 git submodule update --remote --merge
 ```
 
+## Taxonomy term pages
+
+- Hugo v0.154+ renders tag/category term pages as kind `term` and looks for `layouts/taxonomy/term.html`.
+- LoveIt ships `themes/LoveIt/layouts/taxonomy/list.html` and `themes/LoveIt/layouts/taxonomy/terms.html` but no `term.html`.
+- This repo provides `layouts/taxonomy/term.html` to render HTML for `/tags/<term>/` and `/categories/<term>/`.
+
 ## Custom styling
 
-- Fonts and head includes: `layouts/_partials/custom-head.html`
-- Custom styles: `static/css/custom.css`
+- Dark theme overrides: `assets/css/dark-overrides.css` (wired via `params.page.library.css.darkOverrides` in `hugo.toml`).
+- Light theme overrides: `assets/css/light-overrides.css` (wired via `params.page.library.css.lightOverrides` in `hugo.toml`).
 
 ## Deployment
 
