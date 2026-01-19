@@ -1,4 +1,8 @@
+{{- $comment := .Scratch.Get "comment" | default dict -}}
+
+{{- if $comment.enable -}}
 <script defer src="https://comments.arunmozhi.in/comentario.js"></script>
-<div style="margin-top: 3rem;">
+<div style="margin-top: 3rem">
     <comentario-comments></comentario-comments>
 </div>
+{{- end -}}

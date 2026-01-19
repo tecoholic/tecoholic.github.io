@@ -18,7 +18,7 @@ categories:
   - Coding
 ---
 
-I have [previously written about using Mise](./managing-open-edx-tutor-with-mise.md) to manage multiple versions of Open edX Tutor. It had it's limitations and involved using a custom library I created to handle versions. I soon grew out of it. Since Tutor plugins are Python packages, it's best to create dedicated virtual environments to keep things separate and self contained.
+I have [previously written about using Mise]({{< ref "managing-open-edx-tutor-with-mise" >}}) to manage multiple versions of Open edX Tutor. It had it's limitations and involved using a custom library I created to handle versions. I soon grew out of it. Since Tutor plugins are Python packages, it's best to create dedicated virtual environments to keep things separate and self contained.
 <!--more-->
 
 So, [the solution we came up with at OpenCraft](https://forum.opencraft.com/t/new-recommendations-for-devstacks/1845) was to designate a directory as a Tutor environment, create a Python virtual environment inside it and let Mise handle all the paths. That takes care of managing multiple versions in isolated environments.
