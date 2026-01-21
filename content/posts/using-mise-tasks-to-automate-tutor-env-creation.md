@@ -41,8 +41,8 @@ cd $PWD
 mkdir -p plugins
 mise use python@3.12
 mise config set env._.python.venv.path ".venv"
-mise set TUTOR_ROOT="$PWD"
-mise set TUTOR_PLUGINS_ROOT="$PWD/plugins"
+mise set TUTOR_ROOT="{{ cwd }}"
+mise set TUTOR_PLUGINS_ROOT="{{ cwd }}/plugins"
 
 echo "Creating a virtual environment"
 python -m venv .venv
