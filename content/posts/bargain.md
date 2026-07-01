@@ -1,6 +1,7 @@
 ---
 title: "Bargain"
 slug: "bargain"
+date: '2012-12-27T00:00:00'
 ---
 
 <a href="http://commons.wikimedia.org/wiki/File%3AHermann_Vogel-The_Good_Bargain-2.jpg" rel="attachment wp-att-62"><img src="http://upload.wikimedia.org/wikipedia/commons/f/ff/Hermann_Vogel-The_Good_Bargain-2.jpg" alt="Image: Hermann_Vogel-The_Good_Bargain-2" width="427" height="284" class="aligncenter size-full wp-image-62" /></a>

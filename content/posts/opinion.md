@@ -1,6 +1,7 @@
 ---
 title: "Opinion"
 slug: "opinion"
+date: '2013-01-22T00:00:00'
 ---
 
 <h2 style="text-align:center;">

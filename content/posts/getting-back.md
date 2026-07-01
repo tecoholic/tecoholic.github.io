@@ -1,6 +1,7 @@
 ---
 title: "Getting Back"
 slug: "getting-back"
+date: '2013-11-14T00:00:00'
 ---
 
 I started this blog to document whatever I do through the two years of my TFI Fellowship, for the benefit of coming back after the two years and make an analysis, of what is what, and get a better understanding. It has been 6 good months since I last wrote and 5 tough months since I joined the fellowship. I have been learning a lot all this time and was kept busy in trying to figure things out, just to stay alive and go to school everyday. The journey has been tough and rarely have time to write mails. I skip taking phone calls other than the most important, because that has become a luxury that I cannot afford. Blogging, a fantasy to me.

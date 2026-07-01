@@ -1,6 +1,7 @@
 ---
 title: "Figure"
 slug: "figure"
+date: '2012-12-28T00:00:00'
 ---
 
 First I am sorry to both the English only blog readers and Tamil only blog readers. This post is going to be a mixture of both.

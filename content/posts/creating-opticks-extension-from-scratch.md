@@ -1,6 +1,7 @@
 ---
 title: "Creating Opticks Plug-in From Scratch"
 slug: "creating-opticks-extension-from-scratch"
+date: '2013-02-28T00:00:00'
 categories:
   - Notes
 tags:

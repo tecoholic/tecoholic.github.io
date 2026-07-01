@@ -1,6 +1,7 @@
 ---
 title: India, Money, Cricket & Media
 slug: "india-money-cricket-media"
+date: '2013-05-23T00:00:00'
 ---
 
 Warning: If you are so naive that you believe everything shown on the TV, close this post.

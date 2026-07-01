@@ -1,6 +1,7 @@
 ---
 title: "A Conversation About Schools - Part 1"
 slug: "a-conversation-about-schools"
+date: '2016-03-20T00:00:00'
 categories:
   - General
 tags:

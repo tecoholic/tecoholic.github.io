@@ -1,6 +1,7 @@
 ---
 title: "Rural Nostalgia"
 slug: "rural-nostalgia"
+date: '2013-05-03T00:00:00'
 ---
 
 I have been wanting to write about my nostalgia for the rural life. At any given day I would identify myself as a rural kid who loves simple things than a urban youth yearning for the riches and the conveniences of the city. There are many things that I miss about the laid back life one has in a rural India compared to the fast paced urban life.

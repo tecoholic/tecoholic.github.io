@@ -1,6 +1,7 @@
 ---
 title: "I Have a Dream Too"
 slug: "i-have-a-dream-too"
+date: '2013-01-23T00:00:00'
 ---
 
 I think it is a crime if writers don&#8217;t have a dream and blasphemous if they don&#8217;t write under the title &#8220;I Have a Dream&#8221;.

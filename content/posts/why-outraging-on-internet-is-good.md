@@ -1,6 +1,7 @@
 ---
 title: "Why Outraging on Internet is Good?"
 slug: "why-outraging-on-internet-is-good"
+date: '2012-12-23T00:00:00'
 ---
 
 Internet Outraging &#8211; is the most comical invention of the urban-internet-savvy humans. Or at least many think that way. 

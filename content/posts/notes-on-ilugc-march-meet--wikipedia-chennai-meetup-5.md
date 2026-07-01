@@ -1,6 +1,7 @@
 ---
 title: "Notes on ILUGC March Meet and Wikipedia Chennai Meetup 5"
 slug: "notes-on-ilugc-march-meet--wikipedia-chennai-meetup-5"
+date: '2013-03-14T00:00:00'
 categories:
   - Notes
 tags:

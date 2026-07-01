@@ -1,6 +1,7 @@
 ---
 title: "Brute-forcing a Django Forms to FastAPI Migration with LLM"
 slug: "brute-forcing-a-framework-migration-with-llm"
+date: '2025-11-23T00:00:00'
 ---
 
 I decided to migrate a Python Django application to FastAPI. The app was mainly serving APIs for triggering some background tasks. Whatever data it needed could be just put into configs or JSON files.

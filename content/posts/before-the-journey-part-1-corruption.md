@@ -1,6 +1,7 @@
 ---
 title: Before The Journey - Part 1 - Corruption
 slug: "before-the-journey-part-1-corruption"
+date: '2013-05-07T00:00:00'
 ---
 
 India doesn&#8217;t need a definition for this word, still I like to include it for the sake of coherency. Making someone morally depraved. That strikes me most. Corruption is not specific to the people in position and power to act, it has become a character of the society. I was shocked when my mother said she demanded money in order to vote. The thing which seemed to be on the streets is finally at home. I wouldn&#8217;t take this as a indicator of how my parent has become corrupted and make the mistake of missing forest for the trees. It is an indicator of how the society, which had a name for truth and integrity, has come to a state where corruption is not recognized, even when present in its purest form. On what stand the society expects to see just use of power, from the most powerful in the country, when a housewife with merely a vote in millions, could misuse it for extortion? Laughable.

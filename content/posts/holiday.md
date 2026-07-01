@@ -1,6 +1,7 @@
 ---
 title: "Holiday"
 slug: "holiday"
+date: '2012-12-26T00:00:00'
 ---
 
 &#8220;Come dear, come. Oh! How long has it been since I last saw you?&#8221; &#8211; greeted Ponnamma. It is always a 6 month wait for 6 days with her only grandson Rasu Kutti. In no time, there is an animated conversation between Ponnamma and Rasu. It always starts with the train and moves through everything in the village from the barking next house dog to weekly market under the banyan tree. Nobody knows or remembers how they end their conversation.

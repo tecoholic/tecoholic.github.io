@@ -1,6 +1,7 @@
 ---
 title: "Hello!"
 slug: "hello"
+date: '2013-04-27T00:00:00'
 ---
 
 Hello!

@@ -1,6 +1,7 @@
 ---
 title: "Installing gluu-flask requirements.txt on Mac"
 slug: "installing-gluu-flask-requirements"
+date: '2016-02-09T00:00:00'
 categories:
   - General
 tags:
