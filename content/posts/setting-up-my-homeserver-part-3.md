@@ -116,7 +116,7 @@ Ideally, I should be creating the Oracle VM using Terraform as well. But the ent
 
 
 
-![](/img/wp-content/uploads/2022/12/workflow.png?w=1024)
+![](/img/wp-content/uploads/2022/12/workflow.png)
 
 
 Since, most of what we are dealing with are web services, I haven't run into a situation where I had to deal with a non-docker deployment yet. But I rest easy knowing that when the day comes, I can rely on the "exec" and "raw_exec" drivers of Nomad to run them using pretty much the same workflow.
@@ -144,7 +144,7 @@ I have chosen the simpler solution of storing them as Nomad Variables. I create 
 
 
 
-![](/img/wp-content/uploads/2022/12/image.png?w=1024)
+![](/img/wp-content/uploads/2022/12/image.png)
 
 An example set of secrets
 
@@ -229,7 +229,7 @@ I woke up on a Sunday and wanted to setup Pihole for blocking ads. I had the hou
 
 
 
-![](/img/wp-content/uploads/2022/12/image-2.png?w=1024)
+![](/img/wp-content/uploads/2022/12/image-2.png)
 
 
 References

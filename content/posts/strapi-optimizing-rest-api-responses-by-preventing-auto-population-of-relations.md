@@ -47,7 +47,7 @@ I have setup 5 Expense Items in the Admin dashboard for our `test_user`. 4 of th
 
 
 
-![](/img/wp-content/uploads/2020/08/strapi-expense-response.png?w=1024)
+![](/img/wp-content/uploads/2020/08/strapi-expense-response.png)
 
 
 When making a GET request to `/categories`, we are not only getting the categories but also all the expense items which are under every category. When a user has thousands of expense items, we cannot be querying the DB for all of them whenever a GET request is made to categories. That would cause serious performance issues.
@@ -107,7 +107,7 @@ Now as soon as we save the file, the Strapi dev server should restart. Now we ca
 
 
 
-![](/img/wp-content/uploads/2020/08/strapi-no-relations-data.png?w=1024)
+![](/img/wp-content/uploads/2020/08/strapi-no-relations-data.png)
 
 
 There is no expense items in the response. Just the categories.
@@ -126,7 +126,7 @@ Let us take a look at the login response.
 
 
 
-![](/img/wp-content/uploads/2020/08/strapi-login-response.png?w=1024)
+![](/img/wp-content/uploads/2020/08/strapi-login-response.png)
 
 
 We can see that it contains all the categories and expense items of the user. This would put disastrous load on the system as the data size grows. So, let us turn off auto-populate for the users as well.
@@ -148,7 +148,7 @@ Now, let us login again and check the response.
 
 
 
-![](/img/wp-content/uploads/2020/08/strapi-optimized-login.png?w=1024)
+![](/img/wp-content/uploads/2020/08/strapi-optimized-login.png)
 
 
 No categories or expense items in the response, just the JWT token user object and the roles. Now every time a user logs in Strapi won't be querying the database for everything related to the user.

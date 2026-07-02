@@ -22,10 +22,14 @@ enableRobotsTXT = true
   [params.header]
     [params.header.title]
       name = "Arunmozhi"
+  [params.footer]
+    since = 2012
   [params.home]
     [params.home.profile]
       avatarURL = "img/avatar.png"
       subtitle = ""
+    [params.home.posts]
+      enable = false
   [params.social]
     GitHub = "tecoholic"
     Stackoverflow = "8765631/arunmozhi"

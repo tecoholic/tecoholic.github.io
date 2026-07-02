@@ -40,7 +40,7 @@ The search led to the discovery of Named Entity Recognition (NER) using [spaCy](
 
 
 
-![](/img/wp-content/uploads/2020/12/ner_attempt_1.jpeg?w=1024)
+![](/img/wp-content/uploads/2020/12/ner_attempt_1.jpeg)
 
 Trying out NER based extraction in Google Colab Notebook using spaCy
 
@@ -95,10 +95,10 @@ I created the NER with the above goals as a Free and Open Source project and rel
 
 
 
-![](/img/wp-content/uploads/2020/12/start_page.png?w=1024)
+![](/img/wp-content/uploads/2020/12/start_page.png)
 
 
-![](/img/wp-content/uploads/2020/12/tagging.png?w=1024)
+![](/img/wp-content/uploads/2020/12/tagging.png)
 
 
 ### Credits

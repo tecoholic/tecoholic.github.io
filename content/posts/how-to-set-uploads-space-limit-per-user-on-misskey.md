@@ -23,7 +23,7 @@ Change the Policy of the role applied to the user. Since I have a single person 
 
 
 
-![](/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png?w=1024)
+![](/img/wp-content/uploads/2023/09/screenshot-2023-09-26-at-4.41.24-pm.png)
 
 
 

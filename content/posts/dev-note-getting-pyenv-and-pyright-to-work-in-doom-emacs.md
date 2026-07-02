@@ -106,7 +106,7 @@ With all of this setup clearly, now I get autocompletion for dependencies instal
 
 
 
-![](/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.29.59-pm.png?w=1024)
+![](/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.29.59-pm.png)
 
 
 Notice that in the modeline, pyenv has loaded the correct environment and the LSP is also using the same one (the blue Python awesome-sauce). 
@@ -119,7 +119,7 @@ I can now also run my tests quickly using `SPC m t t` using pytest.
 
 
 
-![](/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.33.03-pm.png?w=1024)
+![](/img/wp-content/uploads/2023/09/screenshot-2023-09-12-at-4.33.03-pm.png)
 
 
 ### Finally - a request

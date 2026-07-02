@@ -59,7 +59,7 @@ Today I was looking to install an extension to manage the browser tabs and I ran
 
 
 
-![](/img/wp-content/uploads/2021/12/toby.png?w=1024)
+![](/img/wp-content/uploads/2021/12/toby.png)
 
 Can't install any extension
 

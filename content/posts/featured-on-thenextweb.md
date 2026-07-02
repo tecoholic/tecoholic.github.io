@@ -44,7 +44,7 @@ https://twitter.com/tecoholic/status/1298598910164791298
 
 
 
-![](/img/wp-content/uploads/2020/08/the_next_web_feature.png?w=1024)
+![](/img/wp-content/uploads/2020/08/the_next_web_feature.png)
 
 
 ... and that's how I made it to the homepage of TheNextWeb.
@@ -62,7 +62,7 @@ https://twitter.com/tecoholic/status/1298598910164791298
 
 
 
-![](/img/wp-content/uploads/2020/08/lifehacker-just-arrived.png?w=1024)
+![](/img/wp-content/uploads/2020/08/lifehacker-just-arrived.png)
 
 
 

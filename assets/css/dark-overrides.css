@@ -28,6 +28,11 @@ body[theme="dark"] .single .content .footnotes a {
   font-size: small;
 }
 
+body .home:not([data-home=posts]) .home-profile {
+    transform: translateY(0);
+    padding-top: 2rem;
+}
+
 body .home .post-author {
     display: none;
 }
@@ -46,4 +51,20 @@ body .single .post-author {
 
 body .single .post-category {
     text-transform: capitalize;
+}
+
+/* Landing page grid */
+.landing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.landing-grid .admonition {
+    margin: 0;
+}
+
+.landing-grid .admonition .admonition-content {
+    font-size: 0.9rem;
 }

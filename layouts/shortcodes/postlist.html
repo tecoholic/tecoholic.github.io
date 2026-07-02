@@ -1,0 +1,13 @@
+{{- $category := .Get 0 -}}
+{{- $posts := where .Site.RegularPages "Params.categories" "intersect" (slice $category) -}}
+{{- $sorted := $posts.ByDate.Reverse -}}
+{{- $limit := 10 -}}
+{{- $count := len $sorted -}}
+<ul>
+{{- range first $limit $sorted -}}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <em>{{ .Date.Format "Jan 2006" }}</em></li>
+{{ end -}}
+</ul>
+{{- if gt $count $limit -}}
+<p style="text-align:right"><a href="/categories/{{ $category | urlize }}/"><em>all {{ $count }} posts &rarr;</em></a></p>
+{{ end -}}
