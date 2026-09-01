@@ -102,5 +102,5 @@ That for me is the coolest part. Emacs is this piece of software that has everyt
 Yes, I know I am using an LLM that's doing all of the work. I am not learning anything..etc., I acknowledge that. At the same time, I am also happy that I can personalize Emacs to my hearts content. I don't have think if my personal software should be a TUI or GUI, what langugae or framework to choose..etc., It's been fun.
 
 
-[^1]: I couldn't link something specific here. Just see the **Show HN:** section of Hackernews. There are projects shared everyday and TUIs are abundantly represented.
+[^1]: I couldn't link something specific here. Just see the [Show HN section of Hackernews](https://news.ycombinator.com/show). There are projects shared everyday and TUIs are abundantly represented.
 [^2]: Emacs-everywhere should just be enough to deal with any textbox on the browser. Unfortunately I am caught in some comptability hell between Wayland and Firfox Snap on Ubuntu. So, the best I could get was to launch the editor window with the text from a text box. And then I had to manually copy contents and paste it - that is... so... not "everywhere".
